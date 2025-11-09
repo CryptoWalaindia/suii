@@ -20,25 +20,52 @@ import {
   TrendingUp,
   Zap,
 } from 'lucide-react'
+import { supabase } from './src/supabaseClient'
 
 function App() {
   const [waitlistName, setWaitlistName] = useState('')
   const [waitlistEmail, setWaitlistEmail] = useState('')
   const [waitlistMobile, setWaitlistMobile] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null)
 
-  const handleWaitlistSubmit = (e: React.FormEvent) => {
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: Integrate with a form backend (e.g., Google Forms, Airtable, or a custom API)
-    // For now, we'll just log the data and clear the form.
-    console.log({
-      name: waitlistName,
-      email: waitlistEmail,
-      mobile: waitlistMobile,
-    })
-    alert('Thank you for joining the waitlist! We will notify you soon.')
-    setWaitlistName('')
-    setWaitlistEmail('')
-    setWaitlistMobile('')
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const { error } = await supabase
+        .from('waitlist_submissions')
+        .insert([
+          {
+            name: waitlistName,
+            email: waitlistEmail,
+            mobile: waitlistMobile,
+            created_at: new Date().toISOString()
+          }
+        ])
+
+      if (error) throw error
+
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you for joining the waitlist! We will notify you soon.'
+      })
+
+      // Reset form
+      setWaitlistName('')
+      setWaitlistEmail('')
+      setWaitlistMobile('')
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus({
+        type: 'error',
+        message: 'Sorry, there was an error. Please try again or contact us directly.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -268,6 +295,7 @@ function App() {
                     value={waitlistName}
                     onChange={(e) => setWaitlistName(e.target.value)}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -283,6 +311,7 @@ function App() {
                     value={waitlistEmail}
                     onChange={(e) => setWaitlistEmail(e.target.value)}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -298,15 +327,29 @@ function App() {
                     value={waitlistMobile}
                     onChange={(e) => setWaitlistMobile(e.target.value)}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
+
+              {submitStatus && (
+                <div className={`p-4 rounded-xl text-center font-semibold ${
+                  submitStatus.type === 'success'
+                    ? 'bg-green-100 text-green-800 border border-green-300'
+                    : 'bg-red-100 text-red-800 border border-red-300'
+                }`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg
-                           transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-300 text-lg"
+                           transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-300 text-lg
+                           disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:bg-primary-500"
               >
-                Join the Waitlist
+                {isSubmitting ? 'Submitting...' : 'Join the Waitlist'}
               </button>
             </form>
 

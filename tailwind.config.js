@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Arial', 'Helvetica', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#F0F0FF', // Lighter shade for gradients
