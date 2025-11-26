@@ -9,16 +9,14 @@ import {
   X,
   Instagram,
   Linkedin,
-  Wallet,
+  Youtube,
+  Send,
   IndianRupee,
   Clock,
   BookOpen,
   Mail,
   Phone,
   User,
-  Sparkles,
-  TrendingUp,
-  Zap,
 } from 'lucide-react'
 import { supabase } from './supabaseClient'
 
@@ -27,7 +25,7 @@ function App() {
   const [waitlistEmail, setWaitlistEmail] = useState('')
   const [waitlistMobile, setWaitlistMobile] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<{type: 'success' | 'error', message: string} | null>(null)
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null)
 
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -155,51 +153,69 @@ function App() {
 
         {/* About Section */}
         <section id="about" className="py-20 px-6 md:px-12 bg-white">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="inline-block mb-12">
-              <h2 className="text-5xl font-extrabold text-gray-900 mb-4">About <span className="text-blue-900">Crypto</span><span className="text-blue-400">Wala</span></h2>
-              <div className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 rounded-full"></div>
-            </div>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
-              CryptoWala makes crypto accessible for every Indian. Buy, sell, and transfer digital assets seamlessly using UPI and bank transfers — all in one secure platform designed for simplicity and trust.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
-              We prioritize your security with FIU-aligned compliance, advanced AML protocols, and round-the-clock human support to guide you at every step.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
-              <div className="text-left space-y-6">
-                <h3 className="text-3xl font-semibold text-gray-900 mb-6">Crypto Facts You Should Know</h3>
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-r from-primary-50 to-blue-50 p-6 rounded-2xl border border-primary-100">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <Sparkles className="text-primary-500 w-6 h-6" />
-                      <p className="text-xl font-semibold text-gray-800">15M+ Indians Own Crypto</p>
-                    </div>
-                    <p className="ml-9 text-gray-600">India has one of the largest crypto user bases globally, with millions actively trading digital assets.</p>
-                  </div>
-                  <div className="bg-gradient-to-r from-primary-50 to-blue-50 p-6 rounded-2xl border border-primary-100">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <TrendingUp className="text-primary-500 w-6 h-6" />
-                      <p className="text-xl font-semibold text-gray-800">24/7 Global Market</p>
-                    </div>
-                    <p className="ml-9 text-gray-600">Unlike traditional markets, crypto never sleeps — trade anytime, anywhere, with complete flexibility.</p>
-                  </div>
-                  <div className="bg-gradient-to-r from-primary-50 to-blue-50 p-6 rounded-2xl border border-primary-100">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <Zap className="text-primary-500 w-6 h-6" />
-                      <p className="text-xl font-semibold text-gray-800">Instant Transactions</p>
-                    </div>
-                    <p className="ml-9 text-gray-600">Send money across borders in minutes, not days — faster and more affordable than traditional banking.</p>
-                  </div>
-                </div>
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <div className="inline-block">
+                <h2 className="text-5xl font-extrabold text-gray-900 mb-4">About <span className="text-blue-900">Crypto</span><span className="text-blue-400">Wala</span></h2>
+                <div className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 rounded-full"></div>
               </div>
-              <div className="flex justify-center">
-                <img
-                  src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Crypto facts illustration"
-                  className="rounded-3xl shadow-xl max-w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500 ease-in-out"
-                />
+            </div>
+
+            {/* Two Column Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column - Content */}
+              <div>
+                <ul className="space-y-6">
+                  <li className="flex items-start space-x-3">
+                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        <span className="font-semibold text-gray-900">Accessible for every Indian:</span> Buy, sell, and transfer digital assets seamlessly using UPI and bank transfers — all in one secure platform designed for simplicity and trust.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        <span className="font-semibold text-gray-900">FIU-aligned compliance:</span> Fully registered and compliant with India's Financial Intelligence Unit regulations.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        <span className="font-semibold text-gray-900">Advanced security:</span> Bank-grade AML protocols and encrypted transactions for your peace of mind.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
+                        <span className="font-semibold text-gray-900">24×7 human support:</span> Round-the-clock assistance to guide you at every step of your crypto journey.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right Column - Image */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-md">
+                  <div className="relative z-10">
+                    <img
+                      src="/images/about-illustration.png"
+                      alt="CryptoWala Platform Illustration"
+                      className="w-full h-auto rounded-2xl shadow-2xl"
+                    />
+                  </div>
+                  {/* Decorative background elements */}
+                  <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                  <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -317,11 +333,10 @@ function App() {
               </div>
 
               {submitStatus && (
-                <div className={`p-4 rounded-xl text-center font-semibold ${
-                  submitStatus.type === 'success'
-                    ? 'bg-green-100 text-green-800 border border-green-300'
-                    : 'bg-red-100 text-red-800 border border-red-300'
-                }`}>
+                <div className={`p-4 rounded-xl text-center font-semibold ${submitStatus.type === 'success'
+                  ? 'bg-green-100 text-green-800 border border-green-300'
+                  : 'bg-red-100 text-red-800 border border-red-300'
+                  }`}>
                   {submitStatus.message}
                 </div>
               )}
@@ -351,7 +366,7 @@ function App() {
               <div className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <a href="https://www.flitpay.com/blog/fiu-compliance-indian-crypto-exchanges-all-you-need-to-know" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
+              <a href="https://fiuindia.gov.in/pdfs/AML_legislation/AMLCFTguidelines10032023.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
                 <BookOpen className="text-secondary-500 w-10 h-10 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors duration-300">What is FIU compliance?</h3>
                 <p className="text-gray-600">Understand the regulatory framework that ensures secure and legal crypto transactions in India.</p>
@@ -367,7 +382,7 @@ function App() {
                   Read Article <ArrowRight className="ml-2 w-4 h-4" />
                 </span>
               </a>
-              <a href="https://www.assetchain.in/blog/how-blockchain-technology-transforming-the-india-s-economy" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
+              <a href="https://www.indiatoday.in/business/story/india-tops-global-crypto-adoption-rankings-again-in-2025-report-2783757-2025-09-08" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
                 <BookOpen className="text-secondary-500 w-10 h-10 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors duration-300">India's journey to crypto adoption.</h3>
                 <p className="text-gray-600">Explore the evolving landscape of cryptocurrency in the Indian market.</p>
@@ -381,43 +396,97 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-300 py-12 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <footer className="bg-gray-900 text-gray-300 py-12 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src="/images/logo.svg" alt="CryptoWala Logo" className="w-10 h-10" />
-              <span className="text-2xl font-bold"><span className="text-blue-900">Crypto</span><span className="text-blue-400">Wala</span></span>
+              <img src="/images/logo.svg" alt="CryptoWala Logo" className="w-20 h-20" />
+              <span className="text-2xl font-bold">
+                <span className="text-blue-400">Crypto</span>
+                <span className="text-blue-300">Wala</span>
+              </span>
             </div>
-            <p className="text-gray-400">Making crypto simple, secure, and Indian.</p>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              10 years of dedicated commitment: Sharing our journey, values, and excellence in every endeavor with passion.
+            </p>
+            <div className="flex space-x-4 pt-2">
+              <a href="https://x.com/cryptowalax?t=aBbTuKBrP6A_BPsMhFv4aw&s=09" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                <X className="w-5 h-5" />
+              </a>
+              <a href="https://www.instagram.com/cryptowalaindia?igsh=cW1ia2U5bzl3enVp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.linkedin.com/company/cryptowalaindia/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://youtube.com/@cryptowalaindia?si=wWv7ckBjYtJCnoXV" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors duration-300">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="https://t.me/cryptowalaindiaa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                <Send className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
-          <div className="text-center">
-            <h4 className="text-white font-semibold text-lg mb-4">Connect</h4>
-            <div className="flex justify-center space-x-4">
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                <X className="w-6 h-6" />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                <Instagram className="w-6 h-6" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
-                <Linkedin className="w-6 h-6" />
-              </a>
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Quick links</h4>
+            <ul className="space-y-3">
+              <li><a href="#about" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">About Us</a></li>
+              <li><a href="#features" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Our Services</a></li>
+              <li><a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Privacy Policy</a></li>
+              <li><a href="/T&C CryptoWala.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Terms & Conditions</a></li>
+              <li><a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Risk Disclosure</a></li>
+            </ul>
+          </div>
+
+          {/* Our Location */}
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Our Location</h4>
+            <div className="bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3076!2d78.3808!3d17.4485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzU0LjYiTiA3OMKwMjInNTEuMyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="150"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="CryptoWala Location"
+              ></iframe>
             </div>
           </div>
 
-          <div className="text-right">
-            <h4 className="text-white font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-primary-400 transition-colors duration-300">Careers</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition-colors duration-300">Contact Us</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition-colors duration-300">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition-colors duration-300">Terms of Service</a></li>
+          {/* Get in Touch */}
+          <div>
+            <h4 className="text-white font-semibold text-lg mb-4">Get in touch</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start space-x-2 text-sm">
+                <span className="text-blue-400 mt-1">📍</span>
+                <span className="text-gray-400">
+                  Address: 2nd floor, Next to Club Rogue, SLN Terminus Mall, Gachibowli, Hyderabad, India - 500032
+                </span>
+              </li>
+              <li className="flex items-center space-x-2 text-sm">
+                <Phone className="text-blue-400 w-4 h-4 flex-shrink-0" />
+                <a href="tel:+919000022224" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                  +91 90000 22224
+                </a>
+              </li>
+              <li className="flex items-center space-x-2 text-sm">
+                <Mail className="text-blue-400 w-4 h-4 flex-shrink-0" />
+                <a href="mailto:info@cryptowala.ai" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                  info@cryptowala.ai
+                </a>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-10 pt-8 text-center text-gray-500">
-          <p>&copy; 2025 CryptoWala. All rights reserved.</p>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-800 mt-10 pt-8 text-center">
+          <p className="text-gray-500 text-sm">&copy; 2025 CryptoWala. All rights reserved.</p>
         </div>
       </footer>
     </div>
