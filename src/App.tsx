@@ -17,6 +17,7 @@ import {
   Mail,
   Phone,
   User,
+  Menu,
 } from 'lucide-react'
 import { supabase } from './supabaseClient'
 
@@ -26,6 +27,7 @@ function App() {
   const [waitlistMobile, setWaitlistMobile] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleWaitlistSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -69,62 +71,98 @@ function App() {
   return (
     <div className="font-sans antialiased text-gray-800">
       {/* Header/Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/80 backdrop-blur-lg shadow-lg animate-slide-down px-6 md:px-12 flex justify-between items-center">
+      <header className="fixed top-0 left-0 right-0 z-50 glass-effect backdrop-blur-lg shadow-lg animate-slide-down px-6 md:px-12 flex justify-between items-center" style={{ backgroundColor: '#111827' }}>
         <div className="flex items-center space-x-2">
           <img src="/images/logo.svg" alt="CryptoWala Logo" className="w-20 h-20" />
-          <span className="text-2xl font-bold"><span className="text-blue-900">Crypto</span><span className="text-blue-400">Wala</span></span>
+          <span className="text-2xl font-bold"><span className="text-white">Crypto</span><span className="text-white">Wala</span></span>
         </div>
         <nav className="hidden md:flex space-x-8">
-          <a href="#hero" className="text-lg text-gray-600 hover:text-primary-500 font-medium transition-all duration-300 hover:scale-110">Home</a>
-          <a href="#about" className="text-lg text-gray-600 hover:text-primary-500 font-medium transition-all duration-300 hover:scale-110">About</a>
-          <a href="#features" className="text-lg text-gray-600 hover:text-primary-500 font-medium transition-all duration-300 hover:scale-110">Features</a>
-          <a href="#waitlist" className="text-lg text-gray-600 hover:text-primary-500 font-medium transition-all duration-300 hover:scale-110">Contact us</a>
+          <a href="#hero" className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 hover:scale-110">Home</a>
+          <a href="#about" className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 hover:scale-110">About</a>
+          <a href="#features" className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 hover:scale-110">Features</a>
+          <a href="#waitlist" className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 hover:scale-110">Contact us</a>
         </nav>
         <a
           href="#waitlist"
-          className="shimmer-button bg-gradient-to-r from-primary-500 to-purple-600 hover:from-primary-600 hover:to-purple-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+          className="hidden md:block shimmer-button bg-gradient-to-r from-primary-500 to-purple-600 hover:from-primary-600 hover:to-purple-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
         >
           Contact us
         </a>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-white p-2 hover:bg-gray-700 rounded-lg transition-colors duration-300"
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </header>
+
+      {/* Mobile Menu Dropdown */}
+      {isMobileMenuOpen && (
+        <div className="fixed top-20 left-0 right-0 z-40 md:hidden bg-gray-900 border-t border-gray-700 shadow-lg animate-slide-down">
+          <nav className="flex flex-col p-6 space-y-4">
+            <a
+              href="#hero"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 py-2 border-b border-gray-700"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 py-2 border-b border-gray-700"
+            >
+              About
+            </a>
+            <a
+              href="#features"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 py-2 border-b border-gray-700"
+            >
+              Features
+            </a>
+            <a
+              href="#waitlist"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-lg text-gray-300 hover:text-blue-400 font-medium transition-all duration-300 py-2"
+            >
+              Contact us
+            </a>
+          </nav>
+        </div>
+      )}
 
       <main>
         {/* Hero Section */}
         <section
           id="hero"
-          className="relative flex flex-col md:flex-row items-center justify-center min-h-screen pt-24 pb-16 px-6 md:px-12 overflow-hidden
-                     bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 animate-gradient"
+          className="relative flex flex-col md:flex-row items-center justify-center min-h-screen pt-28 md:pt-32 pb-12 md:pb-16 px-4 md:px-12 overflow-hidden
+                     bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 animate-gradient"
         >
-          <div className="absolute inset-0 opacity-20 pointer-events-none">
-            {/* Subtle background pattern or texture */}
-            <svg className="w-full h-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-              <pattern id="pattern-circles" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                <circle fill="#e0f2fe" cx="2" cy="2" r="1" />
-              </pattern>
-              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-            </svg>
-          </div>
 
-          <div className="relative z-10 text-center md:text-left md:w-1/2 space-y-6 md:pr-12">
-            <h1 className="text-5xl md:text-6xl leading-tight text-gray-900 animate-fade-in-up">
-              <span className="font-bold">Namaste India.</span>
+          <div className="relative z-10 text-center md:text-left md:w-1/2 space-y-4 md:space-y-6 md:pr-12">
+            <h1 className="text-4xl md:text-6xl leading-tight animate-fade-in-up">
+              <span className="font-bold text-blue-400">Namaste India.</span>
               <br />
-              <span className="font-normal">Transact securely seamlessly with <span className="font-bold text-blue-900">Crypto</span><span className="font-bold text-blue-400">Wala</span>.</span>
+              <span className="font-normal text-gray-200 text-3xl md:text-6xl">Transact securely seamlessly with <span className="font-bold text-white">Crypto</span><span className="font-bold text-white">Wala</span>.</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-up delay-200">
+            <p className="text-base md:text-xl text-gray-300 leading-relaxed animate-fade-in-up delay-200">
               FIU-aligned compliance, bank-grade KYC verification, and 24×7 dedicated support.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-6 animate-fade-in-up delay-400">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-4 md:pt-6 animate-fade-in-up delay-400">
               <a
                 href="#waitlist"
-                className="bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full shadow-lg
-                           transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-300"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 md:px-8 rounded-full shadow-lg text-sm md:text-base
+                           transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
               >
                 Create Account / Contact us
               </a>
               <button
                 disabled
-                className="bg-gray-200 text-gray-500 font-semibold py-3 px-8 rounded-full shadow-md cursor-not-allowed
+                className="bg-gray-700 text-gray-400 font-semibold py-3 px-6 md:px-8 rounded-full shadow-md cursor-not-allowed text-sm md:text-base
                            transition-all duration-300 ease-in-out"
               >
                 Get the App (Coming Soon)
@@ -132,32 +170,32 @@ function App() {
             </div>
           </div>
 
-          <div className="relative z-10 mt-32 md:mt-16 md:w-1/2 flex justify-center animate-fade-in-right delay-600">
-            <div className="relative w-64 h-auto md:w-80 lg:w-96">
+          <div className="relative z-10 mt-12 md:mt-16 md:w-1/2 flex justify-center animate-fade-in-right delay-600">
+            <div className="relative w-48 md:w-80 lg:w-96 h-auto">
               <img
                 src="/images/hand.svg"
                 alt="Hand holding crypto"
                 className="w-full h-auto object-contain"
               />
-              <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3 transform -rotate-6 hover:rotate-0 transition-transform duration-500 ease-in-out">
-                <IndianRupee className="text-green-500 w-6 h-6" />
-                <span className="font-semibold text-gray-800">Buy USDT with INR</span>
+              <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 bg-white p-3 md:p-4 rounded-xl shadow-xl flex items-center space-x-2 md:space-x-3 transform -rotate-6 hover:rotate-0 transition-transform duration-500 ease-in-out">
+                <IndianRupee className="text-green-500 w-5 h-5 md:w-6 md:h-6" />
+                <span className="font-semibold text-gray-800 text-xs md:text-base">Buy USDT with INR</span>
               </div>
-              <div className="absolute -top-8 -right-8 bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3 transform rotate-6 hover:rotate-0 transition-transform duration-500 ease-in-out">
-                <Clock className="text-blue-500 w-6 h-6" />
-                <span className="font-semibold text-gray-800">Instant Transactions</span>
+              <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8 bg-white p-3 md:p-4 rounded-xl shadow-xl flex items-center space-x-2 md:space-x-3 transform rotate-6 hover:rotate-0 transition-transform duration-500 ease-in-out">
+                <Clock className="text-blue-500 w-5 h-5 md:w-6 md:h-6" />
+                <span className="font-semibold text-gray-800 text-xs md:text-base">Instant Transactions</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-20 px-6 md:px-12 bg-white">
+        <section id="about" className="py-20 px-6 md:px-12 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
               <div className="inline-block">
-                <h2 className="text-5xl font-extrabold text-gray-900 mb-4">About <span className="text-blue-900">Crypto</span><span className="text-blue-400">Wala</span></h2>
+                <h2 className="text-5xl font-extrabold text-white mb-4">About us</h2>
                 <div className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 rounded-full"></div>
               </div>
             </div>
@@ -168,34 +206,34 @@ function App() {
               <div>
                 <ul className="space-y-6">
                   <li className="flex items-start space-x-3">
-                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <span className="text-blue-400 text-2xl mt-1 flex-shrink-0">•</span>
                     <div>
-                      <p className="text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold text-gray-900">Accessible for every Indian:</span> Buy, sell, and transfer digital assets seamlessly using UPI and bank transfers — all in one secure platform designed for simplicity and trust.
+                      <p className="text-lg text-gray-300 leading-relaxed">
+                        <span className="font-semibold text-white">Accessible for every Indian:</span> Buy, sell, and transfer digital assets seamlessly using UPI and bank transfers — all in one secure platform designed for simplicity and trust.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <span className="text-blue-400 text-2xl mt-1 flex-shrink-0">•</span>
                     <div>
-                      <p className="text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold text-gray-900">FIU-aligned compliance:</span> Fully registered and compliant with India's Financial Intelligence Unit regulations.
+                      <p className="text-lg text-gray-300 leading-relaxed">
+                        <span className="font-semibold text-white">FIU-aligned compliance:</span> Fully registered and compliant with India's Financial Intelligence Unit regulations.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <span className="text-blue-400 text-2xl mt-1 flex-shrink-0">•</span>
                     <div>
-                      <p className="text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold text-gray-900">Advanced security:</span> Bank-grade AML protocols and encrypted transactions for your peace of mind.
+                      <p className="text-lg text-gray-300 leading-relaxed">
+                        <span className="font-semibold text-white">Advanced security:</span> Bank-grade AML protocols and encrypted transactions for your peace of mind.
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <span className="text-primary-500 text-2xl mt-1 flex-shrink-0">•</span>
+                    <span className="text-blue-400 text-2xl mt-1 flex-shrink-0">•</span>
                     <div>
-                      <p className="text-lg text-gray-700 leading-relaxed">
-                        <span className="font-semibold text-gray-900">24×7 human support:</span> Round-the-clock assistance to guide you at every step of your crypto journey.
+                      <p className="text-lg text-gray-300 leading-relaxed">
+                        <span className="font-semibold text-white">24×7 human support:</span> Round-the-clock assistance to guide you at every step of your crypto journey.
                       </p>
                     </div>
                   </li>
@@ -213,8 +251,8 @@ function App() {
                     />
                   </div>
                   {/* Decorative background elements */}
-                  <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary-100 rounded-full blur-3xl opacity-50 -z-10"></div>
-                  <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                  <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-20 -z-10"></div>
+                  <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-600 rounded-full blur-3xl opacity-20 -z-10"></div>
                 </div>
               </div>
             </div>
@@ -222,42 +260,42 @@ function App() {
         </section>
 
         {/* Key Features Section */}
-        <section id="features" className="py-20 px-6 md:px-12 bg-gradient-to-br from-gray-50 to-blue-50">
+        <section id="features" className="py-20 px-6 md:px-12 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
           <div className="max-w-6xl mx-auto text-center">
             <div className="inline-block mb-12">
-              <h2 className="text-5xl font-extrabold text-gray-900 mb-4">Key Features</h2>
-              <div className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 rounded-full"></div>
+              <h2 className="text-5xl font-extrabold text-white mb-4">Key Features</h2>
+              <div className="h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <Banknote className="text-primary-500 w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">UPI & Bank Transfer Integration</h3>
-                <p className="text-gray-600">Buy and sell crypto instantly with your preferred payment methods.</p>
+              <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <Banknote className="text-blue-400 w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">UPI & Bank Transfer Integration</h3>
+                <p className="text-gray-300">Buy and sell crypto instantly with your preferred payment methods.</p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <ShieldCheck className="text-primary-500 w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">FIU-Aligned Compliance</h3>
-                <p className="text-gray-600">Fully registered and KYC verified, ensuring regulatory adherence.</p>
+              <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <ShieldCheck className="text-blue-400 w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">FIU-Aligned Compliance</h3>
+                <p className="text-gray-300">Fully registered and KYC verified, ensuring regulatory adherence.</p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <Lock className="text-primary-500 w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Bank-Grade Security</h3>
-                <p className="text-gray-600">Encrypted transactions and advanced AML monitoring for your peace of mind.</p>
+              <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <Lock className="text-blue-400 w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Bank-Grade Security</h3>
+                <p className="text-gray-300">Encrypted transactions and advanced AML monitoring for your peace of mind.</p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <Headset className="text-primary-500 w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instant Support</h3>
-                <p className="text-gray-600">24×7 chat and call assistance from our dedicated support team.</p>
+              <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <Headset className="text-blue-400 w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Instant Support</h3>
+                <p className="text-gray-300">24×7 chat and call assistance from our dedicated support team.</p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <Gift className="text-primary-500 w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Earn & Refer</h3>
-                <p className="text-gray-600">Exciting rewards and referral bonuses for our early users.</p>
+              <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <Gift className="text-blue-400 w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Earn & Refer</h3>
+                <p className="text-gray-300">Exciting rewards and referral bonuses for our early users.</p>
               </div>
-              <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <X className="text-primary-500 w-12 h-12 mb-4" /> {/* Placeholder for a unique feature icon */}
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Seamless User Experience</h3>
-                <p className="text-gray-600">Intuitive interface designed for simplicity and ease of use.</p>
+              <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                <X className="text-blue-400 w-12 h-12 mb-4" /> {/* Placeholder for a unique feature icon */}
+                <h3 className="text-xl font-semibold text-white mb-2">Seamless User Experience</h3>
+                <p className="text-gray-300">Intuitive interface designed for simplicity and ease of use.</p>
               </div>
             </div>
           </div>
@@ -266,19 +304,11 @@ function App() {
         {/* Coming Soon / Waitlist Section */}
         <section
           id="waitlist"
-          className="py-20 px-6 md:px-12 bg-gradient-to-br from-primary-100 to-blue-200 relative overflow-hidden"
+          className="py-20 px-6 md:px-12 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 relative overflow-hidden"
         >
-          <div className="absolute inset-0 opacity-30 pointer-events-none">
-            <svg className="w-full h-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-              <pattern id="pattern-dots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                <circle fill="#9E7FFF" cx="1" cy="1" r="0.5" />
-              </pattern>
-              <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-dots)" />
-            </svg>
-          </div>
-          <div className="max-w-4xl mx-auto text-center relative z-10 bg-white p-10 md:p-16 rounded-3xl shadow-2xl border border-primary-200">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Be part of India's financial revolution.</h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-10">
+          <div className="max-w-4xl mx-auto text-center relative z-10 bg-gray-800 p-10 md:p-16 rounded-3xl shadow-2xl border border-gray-700">
+            <h2 className="text-4xl font-bold text-white mb-6">Be part of India's financial revolution.</h2>
+            <p className="text-xl text-gray-300 leading-relaxed mb-10">
               Contact us to learn more about CryptoWala.
             </p>
 
@@ -359,34 +389,34 @@ function App() {
         </section>
 
         {/* Education Section (Optional) */}
-        <section id="education" className="py-20 px-6 md:px-12 bg-white">
+        <section id="education" className="py-20 px-6 md:px-12 bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900">
           <div className="max-w-6xl mx-auto text-center">
             <div className="inline-block mb-12">
-              <h2 className="text-5xl font-extrabold text-gray-900 mb-4">Learn More</h2>
-              <div className="h-1 bg-gradient-to-r from-primary-500 to-blue-500 rounded-full"></div>
+              <h2 className="text-5xl font-extrabold text-white mb-4">Learn More</h2>
+              <div className="h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <a href="https://fiuindia.gov.in/pdfs/AML_legislation/AMLCFTguidelines10032023.pdf" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
-                <BookOpen className="text-secondary-500 w-10 h-10 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors duration-300">What is FIU compliance?</h3>
-                <p className="text-gray-600">Understand the regulatory framework that ensures secure and legal crypto transactions in India.</p>
-                <span className="mt-4 inline-flex items-center text-primary-500 group-hover:text-primary-600 font-semibold transition-colors duration-300">
+              <a href="https://fiuindia.gov.in/pdfs/AML_legislation/AMLCFTguidelines10032023.pdf" target="_blank" rel="noopener noreferrer" className="block bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
+                <BookOpen className="text-blue-400 w-10 h-10 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">What is FIU compliance?</h3>
+                <p className="text-gray-300">Understand the regulatory framework that ensures secure and legal crypto transactions in India.</p>
+                <span className="mt-4 inline-flex items-center text-blue-400 group-hover:text-blue-300 font-semibold transition-colors duration-300">
                   Read Article <ArrowRight className="ml-2 w-4 h-4" />
                 </span>
               </a>
-              <a href="https://en.wikipedia.org/wiki/Cryptocurrency" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
-                <BookOpen className="text-secondary-500 w-10 h-10 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors duration-300">Understanding Cryptocurrency Basics</h3>
-                <p className="text-gray-600">Learn the fundamentals of digital currencies, blockchain technology, and how crypto works in simple terms.</p>
-                <span className="mt-4 inline-flex items-center text-primary-500 group-hover:text-primary-600 font-semibold transition-colors duration-300">
+              <a href="https://en.wikipedia.org/wiki/Cryptocurrency" target="_blank" rel="noopener noreferrer" className="block bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
+                <BookOpen className="text-blue-400 w-10 h-10 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">Understanding Cryptocurrency Basics</h3>
+                <p className="text-gray-300">Learn the fundamentals of digital currencies, blockchain technology, and how crypto works in simple terms.</p>
+                <span className="mt-4 inline-flex items-center text-blue-400 group-hover:text-blue-300 font-semibold transition-colors duration-300">
                   Read Article <ArrowRight className="ml-2 w-4 h-4" />
                 </span>
               </a>
-              <a href="https://www.indiatoday.in/business/story/india-tops-global-crypto-adoption-rankings-again-in-2025-report-2783757-2025-09-08" target="_blank" rel="noopener noreferrer" className="block bg-white p-8 rounded-3xl shadow-lg border border-gray-100 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
-                <BookOpen className="text-secondary-500 w-10 h-10 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors duration-300">India's journey to crypto adoption.</h3>
-                <p className="text-gray-600">Explore the evolving landscape of cryptocurrency in the Indian market.</p>
-                <span className="mt-4 inline-flex items-center text-primary-500 group-hover:text-primary-600 font-semibold transition-colors duration-300">
+              <a href="https://www.indiatoday.in/business/story/india-tops-global-crypto-adoption-rankings-again-in-2025-report-2783757-2025-09-08" target="_blank" rel="noopener noreferrer" className="block bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 ease-in-out group">
+                <BookOpen className="text-blue-400 w-10 h-10 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">India's journey to crypto adoption.</h3>
+                <p className="text-gray-300">Explore the evolving landscape of cryptocurrency in the Indian market.</p>
+                <span className="mt-4 inline-flex items-center text-blue-400 group-hover:text-blue-300 font-semibold transition-colors duration-300">
                   Read Article <ArrowRight className="ml-2 w-4 h-4" />
                 </span>
               </a>
@@ -403,8 +433,8 @@ function App() {
             <div className="flex items-center space-x-2">
               <img src="/images/logo.svg" alt="CryptoWala Logo" className="w-20 h-20" />
               <span className="text-2xl font-bold">
-                <span className="text-blue-400">Crypto</span>
-                <span className="text-blue-300">Wala</span>
+                <span className="text-white">Crypto</span>
+                <span className="text-white">Wala</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
