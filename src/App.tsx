@@ -3,7 +3,7 @@ import {
   Banknote,
   ShieldCheck,
   Lock,
-  Headset,
+  TrendingDown,
   Gift,
   ArrowRight,
   X,
@@ -140,50 +140,111 @@ function App() {
         <section
           id="hero"
           className="relative flex flex-col md:flex-row items-center justify-center min-h-screen pt-28 md:pt-32 pb-12 md:pb-16 px-4 md:px-12 overflow-hidden
-                     bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900 animate-gradient"
+                     bg-gradient-to-br from-gray-900 via-gray-800 to-blue-900"
         >
+          {/* Animated Background Orbs */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+          </div>
 
-          <div className="relative z-10 text-center md:text-left md:w-1/2 space-y-4 md:space-y-6 md:pr-12">
-            <h1 className="text-4xl md:text-6xl leading-tight animate-fade-in-up">
-              <span className="font-bold text-blue-400">Namaste India.</span>
+          <div className="relative z-10 text-center md:text-left md:w-1/2 space-y-5 md:space-y-7 md:pr-12">
+            {/* Enhanced Heading with Gradient Text */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-tight animate-fade-in-up">
+              <span className="font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg">
+                Namaste India.
+              </span>
               <br />
-              <span className="font-normal text-gray-200 text-3xl md:text-6xl">Transact securely seamlessly with <span className="font-bold text-white">Crypto</span><span className="font-bold text-white">Wala</span>.</span>
+              <span className="font-normal text-gray-200 text-3xl md:text-5xl lg:text-6xl block mt-2">
+                Transact securely seamlessly with{' '}
+                <span className="font-bold bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                  CryptoWala
+                </span>
+              </span>
             </h1>
-            <p className="text-base md:text-xl text-gray-300 leading-relaxed animate-fade-in-up delay-200">
-              FIU-aligned compliance, bank-grade KYC verification, and 24×7 dedicated support.
+
+            {/* Enhanced Description */}
+            <p className="text-base md:text-xl lg:text-2xl text-gray-300 leading-relaxed animate-fade-in-up delay-200 max-w-2xl">
+              <span className="font-semibold text-blue-300">FIU-aligned compliance</span>, bank-grade KYC verification, and <span className="font-semibold text-blue-300">competitive rates</span>.
             </p>
+
+            {/* Enhanced CTA Buttons */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-4 md:pt-6 animate-fade-in-up delay-400">
               <a
                 href="#waitlist"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 md:px-8 rounded-full shadow-lg text-sm md:text-base
-                           transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                className="group relative bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 px-8 md:px-10 rounded-full shadow-2xl text-sm md:text-base
+                           transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300
+                           before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-blue-400 before:to-blue-500 before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100 before:-z-10 before:blur-xl"
               >
-                Create Account / Contact us
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Join the Waitlist
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
               </a>
               <button
                 disabled
-                className="bg-gray-700 text-gray-400 font-semibold py-3 px-6 md:px-8 rounded-full shadow-md cursor-not-allowed text-sm md:text-base
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 text-gray-400 font-semibold py-4 px-8 md:px-10 rounded-full shadow-md cursor-not-allowed text-sm md:text-base
                            transition-all duration-300 ease-in-out"
               >
                 Get the App (Coming Soon)
               </button>
             </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center md:justify-start gap-6 pt-6 animate-fade-in-up delay-600">
+              <div className="flex items-center gap-2 text-gray-300">
+                <ShieldCheck className="w-5 h-5 text-green-400" />
+                <span className="text-sm font-medium">FIU Registered</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-300">
+                <Lock className="w-5 h-5 text-blue-400" />
+                <span className="text-sm font-medium">Bank-Grade Security</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-300">
+                <TrendingDown className="w-5 h-5 text-purple-400" />
+                <span className="text-sm font-medium">Competitive Rates</span>
+              </div>
+            </div>
           </div>
 
+          {/* Enhanced Illustration Section */}
           <div className="relative z-10 mt-12 md:mt-16 md:w-1/2 flex justify-center animate-fade-in-right delay-600">
             <div className="relative w-48 md:w-80 lg:w-96 h-auto">
+              {/* Glow effect behind image */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+
+              {/* Main Image with Float Animation */}
               <img
                 src="/images/hand.svg"
                 alt="Hand holding crypto"
-                className="w-full h-auto object-contain"
+                className="relative w-full h-auto object-contain animate-float drop-shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 bg-white p-3 md:p-4 rounded-xl shadow-xl flex items-center space-x-2 md:space-x-3 transform -rotate-6 hover:rotate-0 transition-transform duration-500 ease-in-out">
-                <IndianRupee className="text-green-500 w-5 h-5 md:w-6 md:h-6" />
-                <span className="font-semibold text-gray-800 text-xs md:text-base">Buy USDT with INR</span>
+
+              {/* Enhanced Glassmorphism Badges */}
+              <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 bg-white/95 backdrop-blur-xl p-4 md:p-5 rounded-2xl shadow-2xl flex items-center space-x-3 transform -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 ease-in-out border border-white/20 group animate-float animation-delay-1000">
+                <div className="bg-green-100 p-2 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <IndianRupee className="text-green-600 w-5 h-5 md:w-6 md:h-6" />
+                </div>
+                <div>
+                  <span className="font-bold text-gray-800 text-xs md:text-sm block">Buy USDT</span>
+                  <span className="text-gray-600 text-xs">with INR instantly</span>
+                </div>
               </div>
-              <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8 bg-white p-3 md:p-4 rounded-xl shadow-xl flex items-center space-x-2 md:space-x-3 transform rotate-6 hover:rotate-0 transition-transform duration-500 ease-in-out">
-                <Clock className="text-blue-500 w-5 h-5 md:w-6 md:h-6" />
-                <span className="font-semibold text-gray-800 text-xs md:text-base">Instant Transactions</span>
+
+              <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8 bg-white/95 backdrop-blur-xl p-4 md:p-5 rounded-2xl shadow-2xl flex items-center space-x-3 transform rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-500 ease-in-out border border-white/20 group animate-float animation-delay-500">
+                <div className="bg-blue-100 p-2 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <Clock className="text-blue-600 w-5 h-5 md:w-6 md:h-6" />
+                </div>
+                <div>
+                  <span className="font-bold text-gray-800 text-xs md:text-sm block">Instant</span>
+                  <span className="text-gray-600 text-xs">Transactions</span>
+                </div>
+              </div>
+
+              {/* Additional Floating Badge - Top Left */}
+              <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 bg-gradient-to-br from-purple-500 to-pink-500 p-3 md:p-4 rounded-xl shadow-2xl transform -rotate-12 hover:rotate-0 hover:scale-105 transition-all duration-500 ease-in-out animate-float animation-delay-2000">
+                <span className="font-bold text-white text-xs md:text-sm">21K+ Users</span>
               </div>
             </div>
           </div>
@@ -233,7 +294,7 @@ function App() {
                     <span className="text-blue-400 text-2xl mt-1 flex-shrink-0">•</span>
                     <div>
                       <p className="text-lg text-gray-300 leading-relaxed">
-                        <span className="font-semibold text-white">24×7 human support:</span> Round-the-clock assistance to guide you at every step of your crypto journey.
+                        <span className="font-semibold text-white">Competitive rates:</span> Best-in-class pricing with transparent fees for all your crypto transactions.
                       </p>
                     </div>
                   </li>
@@ -283,9 +344,9 @@ function App() {
                 <p className="text-gray-300">Encrypted transactions and advanced AML monitoring for your peace of mind.</p>
               </div>
               <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
-                <Headset className="text-blue-400 w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">Instant Support</h3>
-                <p className="text-gray-300">24×7 chat and call assistance from our dedicated support team.</p>
+                <TrendingDown className="text-blue-400 w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Competitive Rates</h3>
+                <p className="text-gray-300">Best-in-class pricing with transparent fees for all transactions.</p>
               </div>
               <div className="bg-gray-800 p-8 rounded-3xl shadow-lg border border-gray-700 flex flex-col items-center text-center transform hover:scale-105 transition-transform duration-300 ease-in-out">
                 <Gift className="text-blue-400 w-12 h-12 mb-4" />
