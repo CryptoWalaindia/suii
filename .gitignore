@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+dist/
+
+# Build files
+*.log
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
+
+# Temp files
+*.tmp
+*.temp
