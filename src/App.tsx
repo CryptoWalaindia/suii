@@ -121,14 +121,19 @@ function App() {
 
       {/* Footer */}
       <footer className="w-full text-center px-4 py-8 animate-fade-in delay-200">
-        <div className="flex flex-col items-center justify-center gap-2 text-xs md:text-sm font-bold tracking-wide text-gray-900">
+        <div className="flex flex-col items-center justify-center gap-3 text-xs md:text-sm font-bold tracking-wide text-gray-900">
+
+          {/* FIU Badge */}
+          <p>🛡️ FIU-IND REGISTERED</p>
+
           <p>©2025 - 2026. CRYPTOWALA.</p>
-          <div className="flex gap-4 uppercase mt-2">
+          <div className="flex gap-4 uppercase">
             <span>ALL RIGHTS RESERVED.</span>
             <a href="/T&C CryptoWala.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">LEGAL.</a>
             <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">PRIVACY.</a>
             <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 transition-colors">RISK.</a>
           </div>
+
         </div>
       </footer>
 
