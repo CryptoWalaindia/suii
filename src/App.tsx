@@ -51,20 +51,20 @@ function App() {
             }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "14px", color: "#374151" }}>
                 <a
-                  href="mailto:support@cryptowala.com"
+                  href="mailto:info@cryptowala.ai"
                   style={{ display: "block", color: "#374151", textDecoration: "none" }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#000")}
                   onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
                 >
-                  support@cryptowala.com
+                  info@cryptowala.ai
                 </a>
                 <a
-                  href="tel:+918005550199"
+                  href="tel:+919000022224"
                   style={{ display: "block", color: "#374151", textDecoration: "none" }}
                   onMouseEnter={e => (e.currentTarget.style.color = "#000")}
                   onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
                 >
-                  +91 (800) 555-0199
+                  +91 9000022224
                 </a>
               </div>
             </div>
