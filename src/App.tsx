@@ -28,47 +28,61 @@ function App() {
       {/* Header */}
       <header style={{ overflow: "visible", position: "relative", zIndex: 10 }} className="w-full flex justify-between items-center px-12 md:px-24 py-6 border-b border-gray-200">
 
-        {/* CONTACT button + dropdown */}
-        <div ref={contactRef} style={{ position: "relative" }}>
-          <button
-            onClick={() => { setContactOpen(o => !o); setAboutOpen(false); }}
-            className="text-base md:text-lg font-semibold tracking-wide hover:text-gray-600 transition-colors cursor-pointer bg-transparent border-none outline-none"
-          >
-            CONTACT
-          </button>
+        {/* Left cluster: CONTACT + GLOSSARY */}
+        <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
 
-          {contactOpen && (
-            <div style={{
-              position: "absolute",
-              top: "calc(100% + 8px)",
-              left: 0,
-              background: "#fff",
-              border: "1px solid #e5e7eb",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
-              padding: "16px 24px",
-              minWidth: "220px",
-              zIndex: 9999,
-            }}>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "14px", color: "#374151" }}>
-                <a
-                  href="mailto:contact@cryptowala.com"
-                  style={{ display: "block", color: "#374151", textDecoration: "none" }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#000")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
-                >
-                  contact@cryptowala.com
-                </a>
-                <a
-                  href="tel:+919000022224"
-                  style={{ display: "block", color: "#374151", textDecoration: "none" }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#000")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
-                >
-                  +91 9000022224
-                </a>
+          {/* CONTACT button + dropdown */}
+          <div ref={contactRef} style={{ position: "relative" }}>
+            <button
+              onClick={() => { setContactOpen(o => !o); setAboutOpen(false); }}
+              className="text-base md:text-lg font-semibold tracking-wide hover:text-gray-600 transition-colors cursor-pointer bg-transparent border-none outline-none"
+            >
+              CONTACT
+            </button>
+
+            {contactOpen && (
+              <div style={{
+                position: "absolute",
+                top: "calc(100% + 8px)",
+                left: 0,
+                background: "#fff",
+                border: "1px solid #e5e7eb",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
+                padding: "16px 24px",
+                minWidth: "220px",
+                zIndex: 9999,
+              }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: "14px", color: "#374151" }}>
+                  <a
+                    href="mailto:contact@cryptowala.com"
+                    style={{ display: "block", color: "#374151", textDecoration: "none" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
+                  >
+                    contact@cryptowala.com
+                  </a>
+                  <a
+                    href="tel:+919000022224"
+                    style={{ display: "block", color: "#374151", textDecoration: "none" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "#374151")}
+                  >
+                    +91 9000022224
+                  </a>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
+
+          {/* GLOSSARY link */}
+          <a
+            href="/glossary/"
+            className="text-base md:text-lg font-semibold tracking-wide hover:text-gray-600 transition-colors"
+            style={{ textDecoration: "none" }}
+          >
+            GLOSSARY
+          </a>
+
         </div>
 
         {/* ABOUT button + dropdown */}

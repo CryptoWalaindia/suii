@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>Glossary Series 2: Wallets, Keys &amp; Self-Custody | CryptoWala</title>
+  <meta name="title" content="Glossary Series 2: Wallets, Keys &amp; Self-Custody | CryptoWala">
+  <meta name="description" content="Private keys, public keys, seed phrases, and how to securely control your Bitcoin. Part of the CryptoWala Bitcoin &amp; Crypto Glossary.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-2/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-2/">
+  <meta property="og:title" content="Glossary Series 2: Wallets, Keys &amp; Self-Custody | CryptoWala">
+  <meta property="og:description" content="Private keys, public keys, seed phrases, and how to securely control your Bitcoin.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "CryptoWala Glossary Series 2: Wallets, Keys & Self-Custody",
+  "description": "Private keys, public keys, seed phrases, and how to securely control your Bitcoin.",
+  "url": "https://www.cryptowala.ai/glossary/series-2/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CryptoWala",
+    "url": "https://www.cryptowala.ai"
+  },
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Private Key",
+      "description": "A private key is a secret digital key that proves you have the right to spend Bitcoin from\na wallet. It must never be shared. If someone gets your private key, they may be able to\nmove your Bitcoin.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#private-key"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Public Key",
+      "description": "A public key is a cryptographic key connected to a private key. It helps receive Bitcoin\nand verify digital signatures. Unlike a private key, a public key is not meant to be secret\nin the same way.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#public-key"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Seed Phrase",
+      "description": "A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.\nIf your wallet app, phone, or device is lost, the seed phrase can help restore access to\nthe wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#seed-phrase"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Recovery Phrase",
+      "description": "A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It is\nusually the same thing as a seed phrase. Anyone with access to the recovery phrase\nmay be able to restore the wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#recovery-phrase"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Self-Custody",
+      "description": "Self-custody means you control your own Bitcoin or crypto keys instead of relying on an\nexchange or company to hold them for you. It gives more control, but it also gives you\nmore responsibility.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#self-custody"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Custodial Wallet",
+      "description": "A custodial wallet is a wallet where a third party, such as a crypto exchange, controls\nthe private keys for you. You access your funds through an account, but the company\nmanages the keys.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#custodial-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Non-Custodial Wallet",
+      "description": "A non-custodial wallet is a wallet where you control your own private keys or seed\nphrase. This gives you direct control over your Bitcoin, but it also means you are\nresponsible for keeping your backup safe.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#non-custodial-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hot Wallet",
+      "description": "A hot wallet is a Bitcoin or crypto wallet connected to the internet. It is useful for quick\naccess and regular transactions, but it may carry more online security risk than cold\nstorage.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#hot-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cold Wallet",
+      "description": "A cold wallet is a Bitcoin or crypto wallet setup that keeps private keys offline or away\nfrom regular internet exposure. It is often used for long-term storage.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#cold-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hardware Wallet",
+      "description": "A hardware wallet is a physical device designed to protect private keys and sign Bitcoin\ntransactions. It helps keep keys away from regular internet-connected devices.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#hardware-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Passphrase",
+      "description": "A passphrase is an optional extra word, phrase, or password added to a seed phrase in\nsome wallets. It can create an additional layer of wallet protection, but losing it can also\nmake recovery impossible.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#passphrase"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Multisig Wallet",
+      "description": "A multisig wallet is a Bitcoin wallet that requires multiple keys to approve a transaction.\nInstead of one private key controlling the wallet, a multisig setup needs more than one\napproval.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#multisig-wallet"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 2: Wallets, Keys & Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/"
+    }
+  ]
+}</script>
+  <style>
+    .series-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .series-hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .series-hero .series-desc {
+      font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    /* Alphabet sidebar */
+    .alpha-sidebar {
+      position: sticky;
+      top: 24px;
+      align-self: flex-start;
+      padding-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .alpha-link {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.15s;
+      line-height: 1.8;
+      display: block;
+    }
+    .alpha-link.active-letter { color: #000; }
+    .alpha-link.active-letter:hover { color: #555; opacity: 1; }
+    .alpha-link.disabled { color: #eee; cursor: default; }
+
+    /* Terms area */
+    .terms-area { padding-top: 48px; padding-bottom: 80px; }
+
+    .letter-group { margin-bottom: 0; }
+    .letter-anchor {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #bbb;
+      border-top: 1px solid #e5e7eb;
+      padding: 32px 0 16px;
+      margin-bottom: 0;
+    }
+
+    .term-entry {
+      padding: 36px 0 40px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .term-entry:last-child { border-bottom: none; }
+    .term-name {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 24px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.75; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.65; }
+
+    .related-section .section-body { line-height: 2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    .back-link {
+      display: inline-block;
+      padding: 24px 80px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; border-top: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .back-link:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .series-hero { padding: 32px 24px 28px; }
+      .content-wrapper { grid-template-columns: 1fr; padding: 0 24px; }
+      .alpha-sidebar { flex-direction: row; flex-wrap: wrap; position: static; gap: 4px 8px; padding: 20px 0 0; }
+      .alpha-link { font-size: 12px; }
+      .terms-area { padding-top: 24px; }
+      .back-link { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="series-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; SERIES 2
+      </div>
+      <h1>GLOSSARY SERIES 2</h1>
+      <p class="series-desc">Wallets, Keys &amp; Self-Custody &nbsp;—&nbsp; 12 TERMS</p>
+    </div>
+
+    <div class="content-wrapper">
+      <aside class="alpha-sidebar" aria-label="Alphabetical index">
+        <span class="alpha-link disabled">A</span><span class="alpha-link disabled">B</span><a href="#c" class="alpha-link active-letter" id="alpha-C">C</a><span class="alpha-link disabled">D</span><span class="alpha-link disabled">E</span><span class="alpha-link disabled">F</span><span class="alpha-link disabled">G</span><a href="#h" class="alpha-link active-letter" id="alpha-H">H</a><span class="alpha-link disabled">I</span><span class="alpha-link disabled">J</span><span class="alpha-link disabled">K</span><span class="alpha-link disabled">L</span><a href="#m" class="alpha-link active-letter" id="alpha-M">M</a><a href="#n" class="alpha-link active-letter" id="alpha-N">N</a><span class="alpha-link disabled">O</span><a href="#p" class="alpha-link active-letter" id="alpha-P">P</a><span class="alpha-link disabled">Q</span><a href="#r" class="alpha-link active-letter" id="alpha-R">R</a><a href="#s" class="alpha-link active-letter" id="alpha-S">S</a><span class="alpha-link disabled">T</span><span class="alpha-link disabled">U</span><span class="alpha-link disabled">V</span><span class="alpha-link disabled">W</span><span class="alpha-link disabled">X</span><span class="alpha-link disabled">Y</span><span class="alpha-link disabled">Z</span>
+      </aside>
+      <div class="terms-area">
+        <div class="letter-group" id="c"><div class="letter-anchor">C</div>
+        <div class="term-entry" id="cold-wallet">
+          <h2 class="term-name">Cold Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A cold wallet is a Bitcoin or crypto wallet setup that keeps private keys offline or away<br>from regular internet exposure. It is often used for long-term storage.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A cold wallet is a wallet designed to reduce online exposure by keeping private keys<br>offline or in a more isolated environment.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A cold wallet is like a secure locker.<br>You may not open it every day.<br>It may take more effort to access.<br>But it is designed for safer storage.<br>People often use cold wallets when they want to hold Bitcoin for the long term.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Cold wallets matter because online devices can face risks.<br>Phones can get malware.<br>Laptops can be hacked.<br>Browser extensions can be fake.<br>Users can click phishing links.<br>Cold wallets reduce some of these risks by keeping signing keys offline or more<br>protected.<br>This does not make them magic. Users still need safe backups and careful habits.<br>Cold Wallet vs Hot Wallet<br>Hot wallet:<br>Connected to the internet<br>Fast and convenient<br>Useful for active use<br>Cold wallet:<br>Offline or more isolated<br>Less convenient<br>Useful for long-term storage<br>Think of it like this:<br>Hot wallet = daily wallet<br>Cold wallet = long-term vault</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha uses a mobile wallet to learn Bitcoin.<br>Later, she decides to store long-term Bitcoin using a hardware wallet kept offline. She<br>writes down the seed phrase and stores it safely.<br>That setup is a form of cold storage.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think a cold wallet removes all risk.<br>It does not.<br>A cold wallet can reduce online attack risk. But users can still make mistakes, such as<br>losing the seed phrase, buying a tampered device, or entering the phrase into a fake<br>website.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>A cold wallet is only as safe as the full setup.<br>Protect the seed phrase.<br>Buy devices from trusted sources.<br>Check addresses carefully.<br>Do not rush setup.<br>Learn before storing large amounts.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a hardware wallet a cold wallet?</div><div class="faq-a">Often, yes. Hardware wallets are commonly used as cold wallets because they keep
+private keys more isolated.
+Is cold storage only for experts?
+No, beginners can learn it, but they should take time to understand the process.
+Can a cold wallet be hacked?
+Cold wallets reduce online exposure, but poor setup or user mistakes can still create
+risk.
+Do cold wallets store Bitcoin inside the device?
+No. The Bitcoin is recorded on the blockchain. The wallet protects the keys.
+Is cold wallet better than hot wallet?
+For long-term storage, many users prefer cold wallets. For quick use, hot wallets are
+more convenient.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#hot-wallet" class="related-link">Hot Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a></div></div>
+        </div>
+        <div class="term-entry" id="custodial-wallet">
+          <h2 class="term-name">Custodial Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A custodial wallet is a wallet where a third party, such as a crypto exchange, controls<br>the private keys for you. You access your funds through an account, but the company<br>manages the keys.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A custodial wallet is a wallet service where another company holds and manages the<br>private keys on behalf of the user.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A custodial wallet is like keeping money in someone else’s locker.<br>You may have an account login.<br>You may see a balance.<br>You may be able to buy or sell.<br>But the private keys are controlled by the company.<br>This is common on crypto exchanges.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Custodial wallets matter because many beginners first experience Bitcoin through<br>exchanges.<br>They are often easier to use. Users may not need to manage seed phrases<br>immediately. Password resets and account recovery may be available.<br>But there is a trade-off.<br>If the company controls the private keys, you are trusting that company to secure and<br>release your funds properly.<br>Custodial Wallet vs Non-Custodial Wallet<br>Custodial wallet:<br>The company controls the keys.<br>The user controls an account.<br>Recovery may be easier.<br>Trust in the company is required.<br>Non-custodial wallet:<br>The user controls the keys.<br>The user controls the backup.<br>Recovery depends on the seed phrase.<br>Personal responsibility is higher.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul buys Bitcoin on an exchange.<br>The Bitcoin appears in his exchange account. Rahul can log in and see his balance. But<br>the exchange controls the wallet keys behind the scenes.<br>This is a custodial setup.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think an exchange balance is the same as holding Bitcoin in their own<br>wallet.<br>It is different.<br>On an exchange, you usually have a claim inside the exchange system. In self-custody,<br>you control the keys directly.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Custodial wallets can be convenient, but users should understand what they are<br>trusting.<br>They are trusting the company’s security, operations, policies, and availability.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is an exchange wallet custodial?</div><div class="faq-a">Usually yes. Most exchange wallets are custodial.
+Do I have a seed phrase with a custodial wallet?
+Usually no. The company manages the keys.
+Is a custodial wallet easier for beginners?
+It can be easier to start with, but users should still understand the trust involved.
+Can a custodial wallet freeze withdrawals?
+Depending on the platform and rules, a custodial service may restrict or delay
+withdrawals.
+Is custodial always bad?
+Not always. It is a trade-off between convenience and control.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#crypto-exchange" class="related-link">Crypto Exchange</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hot-wallet" class="related-link">Hot Wallet</a></div></div>
+        </div></div><div class="letter-group" id="h"><div class="letter-anchor">H</div>
+        <div class="term-entry" id="hardware-wallet">
+          <h2 class="term-name">Hardware Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A hardware wallet is a physical device designed to protect private keys and sign Bitcoin<br>transactions. It helps keep keys away from regular internet-connected devices.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A hardware wallet is a dedicated device used to store private keys securely and sign<br>transactions without exposing those keys to a normal computer or phone.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A hardware wallet is like a special security device for Bitcoin.<br>It is not just a USB drive.<br>It is not where Bitcoin “sits.”<br>It is a device that protects keys and approves transactions.<br>Your Bitcoin remains recorded on the blockchain. The hardware wallet helps control<br>access.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Hardware wallets matter because they reduce risk from infected computers, fake<br>websites, and online attacks.<br>When used properly, a hardware wallet can help users sign transactions while keeping<br>private keys more protected.<br>Bitcoin.org’s wallet listings describe hardware and signing devices as tools that can<br>securely create private keys and sign Bitcoin transactions.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A hardware wallet creates or stores private keys inside the device.<br>When you want to send Bitcoin, the transaction details are shown for approval. The<br>device signs the transaction. The private key does not need to leave the device.<br>This gives an extra layer of protection.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul wants to store Bitcoin for the long term.<br>He buys a hardware wallet from an official source. During setup, it gives him a seed<br>phrase. He writes the phrase down offline.<br>Later, when he sends Bitcoin, he must confirm the transaction on the hardware wallet<br>device.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think Bitcoin is stored inside the hardware wallet.<br>That is not accurate.<br>The hardware wallet protects the private keys. The Bitcoin itself is recorded on the<br>blockchain.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Buy from official or trusted sources.<br>Check packaging carefully.<br>Write the seed phrase offline.<br>Never enter the seed phrase on a random website.<br>Confirm addresses on the device screen.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Does a hardware wallet store Bitcoin?</div><div class="faq-a">No. It stores or protects private keys. Bitcoin is recorded on the blockchain.
+What happens if I lose my hardware wallet?
+If you have your seed phrase safely backed up, you may be able to restore access
+using another compatible wallet.
+Can someone use my hardware wallet without the PIN?
+The PIN helps protect the device, but the seed phrase is still the most important backup.
+Is a hardware wallet needed for beginners?
+Not always at the start. It becomes more useful when users want stronger self-custody
+for larger or long-term holdings.
+Is a hardware wallet the same as cold storage?
+A hardware wallet is commonly used for cold storage, but the full setup matters.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#multisig-wallet" class="related-link">Multisig Wallet</a></div></div>
+        </div>
+        <div class="term-entry" id="hot-wallet">
+          <h2 class="term-name">Hot Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A hot wallet is a Bitcoin or crypto wallet connected to the internet. It is useful for quick<br>access and regular transactions, but it may carry more online security risk than cold<br>storage.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A hot wallet is a wallet that runs on an internet-connected device, such as a phone,<br>laptop, browser, or online platform.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A hot wallet is like the cash in your pocket.<br>It is easy to use.<br>It is convenient.<br>It is available quickly.<br>But you may not want to keep all your savings in your pocket.<br>In the same way, many people use hot wallets for small or active amounts and cold<br>wallets for longer-term storage.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Hot wallets matter because they make Bitcoin easier to use.<br>They are helpful for:<br>Learning<br>Small transactions<br>Quick payments<br>Regular wallet access<br>Testing how Bitcoin works<br>But because they are connected to the internet, users must be careful with device<br>security, fake apps, phishing links, and malware.<br>Hot Wallet vs Cold Wallet<br>Hot wallet:<br>Connected to the internet<br>Convenient<br>Good for smaller or regular use<br>More exposed to online threats<br>Cold wallet:<br>Offline or more isolated<br>Less convenient<br>Often used for long-term storage<br>Usually considered more secure when used properly</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul installs a Bitcoin wallet app on his phone.<br>He uses it to receive small amounts and learn how transactions work. Because the<br>phone is connected to the internet, this is a hot wallet.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think hot wallets are bad.<br>That is too simple.<br>Hot wallets are useful. The key is to understand what they are best for. They are<br>convenient, but not always ideal for storing large long-term holdings.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Use strong device security.<br>Avoid unknown links.<br>Download wallet apps only from official sources.<br>Keep backups safe.<br>Do not store large amounts until you understand the risks.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a mobile wallet a hot wallet?</div><div class="faq-a">Yes, if it is connected to the internet.
+Is an exchange wallet a hot wallet?
+It can be, but exchange wallet systems may include both hot and cold storage behind
+the scenes. From the user’s side, it is usually custodial.
+Are hot wallets unsafe?
+Not always. They are convenient, but users should understand online risks.
+Should I keep all my Bitcoin in a hot wallet?
+Many users avoid keeping large long-term holdings in hot wallets.
+What is the opposite of a hot wallet?
+A cold wallet.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#custodial-wallet" class="related-link">Custodial Wallet</a></div></div>
+        </div></div><div class="letter-group" id="m"><div class="letter-anchor">M</div>
+        <div class="term-entry" id="multisig-wallet">
+          <h2 class="term-name">Multisig Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A multisig wallet is a Bitcoin wallet that requires multiple keys to approve a transaction.<br>Instead of one private key controlling the wallet, a multisig setup needs more than one<br>approval.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A multisig wallet, short for multi-signature wallet, is a wallet that requires a set number<br>of signatures from multiple private keys before Bitcoin can be spent.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A multisig wallet is like a locker that needs two or more keys to open.<br>One person alone may not be able to move the Bitcoin.<br>For example, a wallet may be set up as 2-of-3.<br>That means there are 3 keys in total, and any 2 are needed to approve a transaction.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Multisig wallets matter because they can reduce single-point-of-failure risk.<br>In a normal single-key wallet, one private key or seed phrase may control everything.<br>In a multisig wallet, multiple keys are involved. This can help families, businesses, and<br>serious long-term holders build stronger controls.<br>But multisig is more complex. It should be used only after learning the basics.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A multisig wallet has multiple keys.<br>The wallet rules decide how many signatures are needed.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Three business partners hold Bitcoin for their company.<br>They create a 2-of-3 multisig wallet.<br>One key is held by Partner A.<br>One key is held by Partner B.<br>One key is held by Partner C.<br>To move Bitcoin, at least two partners must approve the transaction.<br>This reduces the risk of one person acting alone.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think multisig is automatically safer.<br>It can be safer, but only if set up properly.<br>Bad backups, unclear instructions, or lost keys can make multisig difficult. Good security<br>should be understandable, not just complex.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Multisig is powerful, but it is not the first step for most beginners.<br>Learn simple wallets first.<br>Understand seed phrases.<br>Understand hardware wallets.<br>Then study multisig carefully.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does multisig mean?</div><div class="faq-a">Multisig means multiple signatures are required to approve a transaction.
+What is a 2-of-3 wallet?
+It means there are three keys, and any two are needed to spend Bitcoin.
+Is multisig safer than a normal wallet?
+It can be safer when designed well, but it is more complex.
+Who should use multisig?
+It may be useful for businesses, families, institutions, or advanced users holding larger
+amounts.
+Can I lose Bitcoin in a multisig wallet?
+Yes. If keys and backups are not managed properly, access can still be lost.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#add-this-safety-box-on-all-12-pages" class="related-link">Add this safety box on all 12 pages:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cryptowala-safety-note" class="related-link">CryptoWala Safety Note:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#never-share-your-private-key-seed-phrase-or-recovery-phrase-with-anyone-no" class="related-link">Never share your private key, seed phrase, or recovery phrase with anyone. No</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#genuine-wallet-company-exchange-or-support-team-needs-these-details-to-help" class="related-link">genuine wallet company, exchange, or support team needs these details to help</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#you-learn-slowly-test-with-small-amounts-and-protect-your-backups-carefully" class="related-link">you. Learn slowly, test with small amounts, and protect your backups carefully.</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossaryprivate-key" class="related-link">/glossary/private-key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#public-key" class="related-link">Public Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossarypublic-key" class="related-link">/glossary/public-key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-address" class="related-link">Bitcoin Address</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#digital-signature" class="related-link">Digital Signature</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossaryseed-phrase" class="related-link">/glossary/seed-phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossaryrecovery-phrase" class="related-link">/glossary/recovery-phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossaryself-custody" class="related-link">/glossary/self-custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#custodial-wallet" class="related-link">Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossarycustodial-wallet" class="related-link">/glossary/custodial-wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#crypto-exchange" class="related-link">Crypto Exchange</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossarynon-custodial-wallet" class="related-link">/glossary/non-custodial-wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hot-wallet" class="related-link">Hot Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossaryhot-wallet" class="related-link">/glossary/hot-wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossarycold-wallet" class="related-link">/glossary/cold-wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hot-wallet" class="related-link">Hot Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossaryhardware-wallet" class="related-link">/glossary/hardware-wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#multisig-wallet" class="related-link">Multisig Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossarypassphrase" class="related-link">/glossary/passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#multisig-wallet" class="related-link">Multisig Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#glossarymultisig-wallet" class="related-link">/glossary/multisig-wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a></div></div>
+        </div></div><div class="letter-group" id="n"><div class="letter-anchor">N</div>
+        <div class="term-entry" id="non-custodial-wallet">
+          <h2 class="term-name">Non-Custodial Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A non-custodial wallet is a wallet where you control your own private keys or seed<br>phrase. This gives you direct control over your Bitcoin, but it also means you are<br>responsible for keeping your backup safe.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A non-custodial wallet is a Bitcoin or crypto wallet where the user controls the private<br>keys instead of a third-party company.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A non-custodial wallet means:<br>Your wallet.<br>Your keys.<br>Your responsibility.<br>The wallet provider may give you software. But it does not control your Bitcoin for you.<br>This is different from an exchange wallet.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Non-custodial wallets matter because they support the idea of self-custody.<br>They allow users to hold Bitcoin without depending completely on an exchange or<br>custodian.<br>But this control is meaningful only when users understand wallet safety. A seed phrase<br>must be backed up carefully and never shared.<br>Bitcoin.org recommends taking care to secure wallets, including backups and safe<br>practices.<br>Non-Custodial vs Custodial<br>A custodial wallet means a company controls the keys.<br>A non-custodial wallet means the user controls the keys.<br>Simple comparison:<br>Custodial = easier recovery, more trust in company<br>Non-custodial = more control, more personal responsibility</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha downloads a Bitcoin wallet that gives her a seed phrase.<br>She writes the seed phrase down and stores it safely. The wallet provider cannot move<br>her Bitcoin without that phrase or private keys.<br>This is a non-custodial wallet.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think non-custodial wallets are automatically safe.<br>They are not automatically safe.<br>They give control to the user. But if the user shares the seed phrase, downloads fake<br>wallet software, or loses the backup, there can be serious problems.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Only download wallets from official sources.<br>Write down your seed phrase offline.<br>Never share your seed phrase.<br>Send a small test transaction when learning.<br>Take your time.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a non-custodial wallet the same as self-custody?</div><div class="faq-a">Yes, a non-custodial wallet is commonly used for self-custody.
+Does the wallet company control my Bitcoin?
+In a true non-custodial wallet, the company does not control your private keys.
+What happens if I lose my seed phrase?
+If you lose your seed phrase and lose access to the wallet, recovery may not be
+possible.
+Is a hardware wallet non-custodial?
+Most hardware wallets are designed for non-custodial use.
+Is non-custodial better than custodial?
+It depends on the user’s knowledge and needs. Non-custodial gives more control, but
+also more responsibility.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#custodial-wallet" class="related-link">Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a></div></div>
+        </div></div><div class="letter-group" id="p"><div class="letter-anchor">P</div>
+        <div class="term-entry" id="passphrase">
+          <h2 class="term-name">Passphrase</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A passphrase is an optional extra word, phrase, or password added to a seed phrase in<br>some wallets. It can create an additional layer of wallet protection, but losing it can also<br>make recovery impossible.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A passphrase is an extra secret used along with a seed phrase to access a wallet. It is<br>sometimes called the “25th word,” although it does not have to be one word.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A passphrase is like adding a second lock to your wallet backup.<br>Your seed phrase is one lock.<br>Your passphrase is another lock.<br>Both may be needed to restore the same wallet.<br>This can improve security, but it also increases responsibility.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Passphrases matter because they can protect a wallet even if a seed phrase is<br>exposed.<br>But they are advanced.<br>If you forget the passphrase, the wallet you created with it may not be recoverable. This<br>is why beginners should not use passphrases casually.<br>Passphrase vs Seed Phrase<br>A seed phrase is the main wallet backup.<br>A passphrase is an optional extra secret.<br>Seed phrase = main recovery backup<br>Passphrase = extra protection layer<br>If you use a passphrase, you must protect both.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha creates a hardware wallet with a seed phrase.<br>Then she adds a passphrase.<br>Later, she tries to restore the wallet. She enters the seed phrase but forgets the<br>passphrase. The wallet she wants does not appear.<br>This is why passphrases must be handled carefully.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think a passphrase is the same as a wallet app password.<br>It is not.<br>A wallet app password may unlock an app. A passphrase can change which wallet is<br>created from a seed phrase.<br>That makes it much more sensitive.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Do not use a passphrase unless you understand it clearly.<br>If you use one, back it up carefully and privately. Losing it can mean losing access.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a passphrase required?</div><div class="faq-a">No. It is optional in many wallets.
+Is a passphrase the same as a password?
+Not exactly. A passphrase can be part of wallet recovery, while a password may only
+unlock an app.
+What happens if I forget my passphrase?
+You may lose access to the wallet created with that passphrase.
+Is a passphrase good for security?
+It can improve security when used correctly, but it also increases complexity.
+Should beginners use a passphrase?
+Beginners should first understand seed phrases, backups, and wallet recovery before
+using a passphrase.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#multisig-wallet" class="related-link">Multisig Wallet</a></div></div>
+        </div>
+        <div class="term-entry" id="private-key">
+          <h2 class="term-name">Private Key</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A private key is a secret digital key that proves you have the right to spend Bitcoin from<br>a wallet. It must never be shared. If someone gets your private key, they may be able to<br>move your Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A private key is a secret piece of information used to sign Bitcoin transactions. It proves<br>that the person creating the transaction has the right to spend the Bitcoin linked to that<br>key.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Think of a private key like the key to a locker.<br>The locker may be visible to others.<br>People may know where it is.<br>But only the person with the key can open it.<br>In Bitcoin, the private key is what gives control.<br>This is why the word “private” matters. It should stay with you only.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Private keys matter because Bitcoin does not work like a normal bank account.<br>There is usually no “forgot password” button.<br>There is no bank manager who can reverse a mistaken transfer.<br>There is no customer support team that can recover a private key for you.<br>If you control the private key, you control the Bitcoin.<br>If someone else controls the private key, they control the Bitcoin.<br>Bitcoin.org explains that wallets use a private key or seed to sign transactions and<br>prove that they came from the owner of the wallet.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>When you send Bitcoin, your wallet creates a transaction.<br>The private key signs that transaction. This signature proves that the transaction is<br>valid.<br>The private key itself is not shared with the network. Instead, the network checks the<br>signature.<br>A simple way to understand it:<br>Private key = secret control<br>Signature = proof without revealing the secret</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha has Bitcoin in a self-custody wallet.<br>When she sends Bitcoin to Rahul, her wallet uses her private key to sign the<br>transaction. The Bitcoin network checks the signature and confirms that Asha has the<br>right to spend that Bitcoin.<br>Asha does not need to show her private key to anyone.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think a private key is the same as a wallet password.<br>It is not.<br>A wallet password may only unlock the app on your phone or laptop. A private key<br>controls access to Bitcoin itself.<br>Losing an app password may be fixable in some cases. Losing a private key or seed<br>phrase can be much more serious.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Never share your private key.<br>Do not send it on WhatsApp.<br>Do not save it in email.<br>Do not type it into unknown websites.<br>Do not share it with anyone claiming to be support.<br>No genuine support team needs your private key.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does a private key do?</div><div class="faq-a">A private key signs Bitcoin transactions and proves that you have the right to spend
+Bitcoin.
+Can someone steal Bitcoin with a private key?
+Yes. If someone gets your private key, they may be able to move your Bitcoin.
+Is a private key the same as a seed phrase?
+No. A seed phrase usually helps generate or recover private keys. A private key
+controls specific Bitcoin.
+Should I share my private key?
+No. A private key should always remain secret.
+Where is my private key stored?
+It depends on the wallet. Some wallets manage private keys for you. Hardware wallets
+are designed to keep private keys more isolated.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#public-key" class="related-link">Public Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a></div></div>
+        </div>
+        <div class="term-entry" id="public-key">
+          <h2 class="term-name">Public Key</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A public key is a cryptographic key connected to a private key. It helps receive Bitcoin<br>and verify digital signatures. Unlike a private key, a public key is not meant to be secret<br>in the same way.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A public key is a key created from a private key. In Bitcoin, it helps verify that a<br>transaction was signed by the correct private key, without revealing the private key<br>itself.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A public key is like a lock that others can see.<br>The private key is the secret key that opens or controls it.<br>The public key can help others verify that the right private key was used.<br>This is part of how Bitcoin proves ownership without needing a bank.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Public keys matter because they help Bitcoin work securely.<br>They allow the network to verify transactions without exposing private keys. This is<br>important because private keys must stay secret.<br>Bitcoin uses public-key cryptography. That simply means there are two connected keys:<br>One key can be shared more openly.<br>One key must stay private.<br>Public Key vs Private Key<br>A private key must stay secret.<br>A public key can be used for verification.<br>A simple comparison:<br>Private key = proves control<br>Public key = helps verify proof<br>You should never share your private key. A public key is different, but beginners should<br>still rely on their wallet to manage these details safely.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>When a wallet creates a private key, it can also create a public key.<br>When the wallet signs a Bitcoin transaction, the Bitcoin network can use the public key<br>to check whether the signature is valid.<br>This allows the network to confirm that the transaction came from the rightful owner.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul signs a Bitcoin transaction using his private key.<br>The network does not need to see Rahul’s private key. It can use the public key to<br>check whether the signature is correct.<br>This keeps the private key hidden while still allowing the transaction to be verified.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think a public key and a Bitcoin address are the same thing.<br>They are related, but not exactly the same.<br>A Bitcoin address is usually created from public-key information. It is the address people<br>use to send Bitcoin to you.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a public key safe to share?</div><div class="faq-a">A public key is not secret like a private key, but users usually share Bitcoin addresses
+rather than raw public keys.
+Is a public key the same as a Bitcoin address?
+No. A Bitcoin address is related to a public key, but they are not exactly the same.
+Can someone steal Bitcoin with only my public key?
+No. A private key is needed to spend Bitcoin.
+Why does Bitcoin use public keys?
+Bitcoin uses public keys to verify transactions without exposing private keys.
+What should beginners remember?
+Remember this: private key stays secret; public key helps verification.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-address" class="related-link">Bitcoin Address</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#digital-signature" class="related-link">Digital Signature</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a></div></div>
+        </div></div><div class="letter-group" id="r"><div class="letter-anchor">R</div>
+        <div class="term-entry" id="recovery-phrase">
+          <h2 class="term-name">Recovery Phrase</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It is<br>usually the same thing as a seed phrase. Anyone with access to the recovery phrase<br>may be able to restore the wallet.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A recovery phrase is a wallet backup made of words. It helps restore access to a wallet<br>if the device, app, or hardware wallet is lost, damaged, or replaced.<br>Coinbase says a recovery phrase is also known as a seed phrase, and warns users<br>never to share it with anyone.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A recovery phrase is your wallet’s backup key.<br>If your wallet is the door, the recovery phrase is the backup way to open that door again.<br>It is useful because devices can fail.<br>But it is sensitive because anyone who has it may be able to recover the wallet.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Recovery phrases matter because self-custody gives users direct control.<br>That control is powerful. But it also means the user must protect the backup.<br>In a normal banking app, you can often reset your password through the bank.<br>In a self-custody wallet, the recovery phrase may be the only way to restore access.<br>Recovery Phrase vs Seed Phrase<br>For most users, recovery phrase and seed phrase mean the same thing.<br>Wallet companies may use different names:<br>Seed phrase<br>Recovery phrase<br>Secret recovery phrase<br>Backup phrase<br>Mnemonic phrase<br>The purpose is usually the same: wallet recovery.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul buys a new phone.<br>His old phone had his Bitcoin wallet. Because he wrote down his recovery phrase<br>safely, he can restore the wallet on the new phone.<br>Without the phrase, recovery could be difficult or impossible.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think customer support can recover a recovery phrase.<br>In self-custody wallets, the company usually does not have access to your recovery<br>phrase. Coinbase states that it cannot access the recovery phrase or help move funds<br>without it.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>No real support person should ask for your recovery phrase.<br>If someone asks for it, treat it as a serious warning sign.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a recovery phrase the same as a seed phrase?</div><div class="faq-a">Yes, in most wallet contexts they mean the same thing.
+Why do wallets use recovery phrases?
+They help users restore wallet access if a device is lost or damaged.
+Can I change my recovery phrase?
+Usually, you create a new wallet with a new phrase and move funds to the new wallet.
+What happens if I lose my recovery phrase?
+If you lose access to your wallet and do not have the recovery phrase, recovery may not
+be possible.
+Should I share my recovery phrase with support?
+No. Genuine support teams should not need your recovery phrase.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a></div></div>
+        </div></div><div class="letter-group" id="s"><div class="letter-anchor">S</div>
+        <div class="term-entry" id="seed-phrase">
+          <h2 class="term-name">Seed Phrase</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.<br>If your wallet app, phone, or device is lost, the seed phrase can help restore access to<br>the wallet.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A seed phrase is a set of words generated by a wallet that can be used to recover<br>access to the wallet. It is sometimes also called a recovery phrase or backup phrase.<br>Coinbase explains that a recovery phrase is also known as a seed phrase and that only<br>the user has access to it in a self-custody wallet.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A seed phrase is like the master backup of your wallet.<br>Your phone can break.<br>Your wallet app can be deleted.<br>Your device can be lost.<br>But if your seed phrase is safe, you may be able to restore your wallet on another<br>device.<br>This is why it is powerful.<br>It is also why it must be protected carefully.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>A seed phrase matters because it can restore wallet access.<br>That is useful when you lose a phone or switch devices. But it also creates<br>responsibility.<br>If someone else gets your seed phrase, they may be able to access your wallet.<br>Coinbase clearly warns users never to share their recovery phrase and says Coinbase<br>will never ask for it.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>When you create a wallet, the wallet generates a seed phrase.<br>This phrase is used to create the keys that control your wallet. You do not need to<br>understand all the mathematics behind it. But you do need to understand the safety<br>rule:<br>Your seed phrase should stay private and offline.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha installs a Bitcoin wallet on her phone.<br>During setup, the wallet shows her 12 or 24 words. She writes them down and stores<br>them safely.<br>Later, her phone is damaged.<br>Asha buys a new phone, installs the wallet app again, and enters her seed phrase. Her<br>wallet access is restored.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think the seed phrase is just a password.<br>It is not just a password.<br>A normal password may protect an app. A seed phrase can restore access to the wallet<br>itself. That makes it much more sensitive.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Do not take screenshots of your seed phrase.<br>Do not store it in email.<br>Do not save it in Google Drive or iCloud without understanding the risks.<br>Do not send it to anyone.<br>Do not enter it on random websites.<br>Keep it offline and private.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a seed phrase the same as a recovery phrase?</div><div class="faq-a">Yes. In most wallet contexts, seed phrase and recovery phrase mean the same thing.
+How many words are in a seed phrase?
+Many wallets use 12 or 24 words, but this can vary by wallet.
+Can I recover my wallet without a seed phrase?
+Usually, if you are using self-custody and lose the seed phrase, recovery may not be
+possible.
+Can someone steal my Bitcoin with my seed phrase?
+Yes. If someone gets your seed phrase, they may be able to restore your wallet and
+move your Bitcoin.
+Should I store my seed phrase online?
+For most beginners, offline storage is safer because online storage can be hacked or
+leaked.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#passphrase" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a></div></div>
+        </div>
+        <div class="term-entry" id="self-custody">
+          <h2 class="term-name">Self-Custody</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Self-custody means you control your own Bitcoin or crypto keys instead of relying on an<br>exchange or company to hold them for you. It gives more control, but it also gives you<br>more responsibility.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Self-custody is the practice of holding and managing your own private keys or seed<br>phrase. In Bitcoin, this means you control access to your funds directly.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Self-custody means:<br>You hold the keys.<br>You control the wallet.<br>You are responsible for the backup.<br>It is like keeping cash in your own safe instead of leaving it with someone else.<br>The safe gives you control.<br>But you must protect the key.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Self-custody matters because Bitcoin was designed to allow people to hold and transfer<br>value without depending completely on intermediaries.<br>With self-custody, you do not need to ask an exchange for permission to move your<br>Bitcoin.<br>But self-custody is not something to treat casually. You must learn how wallets, seed<br>phrases, private keys, and backups work.<br>Coinbase describes its self-custody wallet as giving users full control of private keys,<br>while also making the recovery phrase essential for access.<br>Self-Custody vs Custody<br>In a custodial wallet, a company holds the keys for you.<br>In self-custody, you hold the keys yourself.<br>Custodial wallet = company controls keys<br>Self-custody wallet = user controls keys<br>Neither should be understood blindly. Beginners should understand both models before<br>choosing.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha keeps Bitcoin on an exchange.<br>The exchange controls the keys. Asha logs in with an account.<br>Later, Asha moves Bitcoin to a non-custodial wallet. Now she controls the seed phrase.<br>She has more direct control, but she must protect the backup herself.<br>That is self-custody.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think self-custody means “no risk.”<br>That is not true.<br>Self-custody removes some risks, like depending completely on an exchange. But it<br>adds personal responsibility, such as protecting the seed phrase and avoiding scams.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Start small when learning.<br>Understand the wallet.<br>Write down the seed phrase.<br>Practice safe backups.<br>Never share secret information.<br>Do not rush.<br>Self-custody is best learned calmly.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Does self-custody mean I own my Bitcoin?</div><div class="faq-a">Self-custody means you control the keys needed to spend your Bitcoin. In Bitcoin, key
+control is very important.
+Is self-custody safe?
+It can be safe when done properly, but mistakes can be costly. Education matters.
+Is an exchange wallet self-custody?
+Usually no. Most exchange wallets are custodial because the exchange controls the
+keys.
+What is the biggest responsibility in self-custody?
+Protecting your seed phrase or private keys.
+Should beginners use self-custody?
+Beginners can learn self-custody, but they should take time to understand backups,
+wallet safety, and transaction basics first.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#recovery-phrase" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#non-custodial-wallet" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#custodial-wallet" class="related-link">Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/#cold-wallet" class="related-link">Cold Wallet</a></div></div>
+        </div></div>
+      </div>
+    </div>
+
+    <a href="/glossary/" class="back-link">← BACK TO GLOSSARY</a>
+  </main>
+
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -7,7 +7,21 @@ CryptoWala application.
 React, Vite, Tailwind CSS.
 
 ## Recent Changes
-- 2026-04-23
+- 2026-06-08
+  - Summary: Added Glossary section — 8 static HTML pages with 68 crypto terms
+  - Details:
+    - Extracted text content from 7 Glossary PDF files (public/glossary/*.pdf) using pdfplumber
+    - Generated `public/glossary/index.html` — hub page with 7 series cards (01-07), hover invert effect, Schema.org DefinedTermSet JSON-LD
+    - Generated `public/glossary/series-1/` through `series-7/index.html` — each with: A-Z sticky sidebar, breadcrumb nav, per-term sections (Quick Answer, Definition, Simple Meaning, Why It Matters, How It Works, Example, Misunderstanding, Safety Note, FAQs, Related Terms), Schema.org DefinedTerm JSON-LD per term, BreadcrumbList schema
+    - All pages: Inter font (Google), pure black/white editorial aesthetic, responsive grid, canonical URLs, OG tags
+    - Modified `src/App.tsx` header: added GLOSSARY link (plain anchor to /glossary/) immediately right of CONTACT in a shared left flex container
+    - Modified `vite.config.ts`: added staticGlossaryPlugin() middleware to serve /glossary/* from public/ HTML files before SPA fallback
+    - Renamed public/Glossary → public/glossary (via copy-delete) for Linux case-sensitivity compatibility
+    - Total: 68 terms across 7 series, fully crawlable by AI engines (ChatGPT, Claude, Gemini, Perplexity) and indexable by Google
+  - Reason: User requested a Glossary section for AI crawlability, SEO discoverability, and content authority for CryptoWala
+  - Files Affected: `src/App.tsx`, `vite.config.ts`, `public/glossary/index.html`, `public/glossary/series-1/index.html` through `series-7/index.html`
+
+
   - Summary: Updated contact email address site-wide
   - Details: Replaced all instances of `info@cryptowala.ai` with `contact@cryptowala.com` across 2 files — the visible contact dropdown link (both `href` and display text) in `App.tsx`, and the `email` field in both JSON-LD structured data schemas (Organization and FinancialService) in `index.html`.
   - Reason: User requested the contact email be changed from `info@cryptowala.ai` to `contact@cryptowala.com`.

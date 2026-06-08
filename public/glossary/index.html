@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>Bitcoin &amp; Crypto Glossary | CryptoWala</title>
+  <meta name="title" content="Bitcoin & Crypto Glossary | CryptoWala">
+  <meta name="description" content="A comprehensive reference of Bitcoin and cryptocurrency terminology in plain English, curated by CryptoWala India. 7 series covering Bitcoin basics, wallets, mining, trading, DeFi, regulation, and advanced concepts.">
+  <meta name="keywords" content="bitcoin glossary, crypto glossary, bitcoin terms India, cryptocurrency definitions, what is bitcoin, what is blockchain, crypto terms for beginners, CryptoWala glossary">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/">
+  <meta property="og:title" content="Bitcoin & Crypto Glossary | CryptoWala">
+  <meta property="og:description" content="A comprehensive reference of Bitcoin and cryptocurrency terminology curated by CryptoWala India.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "CryptoWala Bitcoin & Crypto Glossary",
+  "description": "A comprehensive reference of Bitcoin and cryptocurrency terminology, curated by CryptoWala India.",
+  "url": "https://www.cryptowala.ai/glossary/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CryptoWala",
+    "url": "https://www.cryptowala.ai"
+  },
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin",
+      "description": "Bitcoin is a digital form of money that works without a central bank, government, or payment\ncompany controlling it. It allows people to send value directly to each other through a global\ncomputer net",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Blockchain",
+      "description": "A blockchain is a shared digital record that stores information in groups called blocks. These\nblocks are connected in order, creating a chain of records. In Bitcoin, the blockchain keeps track\nof Bit",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#blockchain"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Satoshi",
+      "description": "A satoshi is the smallest unit of Bitcoin. One Bitcoin is equal to 100,000,000 satoshis. This\nsmaller unit makes it easier to measure and use tiny amounts of Bitcoin.",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#satoshi"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Satoshi Nakamoto",
+      "description": "Satoshi Nakamoto is the name used by the person or group that created Bitcoin. Satoshi\npublished the Bitcoin whitepaper in 2008 and released the first Bitcoin software in 2009. The\nreal identity of Sa",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#satoshi-nakamoto"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Whitepaper",
+      "description": "The Bitcoin whitepaper is the original document that introduced Bitcoin. It was published in 2008\nby Satoshi Nakamoto and explained how a peer-to-peer electronic cash system could work\nwithout a centr",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-whitepaper"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Block",
+      "description": "A block is a group of Bitcoin transactions that gets added to the Bitcoin blockchain. Each block\ncontains transaction data and is connected to the previous block, creating a chain of blocks.\nThe Bitco",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#block"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Transaction",
+      "description": "A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by a\nwallet, signed using a private key, shared with the Bitcoin network, and later confirmed when\nincluded in",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-transaction"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Address",
+      "description": "A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like a\ndestination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them a\nBitcoin add",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-address"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Wallet",
+      "description": "A Bitcoin wallet is software or hardware that helps users send, receive, and manage Bitcoin. A\nwallet does not actually store Bitcoin inside it. Instead, it manages the keys needed to access\nand spend",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Confirmation",
+      "description": "A Bitcoin confirmation means that a Bitcoin transaction has been included in a block on the\nblockchain. Each new block added after that gives the transaction another confirmation, making\nit harder to ",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-confirmation"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Private Key",
+      "description": "A private key is a secret digital key that proves you have the right to spend Bitcoin from\na wallet. It must never be shared. If someone gets your private key, they may be able to\nmove your Bitcoin.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#private-key"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Public Key",
+      "description": "A public key is a cryptographic key connected to a private key. It helps receive Bitcoin\nand verify digital signatures. Unlike a private key, a public key is not meant to be secret\nin the same way.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#public-key"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Seed Phrase",
+      "description": "A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.\nIf your wallet app, phone, or device is lost, the seed phrase can help restore access to\nthe wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#seed-phrase"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Recovery Phrase",
+      "description": "A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It is\nusually the same thing as a seed phrase. Anyone with access to the recovery phrase\nmay be able to restore the wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#recovery-phrase"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Self-Custody",
+      "description": "Self-custody means you control your own Bitcoin or crypto keys instead of relying on an\nexchange or company to hold them for you. It gives more control, but it also gives you\nmore responsibility.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#self-custody"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Custodial Wallet",
+      "description": "A custodial wallet is a wallet where a third party, such as a crypto exchange, controls\nthe private keys for you. You access your funds through an account, but the company\nmanages the keys.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#custodial-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Non-Custodial Wallet",
+      "description": "A non-custodial wallet is a wallet where you control your own private keys or seed\nphrase. This gives you direct control over your Bitcoin, but it also means you are\nresponsible for keeping your backup safe.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#non-custodial-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hot Wallet",
+      "description": "A hot wallet is a Bitcoin or crypto wallet connected to the internet. It is useful for quick\naccess and regular transactions, but it may carry more online security risk than cold\nstorage.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#hot-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Cold Wallet",
+      "description": "A cold wallet is a Bitcoin or crypto wallet setup that keeps private keys offline or away\nfrom regular internet exposure. It is often used for long-term storage.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#cold-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hardware Wallet",
+      "description": "A hardware wallet is a physical device designed to protect private keys and sign Bitcoin\ntransactions. It helps keep keys away from regular internet-connected devices.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#hardware-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Passphrase",
+      "description": "A passphrase is an optional extra word, phrase, or password added to a seed phrase in\nsome wallets. It can create an additional layer of wallet protection, but losing it can also\nmake recovery impossible.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#passphrase"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Multisig Wallet",
+      "description": "A multisig wallet is a Bitcoin wallet that requires multiple keys to approve a transaction.\nInstead of one private key controlling the wallet, a multisig setup needs more than one\napproval.",
+      "url": "https://www.cryptowala.ai/glossary/series-2/#multisig-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Proof of Work",
+      "description": "Proof of work is the system Bitcoin uses to secure its blockchain. Miners use\ncomputing power to find a valid block. This work is difficult to perform but easy for\nthe network to verify.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#proof-of-work"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Mining",
+      "description": "Bitcoin mining is the process of creating new blocks, confirming transactions, and\nsecuring the Bitcoin network through proof of work.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#bitcoin-mining"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Miner",
+      "description": "A Bitcoin miner is a person, company, or machine that uses computing power to\ncompete for adding new blocks to the Bitcoin blockchain.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#bitcoin-miner"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hash Rate",
+      "description": "Hash rate is the amount of computing power being used to mine Bitcoin. A higher\nhash rate usually means miners are performing more calculations to secure the\nnetwork.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#hash-rate"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Difficulty Adjustment",
+      "description": "Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is to\nmine a block. It helps keep block creation close to Bitcoin’s target timing, even\nwhen mining power changes.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#difficulty-adjustment"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Block Reward",
+      "description": "A block reward is the reward a Bitcoin miner receives for successfully adding a\nvalid block to the blockchain. It includes newly issued Bitcoin and transaction\nfees.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#block-reward"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Halving",
+      "description": "Bitcoin halving is an event where the new Bitcoin created in each block is cut in\nhalf. It happens roughly every four years and reduces the rate at which new\nBitcoin enters circulation.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#bitcoin-halving"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "SHA-256",
+      "description": "SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into a\nfixed-length output called a hash. Bitcoin miners use SHA-256 while searching\nfor valid blocks.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#sha-256"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Nonce",
+      "description": "A nonce is a number miners change during Bitcoin mining to search for a valid\nblock hash. It is part of the trial-and-error process in proof of work.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#nonce"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "51% Attack",
+      "description": "A 51% attack is a situation where one miner or group controls more than half of a\nproof-of-work network’s mining power. This could allow them to reorganize blocks\nor attempt double-spending, but it does not let them create unlimited Bitcoin or\nsteal coins from any wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#51-percent-attack"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Node",
+      "description": "A Bitcoin node is a computer running Bitcoin software. It connects to the Bitcoin network,\nchecks transactions and blocks, and helps make sure Bitcoin’s rules are followed.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#bitcoin-node"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Full Node",
+      "description": "A full node is a Bitcoin node that independently verifies the entire set of Bitcoin rules. It checks\ntransactions, blocks, and the blockchain history without relying fully on someone else.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#full-node"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Peer-to-Peer Network",
+      "description": "A peer-to-peer network is a system where computers communicate directly with each other\ninstead of depending on one central server. Bitcoin uses a peer-to-peer network to share\ntransactions and blocks.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#peer-to-peer-network"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Decentralization",
+      "description": "Decentralization means control is spread across many participants instead of being held by one\ncentral authority. In Bitcoin, decentralization means no single company, government, or server\ncontrols the network.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#decentralization"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Consensus Mechanism",
+      "description": "A consensus mechanism is the method a network uses to agree on what is valid. In Bitcoin,\nconsensus depends on rules, nodes, proof of work, and the longest valid chain.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#consensus-mechanism"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Mempool",
+      "description": "The mempool is a waiting area for unconfirmed Bitcoin transactions. When a transaction is\nbroadcast but not yet included in a block, it usually waits in the mempool.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#mempool"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Transaction Fee",
+      "description": "A Bitcoin transaction fee is a small amount paid by the sender to encourage miners to include\nthe transaction in a block. Fees can rise or fall depending on network activity and demand for\nblock space.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#transaction-fee"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "UTXO",
+      "description": "UTXO stands for unspent transaction output. It is a piece of Bitcoin that has been received but\nnot yet spent. Bitcoin uses UTXOs to track ownership instead of normal account balances.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#utxo"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Double Spend",
+      "description": "Double spend means trying to spend the same digital money more than once. Bitcoin was\ndesigned to solve this problem without needing a central authority.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#double-spend"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Timechain",
+      "description": "Timechain is a Bitcoin-native term used to describe Bitcoin’s ordered chain of blocks. It\nhighlights that Bitcoin records transactions in a time-based sequence.",
+      "url": "https://www.cryptowala.ai/glossary/series-4/#timechain"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Scarcity",
+      "description": "Scarcity means something is limited and not available in unlimited quantity. In Bitcoin, scarcity\nmatters because Bitcoin has a fixed supply limit, unlike money that can be created in larger\namounts by central authorities.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#scarcity"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "21 Million Bitcoin Supply",
+      "description": "The 21 million Bitcoin supply means Bitcoin has a maximum limit of 21 million coins. This limit is\npart of Bitcoin’s rules and is one of the main reasons Bitcoin is studied as scarce digital money.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#21-million-bitcoin-supp"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Store of Value",
+      "description": "A store of value is an asset that people use to preserve purchasing power over time. Gold, land,\nand some financial assets are often studied as stores of value. Bitcoin is also discussed as a\npossible digital store of value because of its scarcity and open monetary rules.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#store-of-value"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Digital Gold",
+      "description": "Digital gold is a phrase used to describe Bitcoin as a scarce digital asset. People compare\nBitcoin to gold because both are limited in supply, difficult to create, and studied as stores of\nvalue.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#digital-gold"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hard Money",
+      "description": "Hard money is money that is difficult to create in large amounts. Bitcoin is often discussed as\nhard money because its supply is limited and new issuance follows fixed protocol rules.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#hard-money"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Sound Money",
+      "description": "Sound money is money that has reliable monetary properties. It is usually difficult to create,\nwidely trusted, durable, and able to preserve purchasing power better over time.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#sound-money"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Fiat Currency",
+      "description": "Fiat currency is money issued by a government and used as legal tender. Examples include the\nIndian rupee, US dollar, euro, and yen. Fiat money is not backed by a fixed supply asset like\ngold.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#fiat-currency"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Inflation",
+      "description": "Inflation means the general price level of goods and services rises over time. When inflation\nhappens, each unit of money buys less than before.",
+      "url": "https://www.cryptowala.ai/glossary/series-5/#inflation"
+    }
+  ]
+}</script>
+  <style>
+    .glossary-hero {
+      padding: 64px 80px 48px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .glossary-hero h1 {
+      font-size: clamp(56px, 8vw, 96px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .glossary-hero .subtitle {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #e5e7eb;
+      margin: 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .series-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 36px 32px;
+      background: #fff;
+      transition: background 0.18s, color 0.18s;
+      text-decoration: none;
+      color: #000;
+      cursor: pointer;
+      position: relative;
+    }
+    .series-card:hover { background: #000; color: #fff; }
+    .card-num {
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      min-width: 60px;
+      flex-shrink: 0;
+    }
+    .card-body { flex: 1; }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .card-subtitle {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #555;
+      transition: color 0.18s;
+    }
+    .series-card:hover .card-desc { color: #ccc; }
+    .card-count {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-top: 12px;
+      color: #888;
+      transition: color 0.18s;
+    }
+    .series-card:hover .card-count { color: #aaa; }
+    .card-arrow {
+      font-size: 18px;
+      font-weight: 300;
+      align-self: flex-end;
+      transition: transform 0.18s;
+    }
+    .series-card:hover .card-arrow { transform: translateX(4px); }
+
+    .glossary-note {
+      padding: 32px 80px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: #888;
+      text-transform: uppercase;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 1024px) {
+      .series-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .glossary-hero { padding: 40px 24px 32px; }
+      .series-grid { grid-template-columns: 1fr; }
+      .glossary-note { padding: 24px; }
+      .card-num { font-size: 36px; min-width: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="glossary-hero">
+      <h1>GLOSSARY</h1>
+      <p class="subtitle">A COMPREHENSIVE REFERENCE OF BITCOIN &amp; CRYPTO TERMINOLOGY — BY CRYPTOWALA</p>
+    </div>
+
+    <div class="series-grid">
+      
+      <a href="/glossary/series-1/" class="series-card" id="series-card-1">
+        <div class="card-num">01</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 1</div>
+          <div class="card-subtitle">Bitcoin Basics</div>
+          <div class="card-desc">Fundamental Bitcoin &amp; blockchain concepts — Bitcoin, blockchain, wallets, transactions, and how the network works.</div>
+          <div class="card-count">10 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      <a href="/glossary/series-2/" class="series-card" id="series-card-2">
+        <div class="card-num">02</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 2</div>
+          <div class="card-subtitle">Wallets, Keys &amp; Self-Custody</div>
+          <div class="card-desc">Private keys, public keys, seed phrases, and how to securely control your Bitcoin.</div>
+          <div class="card-count">12 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      <a href="/glossary/series-3/" class="series-card" id="series-card-3">
+        <div class="card-num">03</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 3</div>
+          <div class="card-subtitle">Mining, Proof-of-Work &amp; Security</div>
+          <div class="card-desc">How Bitcoin is mined, what proof-of-work means, and how the network stays secure.</div>
+          <div class="card-count">10 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      <a href="/glossary/series-4/" class="series-card" id="series-card-4">
+        <div class="card-num">04</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 4</div>
+          <div class="card-subtitle">Exchanges, Trading &amp; On-Ramps</div>
+          <div class="card-desc">Crypto exchanges, KYC, on-ramps, off-ramps, and how to buy and sell Bitcoin in India.</div>
+          <div class="card-count">10 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      <a href="/glossary/series-5/" class="series-card" id="series-card-5">
+        <div class="card-num">05</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 5</div>
+          <div class="card-subtitle">DeFi, Altcoins &amp; Broader Crypto</div>
+          <div class="card-desc">Ethereum, smart contracts, DeFi, altcoins, stablecoins, and NFTs explained simply.</div>
+          <div class="card-count">10 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      <a href="/glossary/series-6/" class="series-card" id="series-card-6">
+        <div class="card-num">06</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 6</div>
+          <div class="card-subtitle">Regulation, Risk &amp; Scams</div>
+          <div class="card-desc">Legal landscape, common crypto scams, risk management, and how to stay safe.</div>
+          <div class="card-count">8 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+      <a href="/glossary/series-7/" class="series-card" id="series-card-7">
+        <div class="card-num">07</div>
+        <div class="card-body">
+          <div class="card-title">Glossary Series 7</div>
+          <div class="card-subtitle">Advanced Bitcoin Concepts</div>
+          <div class="card-desc">Lightning Network, multisig, SegWit, Taproot, and deeper Bitcoin technology explained.</div>
+          <div class="card-count">8 terms</div>
+        </div>
+        <div class="card-arrow">→</div>
+      </a>
+    </div>
+
+    <div class="glossary-note">
+      All content is periodically updated and optimised for AI discovery and search engine indexing. &nbsp;·&nbsp;
+      Sourced from CryptoWala educational materials. &nbsp;·&nbsp;
+      Curated for Indian Bitcoin &amp; crypto learners.
+    </div>
+  </main>
+
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

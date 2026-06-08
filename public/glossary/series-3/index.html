@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>Glossary Series 3: Mining, Proof-of-Work &amp; Security | CryptoWala</title>
+  <meta name="title" content="Glossary Series 3: Mining, Proof-of-Work &amp; Security | CryptoWala">
+  <meta name="description" content="How Bitcoin is mined, what proof-of-work means, and how the network stays secure. Part of the CryptoWala Bitcoin &amp; Crypto Glossary.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-3/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-3/">
+  <meta property="og:title" content="Glossary Series 3: Mining, Proof-of-Work &amp; Security | CryptoWala">
+  <meta property="og:description" content="How Bitcoin is mined, what proof-of-work means, and how the network stays secure.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "CryptoWala Glossary Series 3: Mining, Proof-of-Work & Security",
+  "description": "How Bitcoin is mined, what proof-of-work means, and how the network stays secure.",
+  "url": "https://www.cryptowala.ai/glossary/series-3/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CryptoWala",
+    "url": "https://www.cryptowala.ai"
+  },
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Proof of Work",
+      "description": "Proof of work is the system Bitcoin uses to secure its blockchain. Miners use\ncomputing power to find a valid block. This work is difficult to perform but easy for\nthe network to verify.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#proof-of-work"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Mining",
+      "description": "Bitcoin mining is the process of creating new blocks, confirming transactions, and\nsecuring the Bitcoin network through proof of work.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#bitcoin-mining"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Miner",
+      "description": "A Bitcoin miner is a person, company, or machine that uses computing power to\ncompete for adding new blocks to the Bitcoin blockchain.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#bitcoin-miner"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Hash Rate",
+      "description": "Hash rate is the amount of computing power being used to mine Bitcoin. A higher\nhash rate usually means miners are performing more calculations to secure the\nnetwork.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#hash-rate"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Difficulty Adjustment",
+      "description": "Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is to\nmine a block. It helps keep block creation close to Bitcoin’s target timing, even\nwhen mining power changes.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#difficulty-adjustment"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Block Reward",
+      "description": "A block reward is the reward a Bitcoin miner receives for successfully adding a\nvalid block to the blockchain. It includes newly issued Bitcoin and transaction\nfees.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#block-reward"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Halving",
+      "description": "Bitcoin halving is an event where the new Bitcoin created in each block is cut in\nhalf. It happens roughly every four years and reduces the rate at which new\nBitcoin enters circulation.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#bitcoin-halving"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "SHA-256",
+      "description": "SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into a\nfixed-length output called a hash. Bitcoin miners use SHA-256 while searching\nfor valid blocks.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#sha-256"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Nonce",
+      "description": "A nonce is a number miners change during Bitcoin mining to search for a valid\nblock hash. It is part of the trial-and-error process in proof of work.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#nonce"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "51% Attack",
+      "description": "A 51% attack is a situation where one miner or group controls more than half of a\nproof-of-work network’s mining power. This could allow them to reorganize blocks\nor attempt double-spending, but it does not let them create unlimited Bitcoin or\nsteal coins from any wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-3/#51-percent-attack"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 3: Mining, Proof-of-Work & Security",
+      "item": "https://www.cryptowala.ai/glossary/series-3/"
+    }
+  ]
+}</script>
+  <style>
+    .series-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .series-hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .series-hero .series-desc {
+      font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    /* Alphabet sidebar */
+    .alpha-sidebar {
+      position: sticky;
+      top: 24px;
+      align-self: flex-start;
+      padding-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .alpha-link {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.15s;
+      line-height: 1.8;
+      display: block;
+    }
+    .alpha-link.active-letter { color: #000; }
+    .alpha-link.active-letter:hover { color: #555; opacity: 1; }
+    .alpha-link.disabled { color: #eee; cursor: default; }
+
+    /* Terms area */
+    .terms-area { padding-top: 48px; padding-bottom: 80px; }
+
+    .letter-group { margin-bottom: 0; }
+    .letter-anchor {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #bbb;
+      border-top: 1px solid #e5e7eb;
+      padding: 32px 0 16px;
+      margin-bottom: 0;
+    }
+
+    .term-entry {
+      padding: 36px 0 40px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .term-entry:last-child { border-bottom: none; }
+    .term-name {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 24px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.75; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.65; }
+
+    .related-section .section-body { line-height: 2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    .back-link {
+      display: inline-block;
+      padding: 24px 80px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; border-top: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .back-link:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .series-hero { padding: 32px 24px 28px; }
+      .content-wrapper { grid-template-columns: 1fr; padding: 0 24px; }
+      .alpha-sidebar { flex-direction: row; flex-wrap: wrap; position: static; gap: 4px 8px; padding: 20px 0 0; }
+      .alpha-link { font-size: 12px; }
+      .terms-area { padding-top: 24px; }
+      .back-link { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="series-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; SERIES 3
+      </div>
+      <h1>GLOSSARY SERIES 3</h1>
+      <p class="series-desc">Mining, Proof-of-Work &amp; Security &nbsp;—&nbsp; 10 TERMS</p>
+    </div>
+
+    <div class="content-wrapper">
+      <aside class="alpha-sidebar" aria-label="Alphabetical index">
+        <span class="alpha-link disabled">A</span><a href="#b" class="alpha-link active-letter" id="alpha-B">B</a><span class="alpha-link disabled">C</span><a href="#d" class="alpha-link active-letter" id="alpha-D">D</a><span class="alpha-link disabled">E</span><span class="alpha-link disabled">F</span><span class="alpha-link disabled">G</span><a href="#h" class="alpha-link active-letter" id="alpha-H">H</a><span class="alpha-link disabled">I</span><span class="alpha-link disabled">J</span><span class="alpha-link disabled">K</span><span class="alpha-link disabled">L</span><span class="alpha-link disabled">M</span><a href="#n" class="alpha-link active-letter" id="alpha-N">N</a><span class="alpha-link disabled">O</span><a href="#p" class="alpha-link active-letter" id="alpha-P">P</a><span class="alpha-link disabled">Q</span><span class="alpha-link disabled">R</span><a href="#s" class="alpha-link active-letter" id="alpha-S">S</a><span class="alpha-link disabled">T</span><span class="alpha-link disabled">U</span><span class="alpha-link disabled">V</span><span class="alpha-link disabled">W</span><span class="alpha-link disabled">X</span><span class="alpha-link disabled">Y</span><span class="alpha-link disabled">Z</span>
+      </aside>
+      <div class="terms-area">
+        <div class="letter-group" id="5"><div class="letter-anchor">5</div>
+        <div class="term-entry" id="51-percent-attack">
+          <h2 class="term-name">51% Attack</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A 51% attack is a situation where one miner or group controls more than half of a<br>proof-of-work network’s mining power. This could allow them to reorganize blocks<br>or attempt double-spending, but it does not let them create unlimited Bitcoin or<br>steal coins from any wallet.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A 51% attack is a potential attack on a proof-of-work blockchain where one actor<br>controls the majority of mining power and can interfere with the normal ordering<br>of blocks.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A 51% attack means one group has too much mining power.<br>If they control most of the network’s hash rate, they may be able to build an<br>alternative chain faster than the honest network.<br>This can create serious problems.<br>But it does not mean they can do anything they want.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>51% attacks matter because they explain why Bitcoin’s mining power and<br>decentralization are important.<br>Bitcoin is designed so that attacking the network requires enormous resources.<br>An attacker would need hardware, electricity, coordination, and enough power to<br>compete with the rest of the network.<br>This makes attacks costly.<br>What a 51% Attacker Can Do<br>A 51% attacker may try to:<br>Reorganize recent blocks<br>Double-spend their own transactions<br>Censor some transactions temporarily<br>Disrupt trust in the network<br>What a 51% Attacker Cannot Do<br>A 51% attacker cannot simply:<br>Create unlimited Bitcoin<br>Steal Bitcoin from any wallet<br>Change old rules without users and nodes accepting them<br>Spend Bitcoin without private keys<br>This is important for beginners to understand.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a classroom where students vote on the correct version of a notebook.<br>If one group controls most of the voting power, they can push their preferred<br>version.<br>But they still cannot write impossible entries that break the basic rules everyone<br>checks.<br>Bitcoin nodes still verify rules.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think a 51% attack means Bitcoin would instantly end.<br>That is too extreme.<br>A 51% attack would be serious, but it has limits. It is better understood as a<br>costly network attack risk, not unlimited control over Bitcoin.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does 51% attack mean?</div><div class="faq-a">It means one miner or group controls more than half of a proof-of-work network’s
+mining power.
+Can a 51% attacker steal my Bitcoin?
+They cannot steal Bitcoin from your wallet without your private keys.
+Can a 51% attacker create unlimited Bitcoin?
+No. Nodes would reject blocks that break Bitcoin’s supply rules.
+Why is Bitcoin difficult to 51% attack?
+Because an attacker would need enormous mining power, energy, hardware, and
+coordination.
+Does hash rate help protect against 51% attacks?
+Yes. More honest hash rate can make majority attacks more expensive.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-node" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#double-spend" class="related-link">Double Spend</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-confirmation" class="related-link">Bitcoin Confirmation</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#add-this-small-box-near-the-bottom-of-all-10-pages" class="related-link">Add this small box near the bottom of all 10 pages:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#cryptowala-note" class="related-link">CryptoWala Note:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#mining-and-proof-of-work-are-about-bitcoin" class="related-link">Mining and proof of work are about Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#security-not-guaranteed-profits-understanding" class="related-link">security, not guaranteed profits. Understanding</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#them-helps-you-see-why-bitcoin-is-costly-to" class="related-link">them helps you see why Bitcoin is costly to</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#attack-how-blocks-are-added-and-why-the" class="related-link">attack, how blocks are added, and why the</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#network-depends-on-rules-incentives-and" class="related-link">network depends on rules, incentives, and</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#verification" class="related-link">verification.</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#series-3-internal-linking-plan" class="related-link">Series 3 Internal Linking Plan</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#use-these-naturally-inside-each-page" class="related-link">Use these naturally inside each page.</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossaryproof-of-work" class="related-link">/glossary/proof-of-work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#51-attack" class="related-link">51% Attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossarybitcoin-mining" class="related-link">/glossary/bitcoin-mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-halving" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossarybitcoin-miner" class="related-link">/glossary/bitcoin-miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-node" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossaryhash-rate" class="related-link">/glossary/hash-rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#51-attack" class="related-link">51% Attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossarydifficulty-adjustment" class="related-link">/glossary/difficulty-adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-halving" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossaryblock-reward" class="related-link">/glossary/block-reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-halving" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#transaction-fee" class="related-link">Transaction Fee</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossarybitcoin-halving" class="related-link">/glossary/bitcoin-halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#scarcity" class="related-link">Scarcity</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#21-million-bitcoin-supply" class="related-link">21 Million Bitcoin Supply</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossarysha-256" class="related-link">/glossary/sha-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#nonce" class="related-link">Nonce</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossarynonce" class="related-link">/glossary/nonce</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#glossary51-percent-attack" class="related-link">/glossary/51-percent-attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#link-to" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-node" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#double-spend" class="related-link">Double Spend</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-confirmation" class="related-link">Bitcoin Confirmation</a></div></div>
+        </div></div><div class="letter-group" id="b"><div class="letter-anchor">B</div>
+        <div class="term-entry" id="bitcoin-halving">
+          <h2 class="term-name">Bitcoin Halving</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Bitcoin halving is an event where the new Bitcoin created in each block is cut in<br>half. It happens roughly every four years and reduces the rate at which new<br>Bitcoin enters circulation.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Bitcoin halving is a programmed event in Bitcoin where the block subsidy paid to<br>miners is reduced by 50%.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Bitcoin has a fixed supply schedule.<br>New Bitcoin enters circulation through mining rewards.<br>But this new supply does not stay the same forever.<br>After every halving, miners receive half as much new Bitcoin per block as before.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin halving matters because it controls Bitcoin’s new supply.<br>Traditional money supply can be changed by central banks. Bitcoin’s supply rules<br>are written into the protocol.<br>Halving is one reason Bitcoin is studied as scarce digital money.<br>But halving does not guarantee price movement. It is a supply event, not a<br>promise of profit.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin miners receive a block subsidy when they add a valid block.<br>After a certain number of blocks, that subsidy is cut in half.<br>This process repeats over time until the new Bitcoin subsidy eventually becomes<br>extremely small and later reaches zero.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a company producing 100 units of something every day.<br>Then, according to a fixed rule, production drops to 50 units per day.<br>Later, it drops to 25.<br>Bitcoin halving works like a programmed reduction in new issuance.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many people talk about halving only as a price event.<br>That is not the best way to understand it.<br>Halving is mainly about Bitcoin’s supply schedule. Price depends on many<br>factors, including demand, liquidity, macro conditions, regulation, and market<br>behaviour.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What gets cut in half during Bitcoin halving?</div><div class="faq-a">The new Bitcoin subsidy paid to miners is cut in half.
+Does halving reduce existing Bitcoin?
+No. It only reduces the rate of new Bitcoin creation.
+Does halving guarantee Bitcoin price will rise?
+No. Halving affects supply issuance, but price is not guaranteed.
+Why does Bitcoin have halvings?
+Halvings are part of Bitcoin’s programmed supply schedule.
+Is halving related to mining?
+Yes. It directly affects the subsidy miners receive for adding blocks.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#21-million-bitcoin-supply" class="related-link">21 Million Bitcoin Supply</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#scarcity" class="related-link">Scarcity</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-miner">
+          <h2 class="term-name">Bitcoin Miner</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A Bitcoin miner is a person, company, or machine that uses computing power to<br>compete for adding new blocks to the Bitcoin blockchain.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin miner is a network participant that performs proof of work to create valid<br>blocks and confirm Bitcoin transactions.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A miner is like a worker in Bitcoin’s security system.<br>Miners do not just “find coins.”<br>They help process transactions and protect the blockchain.<br>They use machines that perform many calculations every second. These<br>machines search for a valid block hash.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Miners matter because they make Bitcoin costly to attack.<br>To change the blockchain, an attacker would need to compete against the mining<br>power of the honest network. That requires large amounts of hardware,<br>electricity, and coordination.<br>This is one reason Bitcoin’s proof-of-work system is powerful.<br>What Miners Do<br>Bitcoin miners:<br>Collect pending transactions<br>Build candidate blocks<br>Try different nonce values<br>Search for a valid hash<br>Broadcast valid blocks<br>Earn rewards if their block is accepted<br>ASIC miners are specialized machines built to perform mining calculations<br>efficiently.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>They may earn block rewards and transaction fees when their block is accepted.<br>Can miners change Bitcoin rules?<br>Not by themselves. Nodes and users also play a key role in enforcing rules.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine many people trying to solve a number puzzle.<br>The winner earns the right to add the next page to a shared record book.<br>In Bitcoin, miners compete to add the next block to the blockchain.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think miners control Bitcoin.<br>Miners are important, but they do not control Bitcoin alone. Nodes check the<br>rules. Users choose software. Developers propose improvements. Bitcoin<br>security depends on multiple groups.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does a Bitcoin miner do?</div><div class="faq-a">A miner performs proof of work to add new blocks and confirm transactions.
+Do miners own the Bitcoin network?
+No. Miners are important participants, but they do not control the entire network.
+Why do miners use special machines?
+Bitcoin mining is highly competitive, so miners use ASIC machines designed for
+hashing.
+How do miners earn money?
+They may earn block rewards and transaction fees when their block is accepted.
+Can miners change Bitcoin rules?
+Not by themselves. Nodes and users also play a key role in enforcing rules.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#asic-miner" class="related-link">ASIC Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-node" class="related-link">Bitcoin Node</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-mining">
+          <h2 class="term-name">Bitcoin Mining</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Bitcoin mining is the process of creating new blocks, confirming transactions, and<br>securing the Bitcoin network through proof of work.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Bitcoin mining is a process where miners use specialized computers to compete<br>for the right to add a new block of transactions to the Bitcoin blockchain.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Bitcoin mining is not digging coins from the ground.<br>It is a digital process.<br>Miners collect transactions, build blocks, and use computing power to find a valid<br>proof of work. The successful miner adds the block to the blockchain and<br>receives a reward.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin mining matters because it keeps Bitcoin’s transaction history organized<br>and difficult to change.<br>Mining helps:<br>Confirm transactions<br>Add new blocks<br>Secure the blockchain<br>Distribute new Bitcoin through block rewards<br>Make attacks expensive<br>Bitcoin.org describes mining as a distributed consensus system that confirms<br>pending transactions by including them in the blockchain.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A miner gathers pending Bitcoin transactions.<br>The miner creates a block.<br>The miner searches for a valid hash by changing values such as the nonce.<br>When the miner finds a valid hash, the block is broadcast to the network.<br>Bitcoin nodes check the block.<br>If valid, the block becomes part of the blockchain.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Think of miners like participants in a global puzzle competition.<br>Everyone is trying to solve the same type of puzzle.<br>The first one to solve it gets to add the next page to Bitcoin’s record book.<br>Everyone else can quickly check whether the solution is correct.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think miners “approve” Bitcoin however they want.<br>They cannot.<br>Miners propose blocks, but nodes verify whether those blocks follow Bitcoin’s<br>rules. If a miner creates an invalid block, nodes can reject it.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What do Bitcoin miners do?</div><div class="faq-a">They collect transactions, create blocks, perform proof of work, and help secure
+the Bitcoin network.
+Do miners create Bitcoin?
+New Bitcoin enters circulation through the block reward, which is given to the
+successful miner.
+Can anyone mine Bitcoin?
+Technically yes, but modern Bitcoin mining usually requires specialized
+hardware, low-cost electricity, and professional operations.
+Is mining the same as validating?
+Not exactly. Miners create blocks. Nodes verify that blocks follow Bitcoin’s rules.
+Why is mining important for security?
+Mining makes it expensive to rewrite transaction history or attack the network.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-halving" class="related-link">Bitcoin Halving</a></div></div>
+        </div>
+        <div class="term-entry" id="block-reward">
+          <h2 class="term-name">Block Reward</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A block reward is the reward a Bitcoin miner receives for successfully adding a<br>valid block to the blockchain. It includes newly issued Bitcoin and transaction<br>fees.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A block reward is the incentive paid to a miner when their valid block is accepted<br>by the Bitcoin network.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A block reward is Bitcoin’s way of rewarding miners for helping secure the<br>network.<br>Miners spend money on machines, electricity, cooling, and operations.<br>The block reward gives them a reason to do this work honestly.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Block rewards matter because they connect Bitcoin security with miner<br>incentives.<br>Miners are not securing the network for free. They are rewarded for following the<br>rules and adding valid blocks.<br>Over time, the newly issued Bitcoin part of the block reward decreases through<br>halving events. Transaction fees become more important as block subsidy<br>declines.<br>Research on Bitcoin’s long-term security often studies what happens as block<br>rewards decline and miners rely more on fees.<br>What Is Included in a Block Reward?<br>A Bitcoin block reward has two parts:<br>Newly created Bitcoin<br>Transaction fees from transactions inside the block<br>The newly created Bitcoin is also called the block subsidy.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>A miner finds a valid block.<br>The network accepts the block.<br>The miner receives newly issued Bitcoin plus transaction fees from the<br>transactions included in that block.<br>This is the block reward.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think block reward only means new Bitcoin.<br>Actually, a block reward includes both the block subsidy and transaction fees.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What is the purpose of a block reward?</div><div class="faq-a">It rewards miners for securing the network and adding valid blocks.
+Is the block reward always the same?
+No. The subsidy part reduces over time through Bitcoin halvings.
+Does the block reward include transaction fees?
+Yes. The full miner reward includes subsidy plus transaction fees.
+Why do miners need rewards?
+Mining costs money. Rewards create an economic reason for miners to
+participate honestly.
+Will block rewards end?
+The new Bitcoin subsidy will eventually fall to zero, but transaction fees can still
+reward miners.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-halving" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#transaction-fee" class="related-link">Transaction Fee</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a></div></div>
+        </div></div><div class="letter-group" id="d"><div class="letter-anchor">D</div>
+        <div class="term-entry" id="difficulty-adjustment">
+          <h2 class="term-name">Difficulty Adjustment</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is to<br>mine a block. It helps keep block creation close to Bitcoin’s target timing, even<br>when mining power changes.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Difficulty adjustment is the process by which Bitcoin changes the mining difficulty<br>after a set number of blocks to keep block production relatively stable.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Bitcoin wants blocks to be created at a steady pace over time.<br>But miners can join or leave the network.<br>If more miners join, blocks could be found too quickly.<br>If miners leave, blocks could be found too slowly.<br>Difficulty adjustment helps balance this.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Difficulty adjustment matters because it helps Bitcoin stay predictable.<br>Bitcoin’s issuance schedule depends on blocks. If blocks came too quickly or too<br>slowly for long periods, the system would become less stable.<br>Difficulty adjustment helps Bitcoin respond to changes in mining power without<br>needing a central manager.<br>Bitcoin difficulty is adjusted every 2,016 blocks, roughly every two weeks, based<br>on how long the previous set of blocks took to mine.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin looks at how long it took to mine the previous 2,016 blocks.<br>If blocks were found too quickly, mining becomes harder.<br>If blocks were found too slowly, mining becomes easier.<br>This automatic rule helps keep the network close to its intended block rhythm.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a school exam.<br>If everyone finishes too quickly, the next exam becomes harder.<br>If everyone struggles too much, the next exam becomes easier.<br>Bitcoin difficulty adjustment works in a similar way.<br>It adjusts the challenge based on mining speed.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think Bitcoin difficulty is controlled manually by a person or<br>company.<br>It is not.<br>Difficulty adjustment is part of Bitcoin’s rules and happens automatically.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Why does Bitcoin adjust difficulty?</div><div class="faq-a">To keep block production relatively stable even when mining power changes.
+How often does Bitcoin difficulty adjust?
+Every 2,016 blocks, which is roughly every two weeks.
+What happens if many miners leave?
+Blocks may slow down for a period, then difficulty can adjust downward.
+What happens if many miners join?
+Blocks may come faster for a period, then difficulty can adjust upward.
+Is difficulty adjustment controlled by miners?
+No. It is part of Bitcoin’s protocol rules.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-halving" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a></div></div>
+        </div></div><div class="letter-group" id="h"><div class="letter-anchor">H</div>
+        <div class="term-entry" id="hash-rate">
+          <h2 class="term-name">Hash Rate</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Hash rate is the amount of computing power being used to mine Bitcoin. A higher<br>hash rate usually means miners are performing more calculations to secure the<br>network.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Hash rate is the speed at which mining machines perform hashing calculations in<br>a proof-of-work network like Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Hash rate measures how many guesses miners are making.<br>In Bitcoin mining, miners repeatedly calculate hashes to find a valid block.<br>More hash rate means more attempts per second.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Hash rate matters because it shows how much computing power is helping<br>secure Bitcoin.<br>A higher hash rate can make attacks more difficult because an attacker would<br>need to compete with more total mining power.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin miners use machines to perform SHA-256 hashing.<br>Each calculation is like one attempt to find a valid block.<br>These attempts happen extremely fast. Modern mining machines can perform<br>huge numbers of hashes per second.<br>ASIC miners are designed to generate large numbers of hashes efficiently for<br>proof-of-work mining.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a lottery where miners are buying tickets by doing calculations.<br>The more calculations a miner performs, the more chances they have to find the<br>next valid block.<br>Hash rate measures how many “tickets” are being tried per second.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think hash rate means guaranteed profit for miners.<br>It does not.<br>Mining profit depends on many things, including electricity cost, hardware<br>efficiency, Bitcoin price, difficulty, and transaction fees.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does hash rate mean?</div><div class="faq-a">Hash rate means how many hashing calculations miners perform per second.
+Why is hash rate important?
+It helps show the amount of computing power securing the Bitcoin network.
+Does higher hash rate make Bitcoin safer?
+Generally, more hash rate can make attacks more costly, but security also
+depends on decentralization and incentives.
+Is hash rate the same as mining difficulty?
+No. Hash rate is computing power. Difficulty is the network’s adjustment of how
+hard it is to find a valid block.
+Can hash rate go down?
+Yes. Hash rate can change as miners join or leave the network.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#51-attack" class="related-link">51% Attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block-reward" class="related-link">Block Reward</a></div></div>
+        </div></div><div class="letter-group" id="n"><div class="letter-anchor">N</div>
+        <div class="term-entry" id="nonce">
+          <h2 class="term-name">Nonce</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A nonce is a number miners change during Bitcoin mining to search for a valid<br>block hash. It is part of the trial-and-error process in proof of work.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A nonce is a value in a Bitcoin block header that miners adjust while trying to<br>produce a hash that meets the network’s difficulty target.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A nonce is like a guess number.<br>Miners keep changing this number and hashing the block data.<br>If the result does not fit Bitcoin’s rules, they try again.<br>This happens millions or trillions of times across mining machines.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>The nonce matters because mining is based on repeated attempts.<br>Miners cannot easily predict the winning hash. They must keep trying different<br>values until they find one that works.<br>The nonce is one of the values they change during this search.<br>Mining involves adjusting the nonce and related values until the block hash is<br>below the network’s difficulty target.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A miner creates a candidate block.<br>The miner inserts a nonce.<br>The block data is hashed.<br>If the hash is not valid, the miner changes the nonce.<br>This repeats until a valid hash is found or the miner changes other block data<br>and continues.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine trying to open a combination lock.<br>You try one number.<br>It does not work.<br>You try another.<br>You keep going until the lock opens.<br>A nonce is like the number being changed during Bitcoin mining.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think miners solve a puzzle using intelligence or strategy.<br>Bitcoin mining is mostly repeated computation. Miners are not solving a puzzle<br>like a human riddle. They are making many attempts until one hash meets the<br>target.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does nonce mean in Bitcoin?</div><div class="faq-a">It is a number miners change while searching for a valid block hash.
+Is the nonce secret?
+No. The nonce is part of block data and can be seen.
+Does the nonce create Bitcoin?
+No. It helps miners search for a valid proof of work. New Bitcoin is issued through
+the block reward.
+Why do miners change the nonce?
+Changing the nonce changes the hash result.
+Is nonce used only in Bitcoin?
+No. The word nonce is used in many areas of cryptography and computing.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a></div></div>
+        </div></div><div class="letter-group" id="p"><div class="letter-anchor">P</div>
+        <div class="term-entry" id="proof-of-work">
+          <h2 class="term-name">Proof of Work</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Proof of work is the system Bitcoin uses to secure its blockchain. Miners use<br>computing power to find a valid block. This work is difficult to perform but easy for<br>the network to verify.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Proof of work is a security mechanism where miners must perform computational<br>work before adding a new block to the Bitcoin blockchain. This makes it<br>expensive to attack or rewrite Bitcoin’s transaction history.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Proof of work means:<br>Miners must prove they did real work before the network accepts their block.<br>This work is not physical labour.<br>It is computer calculation.<br>Miners keep trying different inputs until they find a result that fits Bitcoin’s rules.<br>When they find it, other nodes can quickly check whether the result is valid.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Proof of work matters because it makes Bitcoin difficult to manipulate.<br>Without proof of work, someone could try to create fake transaction history easily.<br>With proof of work, changing the blockchain would require massive computing<br>power and energy.<br>This is why Bitcoin security is costly to attack.<br>Bitcoin.org explains that mining uses mathematical proof of work to confirm<br>pending transactions and include them in the blockchain.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin miners collect pending transactions.<br>They create a candidate block.<br>Then they repeatedly hash block data until they find a result that meets the<br>network’s difficulty target.<br>Once a miner finds a valid result, the block is shared with the network. Nodes<br>verify it. If it follows Bitcoin’s rules, it is added to the blockchain.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a lock that can only be opened by trying many possible combinations.<br>Finding the correct combination takes effort.<br>But once someone finds it, others can check it quickly.<br>Proof of work works in a similar way.<br>Mining is hard to perform, but easy to verify.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think proof of work is only about creating new Bitcoin.<br>That is incomplete.<br>Proof of work also helps secure the transaction history, organize blocks, and<br>make attacks expensive.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does proof of work mean in Bitcoin?</div><div class="faq-a">It means miners must use computing power to find a valid block before it can be
+added to the blockchain.
+Why does Bitcoin use proof of work?
+Bitcoin uses proof of work to secure the network, order transactions, and make
+attacks costly.
+Is proof of work the same as mining?
+They are connected, but not the same. Mining is the process. Proof of work is the
+security mechanism miners use.
+Is proof of work easy to verify?
+Yes. Finding a valid proof is difficult, but checking it is relatively easy for Bitcoin
+nodes.
+Does proof of work guarantee Bitcoin’s price?
+No. Proof of work is about network security, not price guarantees.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#miner" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#sha-256" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#51-attack" class="related-link">51% Attack</a></div></div>
+        </div></div><div class="letter-group" id="s"><div class="letter-anchor">S</div>
+        <div class="term-entry" id="sha-256">
+          <h2 class="term-name">SHA-256</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into a<br>fixed-length output called a hash. Bitcoin miners use SHA-256 while searching<br>for valid blocks.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>SHA-256 is a cryptographic hash function that Bitcoin uses in mining and<br>security. It creates a unique-looking fixed-size output from input data.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>SHA-256 is like a digital fingerprint machine.<br>You put data in.<br>It gives a fixed-size fingerprint out.<br>Even a tiny change in the input creates a very different output.<br>This makes hashing useful for checking data and securing Bitcoin blocks.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>SHA-256 matters because it is at the heart of Bitcoin mining.<br>Miners repeatedly hash block data while trying to find a result below the difficulty<br>target.<br>This process is what makes proof of work measurable and verifiable.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A miner takes block information and runs it through SHA-256.<br>The output is a hash.<br>If the hash meets Bitcoin’s difficulty requirement, the block can be valid.<br>If not, the miner changes data such as the nonce and tries again.<br>This trial-and-error process happens many times per second across the network.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine putting a document into a machine that creates a unique code for it.<br>If you change even one letter in the document, the code changes completely.<br>SHA-256 works similarly, but mathematically.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think SHA-256 encrypts Bitcoin.<br>Hashing and encryption are not the same.<br>Encryption is designed to be reversed with a key.<br>Hashing is designed to be one-way.<br>SHA-256 creates a hash. It does not store hidden information that can simply be<br>decrypted.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does SHA-256 mean?</div><div class="faq-a">SHA-256 stands for Secure Hash Algorithm 256-bit.
+Why does Bitcoin use SHA-256?
+Bitcoin uses SHA-256 for hashing in mining and other parts of its security design.
+Is SHA-256 the same as proof of work?
+No. SHA-256 is the hashing algorithm. Proof of work is the broader mining
+security mechanism.
+Can SHA-256 be reversed?
+No practical method exists to reverse a SHA-256 hash back into the original
+input.
+Do miners use SHA-256?
+Yes. Bitcoin miners use SHA-256 hashing while searching for valid blocks.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#hash-rate" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#nonce" class="related-link">Nonce</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#difficulty-adjustment" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/#bitcoin-miner" class="related-link">Bitcoin Miner</a></div></div>
+        </div></div>
+      </div>
+    </div>
+
+    <a href="/glossary/" class="back-link">← BACK TO GLOSSARY</a>
+  </main>
+
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

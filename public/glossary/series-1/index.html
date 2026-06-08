@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>Glossary Series 1: Bitcoin Basics | CryptoWala</title>
+  <meta name="title" content="Glossary Series 1: Bitcoin Basics | CryptoWala">
+  <meta name="description" content="Fundamental Bitcoin &amp; blockchain concepts — Bitcoin, blockchain, wallets, transactions, and how the network works. Part of the CryptoWala Bitcoin &amp; Crypto Glossary.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-1/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-1/">
+  <meta property="og:title" content="Glossary Series 1: Bitcoin Basics | CryptoWala">
+  <meta property="og:description" content="Fundamental Bitcoin &amp; blockchain concepts — Bitcoin, blockchain, wallets, transactions, and how the network works.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": "CryptoWala Glossary Series 1: Bitcoin Basics",
+  "description": "Fundamental Bitcoin & blockchain concepts — Bitcoin, blockchain, wallets, transactions, and how the network works.",
+  "url": "https://www.cryptowala.ai/glossary/series-1/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "CryptoWala",
+    "url": "https://www.cryptowala.ai"
+  },
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin",
+      "description": "Bitcoin is a digital form of money that works without a central bank, government, or payment\ncompany controlling it. It allows people to send value directly to each other through a global\ncomputer network. Bitcoin is also limited in supply, which is one reason many people study it as\na new kind of m",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Blockchain",
+      "description": "A blockchain is a shared digital record that stores information in groups called blocks. These\nblocks are connected in order, creating a chain of records. In Bitcoin, the blockchain keeps track\nof Bitcoin transactions and helps the network agree on who owns what.",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#blockchain"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Satoshi",
+      "description": "A satoshi is the smallest unit of Bitcoin. One Bitcoin is equal to 100,000,000 satoshis. This\nsmaller unit makes it easier to measure and use tiny amounts of Bitcoin.",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#satoshi"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Satoshi Nakamoto",
+      "description": "Satoshi Nakamoto is the name used by the person or group that created Bitcoin. Satoshi\npublished the Bitcoin whitepaper in 2008 and released the first Bitcoin software in 2009. The\nreal identity of Satoshi Nakamoto is still unknown.\nThe Bitcoin whitepaper was published under the name Satoshi Nakamot",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#satoshi-nakamoto"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Whitepaper",
+      "description": "The Bitcoin whitepaper is the original document that introduced Bitcoin. It was published in 2008\nby Satoshi Nakamoto and explained how a peer-to-peer electronic cash system could work\nwithout a central authority.\nThe whitepaper presents Bitcoin as a peer-to-peer electronic cash system and explains ",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-whitepaper"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Block",
+      "description": "A block is a group of Bitcoin transactions that gets added to the Bitcoin blockchain. Each block\ncontains transaction data and is connected to the previous block, creating a chain of blocks.\nThe Bitcoin Developer Guide describes blocks as part of the structure used to record\ntransactions and protect",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#block"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Transaction",
+      "description": "A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by a\nwallet, signed using a private key, shared with the Bitcoin network, and later confirmed when\nincluded in a block.\nBitcoin.org explains that wallets use a private key or seed to sign transactions, giving\nm",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-transaction"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Address",
+      "description": "A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like a\ndestination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them a\nBitcoin address from your wallet.",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-address"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Wallet",
+      "description": "A Bitcoin wallet is software or hardware that helps users send, receive, and manage Bitcoin. A\nwallet does not actually store Bitcoin inside it. Instead, it manages the keys needed to access\nand spend Bitcoin recorded on the Bitcoin blockchain.\nThe Bitcoin Developer Guide explains that wallet progra",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-wallet"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bitcoin Confirmation",
+      "description": "A Bitcoin confirmation means that a Bitcoin transaction has been included in a block on the\nblockchain. Each new block added after that gives the transaction another confirmation, making\nit harder to reverse.",
+      "url": "https://www.cryptowala.ai/glossary/series-1/#bitcoin-confirmation"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 1: Bitcoin Basics",
+      "item": "https://www.cryptowala.ai/glossary/series-1/"
+    }
+  ]
+}</script>
+  <style>
+    .series-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .series-hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .series-hero .series-desc {
+      font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    /* Alphabet sidebar */
+    .alpha-sidebar {
+      position: sticky;
+      top: 24px;
+      align-self: flex-start;
+      padding-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .alpha-link {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: #ccc;
+      transition: color 0.15s;
+      line-height: 1.8;
+      display: block;
+    }
+    .alpha-link.active-letter { color: #000; }
+    .alpha-link.active-letter:hover { color: #555; opacity: 1; }
+    .alpha-link.disabled { color: #eee; cursor: default; }
+
+    /* Terms area */
+    .terms-area { padding-top: 48px; padding-bottom: 80px; }
+
+    .letter-group { margin-bottom: 0; }
+    .letter-anchor {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #bbb;
+      border-top: 1px solid #e5e7eb;
+      padding: 32px 0 16px;
+      margin-bottom: 0;
+    }
+
+    .term-entry {
+      padding: 36px 0 40px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .term-entry:last-child { border-bottom: none; }
+    .term-name {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 24px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.75; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.65; }
+
+    .related-section .section-body { line-height: 2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    .back-link {
+      display: inline-block;
+      padding: 24px 80px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; border-top: 1px solid #e5e7eb;
+      width: 100%;
+    }
+    .back-link:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .series-hero { padding: 32px 24px 28px; }
+      .content-wrapper { grid-template-columns: 1fr; padding: 0 24px; }
+      .alpha-sidebar { flex-direction: row; flex-wrap: wrap; position: static; gap: 4px 8px; padding: 20px 0 0; }
+      .alpha-link { font-size: 12px; }
+      .terms-area { padding-top: 24px; }
+      .back-link { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="series-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; SERIES 1
+      </div>
+      <h1>GLOSSARY SERIES 1</h1>
+      <p class="series-desc">Bitcoin Basics &nbsp;—&nbsp; 10 TERMS</p>
+    </div>
+
+    <div class="content-wrapper">
+      <aside class="alpha-sidebar" aria-label="Alphabetical index">
+        <span class="alpha-link disabled">A</span><a href="#b" class="alpha-link active-letter" id="alpha-B">B</a><span class="alpha-link disabled">C</span><span class="alpha-link disabled">D</span><span class="alpha-link disabled">E</span><span class="alpha-link disabled">F</span><span class="alpha-link disabled">G</span><span class="alpha-link disabled">H</span><span class="alpha-link disabled">I</span><span class="alpha-link disabled">J</span><span class="alpha-link disabled">K</span><span class="alpha-link disabled">L</span><span class="alpha-link disabled">M</span><span class="alpha-link disabled">N</span><span class="alpha-link disabled">O</span><span class="alpha-link disabled">P</span><span class="alpha-link disabled">Q</span><span class="alpha-link disabled">R</span><a href="#s" class="alpha-link active-letter" id="alpha-S">S</a><span class="alpha-link disabled">T</span><span class="alpha-link disabled">U</span><span class="alpha-link disabled">V</span><span class="alpha-link disabled">W</span><span class="alpha-link disabled">X</span><span class="alpha-link disabled">Y</span><span class="alpha-link disabled">Z</span>
+      </aside>
+      <div class="terms-area">
+        <div class="letter-group" id="b"><div class="letter-anchor">B</div>
+        <div class="term-entry" id="bitcoin">
+          <h2 class="term-name">Bitcoin</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Bitcoin is a digital form of money that works without a central bank, government, or payment<br>company controlling it. It allows people to send value directly to each other through a global<br>computer network. Bitcoin is also limited in supply, which is one reason many people study it as<br>a new kind of money.<br>Bitcoin.org describes Bitcoin as an open-source peer-to-peer money system and a new kind of<br>payment network.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>The easiest way to understand Bitcoin is this:<br>Bitcoin is money for the internet.<br>You do not need a bank branch to use it.<br>You do not need a card company to approve every transaction.<br>You do not need one central company to run the system.<br>Instead, Bitcoin runs on a network of computers around the world. These computers follow the<br>same rules and keep a shared record of transactions.<br>That shared record is called the Bitcoin blockchain.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin matters because it introduced a new way to think about money.<br>Before Bitcoin, digital payments usually needed a trusted middleman. For example, when you<br>use a banking app, the bank updates your balance. When you use a card, banks and payment<br>companies help process the transaction.<br>Bitcoin is different.<br>It uses software, cryptography, and a public network to let people send value directly to each<br>other.<br>This does not mean Bitcoin is risk-free. Bitcoin’s price can be volatile, and users must learn how<br>to store it safely. But as a technology, Bitcoin is important because it showed that digital money<br>can work without one central authority.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin works through a few important parts:<br>A Bitcoin wallet helps users send and receive Bitcoin.<br>A private key proves ownership.<br>A Bitcoin transaction moves Bitcoin from one address to another.<br>Miners collect transactions into blocks.<br>Proof of work makes it expensive to attack the network.<br>Nodes check that everyone is following Bitcoin’s rules.<br>Together, these parts allow Bitcoin to work as a decentralized monetary network.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine Asha wants to send Bitcoin to Rahul.<br>Asha opens her Bitcoin wallet and enters Rahul’s Bitcoin address. Her wallet creates a<br>transaction and signs it using her private key. This proves that Asha has the right to spend that<br>Bitcoin.<br>The transaction is shared with the Bitcoin network. Miners include it in a block. Nodes check<br>that the transaction follows Bitcoin’s rules.<br>After confirmation, Rahul can see that he has received Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think Bitcoin is stored inside a wallet app.<br>That is not exactly true.<br>Bitcoin is recorded on the Bitcoin blockchain. A wallet helps manage the keys that allow<br>someone to spend Bitcoin. This is why private keys and seed phrases are so important.<br>Bitcoin.org explains that wallets keep a private key or seed that is used to sign transactions.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is Bitcoin real money?</div><div class="faq-a">Bitcoin is a digital asset used by many people as money, but it is not the same as
+government-issued currency. Its legal and tax treatment can be different in different countries.
+Who controls Bitcoin?
+Bitcoin is not controlled by one company or government. It is maintained by users, miners,
+developers, and nodes that follow Bitcoin’s rules.
+Is Bitcoin the same as crypto?
+Bitcoin is the first and most well-known cryptocurrency. Crypto is a broader term that includes
+many other digital assets and blockchain projects.
+Can Bitcoin be copied?
+Bitcoin’s code can be copied, but its network, history, security, and adoption cannot be copied
+easily.
+Is Bitcoin safe?
+The Bitcoin network is designed to be secure, but users can still lose money through scams,
+exchange failures, wrong addresses, or poor wallet security.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#blockchain" class="related-link">Blockchain</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#satoshi" class="related-link">Satoshi</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#satoshi-nakamoto" class="related-link">Satoshi Nakamoto</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-halving" class="related-link">Bitcoin Halving</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-address">
+          <h2 class="term-name">Bitcoin Address</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like a<br>destination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them a<br>Bitcoin address from your wallet.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A Bitcoin address is like an account destination for receiving Bitcoin.<br>But it is not exactly the same as a bank account number.<br>A bank account is linked to a bank and your identity. A Bitcoin address is created by a wallet<br>and is used on the Bitcoin network.<br>You can create many Bitcoin addresses from one wallet.<br>Bitcoin.org recommends using a new Bitcoin address each time you receive a new payment for<br>better privacy.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin addresses matter because they tell the network where Bitcoin should be sent.<br>If the address is wrong, the Bitcoin may be lost.<br>If the address belongs to someone else, they may receive the Bitcoin.<br>If the address is copied incorrectly, the transaction may fail or go to the wrong place.<br>This is why checking addresses is an important habit.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A Bitcoin wallet creates addresses using cryptographic keys.<br>The user shares the address with someone who wants to send Bitcoin. The sender enters that<br>address into their wallet and creates a transaction.<br>The Bitcoin network then checks whether the transaction follows the rules.<br>A Bitcoin address is connected to public-key cryptography, but beginners do not need to<br>understand all the mathematics at first.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha wants Rahul to send her Bitcoin.<br>She opens her Bitcoin wallet and taps “Receive.”<br>The wallet shows a Bitcoin address and QR code.<br>Asha shares it with Rahul.<br>Rahul scans the QR code and sends Bitcoin to that address.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think one wallet has only one Bitcoin address.<br>Actually, one wallet can create many addresses. Using a fresh address for each payment can<br>improve privacy.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a Bitcoin address the same as a public key?</div><div class="faq-a">No. A Bitcoin address is related to public-key cryptography, but it is not exactly the same as a
+public key.
+Can I reuse a Bitcoin address?
+Technically yes, but using a new address for each payment is better for privacy.
+What happens if I send Bitcoin to the wrong address?
+Bitcoin transactions are generally not reversible, so the Bitcoin may be lost or sent to someone
+else.
+Can someone steal my Bitcoin with only my address?
+No. A Bitcoin address can be shared to receive Bitcoin. The private key or seed phrase must
+stay secret.
+Why do Bitcoin addresses look complicated?
+They are designed for cryptographic accuracy, not human memory. Most people use copy-paste
+or QR codes.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#public-key" class="related-link">Public Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#qr-code" class="related-link">QR Code</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#self-custody" class="related-link">Self-Custody</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-confirmation">
+          <h2 class="term-name">Bitcoin Confirmation</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin confirmation means that a Bitcoin transaction has been included in a block on the<br>blockchain. Each new block added after that gives the transaction another confirmation, making<br>it harder to reverse.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A confirmation is like a transaction getting recorded in Bitcoin’s public record book.<br>When you send Bitcoin, the transaction first waits to be included in a block. Once miners add it<br>to a block and the network accepts that block, the transaction has one confirmation.<br>When another block is added after it, the transaction has two confirmations.<br>The more confirmations a transaction has, the harder it becomes to change.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Confirmations matter because they help users know how final a Bitcoin transaction is.<br>A transaction with zero confirmations is still waiting.<br>A transaction with one confirmation has been added to a block.<br>A transaction with more confirmations is deeper in the blockchain.<br>For small payments, fewer confirmations may be enough. For larger payments, people often<br>wait for more confirmations.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin transactions are added to blocks.<br>When your transaction is included in a block, it receives its first confirmation. Every new block<br>added after that increases the confirmation count.<br>This happens because each new block builds on top of the previous blocks. Reversing an older<br>transaction would require changing that block and the blocks after it.<br>Bitcoin.org explains that proof of work and the blockchain make it difficult to modify past<br>transactions because doing so would require redoing work and overtaking the network.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul sends Bitcoin to Asha.<br>At first, Asha’s wallet shows the transaction as pending.<br>After it is included in a block, it shows one confirmation.<br>After more blocks are added, it shows more confirmations.<br>Asha may wait for several confirmations before treating the transaction as final, especially if the<br>amount is large.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think a Bitcoin transaction is final the moment they press send.<br>That is not always true.<br>The transaction may first need to be broadcast, accepted by the network, included in a block,<br>and confirmed. Until then, it may appear as pending or unconfirmed.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does one confirmation mean?</div><div class="faq-a">One confirmation means the transaction has been included in one block on the Bitcoin
+blockchain.
+What does zero confirmation mean?
+Zero confirmation means the transaction has been broadcast but not yet included in a block.
+How many confirmations are enough?
+It depends on the value of the transaction and the receiver’s risk comfort. Larger transactions
+usually require more confirmations.
+Can a confirmed Bitcoin transaction be reversed?
+The more confirmations a transaction has, the harder it becomes to reverse. Bitcoin transactions
+are not reversible like normal card payments.
+Why is my Bitcoin transaction still unconfirmed?
+It may be waiting because of low transaction fees, high network activity, or wallet settings.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#blockchain" class="related-link">Blockchain</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#transaction-fee" class="related-link">Transaction Fee</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#mempool" class="related-link">Mempool</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-transaction">
+          <h2 class="term-name">Bitcoin Transaction</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by a<br>wallet, signed using a private key, shared with the Bitcoin network, and later confirmed when<br>included in a block.<br>Bitcoin.org explains that wallets use a private key or seed to sign transactions, giving<br>mathematical proof that the transaction came from the wallet owner.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A Bitcoin transaction is how Bitcoin moves.<br>When someone sends Bitcoin, they are not moving physical coins. They are creating a digital<br>message that says:<br>“This amount of Bitcoin should move from here to there.”<br>The wallet signs this message using the sender’s private key.<br>That signature proves the sender has the right to spend the Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Transactions are the basic activity of the Bitcoin network.<br>Every payment, transfer, or wallet movement happens through a transaction. The blockchain is<br>simply a long history of confirmed Bitcoin transactions.<br>Understanding transactions helps beginners understand addresses, wallets, fees, confirmations,<br>and self-custody.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A basic Bitcoin transaction works like this:<br>The sender enters the receiver’s Bitcoin address.<br>The wallet prepares the transaction.<br>The wallet signs the transaction using the private key.<br>The transaction is shared with the Bitcoin network.<br>Miners include it in a block.<br>Nodes verify that it follows Bitcoin’s rules.<br>Once confirmed, the receiver can see the Bitcoin as received.<br>The Bitcoin Developer Guide explains transaction structures and how Bitcoin transactions<br>transfer value using scripts and outputs.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul wants to send Bitcoin to Meera.<br>Meera shares her Bitcoin address. Rahul enters the address in his wallet and chooses the<br>amount. His wallet signs the transaction and broadcasts it to the network.<br>After miners include it in a block, Meera’s wallet shows the transaction as confirmed.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think Bitcoin transactions can always be reversed like card payments.<br>Bitcoin transactions are different.<br>Once a transaction is confirmed deeply enough, it becomes very difficult to reverse. This is why<br>users must check the address carefully before sending Bitcoin.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Can a Bitcoin transaction be cancelled?</div><div class="faq-a">If a transaction is not yet confirmed, there may be limited options depending on the wallet and
+fee settings. Once confirmed, Bitcoin transactions are generally not reversible like bank or card
+payments.
+Why do Bitcoin transactions have fees?
+Fees encourage miners to include transactions in blocks and help secure the network over time.
+How long does a Bitcoin transaction take?
+It depends on network activity, fees, and confirmations. A transaction may appear quickly but is
+usually considered stronger after confirmations.
+What happens if I send Bitcoin to the wrong address?
+In most cases, it cannot be reversed. Bitcoin users must carefully verify addresses before
+sending.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-address" class="related-link">Bitcoin Address</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-confirmation" class="related-link">Bitcoin Confirmation</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#transaction-fee" class="related-link">Transaction Fee</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-wallet">
+          <h2 class="term-name">Bitcoin Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin wallet is software or hardware that helps users send, receive, and manage Bitcoin. A<br>wallet does not actually store Bitcoin inside it. Instead, it manages the keys needed to access<br>and spend Bitcoin recorded on the Bitcoin blockchain.<br>The Bitcoin Developer Guide explains that wallet programs create public keys to receive<br>satoshis and use corresponding private keys to spend them.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A Bitcoin wallet is like a key manager.<br>It helps you:<br>Receive Bitcoin<br>Send Bitcoin<br>View your balance<br>Create addresses<br>Sign transactions<br>Back up wallet access<br>But the Bitcoin itself is not sitting inside the wallet app.<br>Bitcoin stays recorded on the blockchain.<br>Your wallet manages the keys that let you control it.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin wallets matter because they are the main tool people use to interact with Bitcoin.<br>Without a wallet, you cannot easily send or receive Bitcoin.<br>But wallets also come with responsibility. If you use a self-custody wallet, you must protect your<br>seed phrase. If you lose it, recovery may be impossible. If someone else gets it, they may be<br>able to move your Bitcoin.<br>Types of Bitcoin Wallets<br>There are several common types of wallets:<br>A hot wallet is connected to the internet. It is convenient but usually less secure than offline<br>storage.<br>A cold wallet keeps keys offline. It is often used for long-term storage.<br>A hardware wallet is a physical device designed to protect private keys.<br>A custodial wallet means a company controls the keys for you.<br>A non-custodial wallet means you control the keys yourself.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Think of your Bitcoin wallet like the key to a locker.<br>The locker is not inside the key.<br>But the key gives you access to what is inside.<br>Similarly, your Bitcoin is not inside the wallet app. The wallet gives you access to Bitcoin<br>recorded on the blockchain.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>The biggest misunderstanding is this:<br>“My Bitcoin is stored in my wallet.”<br>A better way to say it is:<br>“My Bitcoin is recorded on the blockchain, and my wallet manages the keys that let me spend<br>it.”<br>This small difference is very important for self-custody.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Does a Bitcoin wallet store Bitcoin?</div><div class="faq-a">Not exactly. A wallet manages keys. Bitcoin is recorded on the blockchain.
+What happens if I delete my Bitcoin wallet app?
+If you have your seed phrase or backup, you may be able to restore the wallet. Without a
+backup, you may lose access.
+Is a wallet the same as an exchange account?
+No. An exchange account is usually custodial. A self-custody wallet gives you control of your
+own keys.
+Which wallet is safest?
+Safety depends on how the wallet is used. Hardware wallets and cold storage are often used for
+stronger security, but beginners must still learn proper backup habits.
+Can one wallet create many addresses?
+Yes. A wallet can create many Bitcoin addresses.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#private-key" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#public-key" class="related-link">Public Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#seed-phrase" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#self-custody" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#hot-wallet" class="related-link">Hot Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#cold-wallet" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#hardware-wallet" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-address" class="related-link">Bitcoin Address</a></div></div>
+        </div>
+        <div class="term-entry" id="bitcoin-whitepaper">
+          <h2 class="term-name">Bitcoin Whitepaper</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>The Bitcoin whitepaper is the original document that introduced Bitcoin. It was published in 2008<br>by Satoshi Nakamoto and explained how a peer-to-peer electronic cash system could work<br>without a central authority.<br>The whitepaper presents Bitcoin as a peer-to-peer electronic cash system and explains the use<br>of digital signatures, proof of work, and a chain of transaction history.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>The Bitcoin whitepaper is like Bitcoin’s original blueprint.<br>It explains the problem Bitcoin was trying to solve and the basic design of the solution.<br>The problem was simple to understand but hard to solve:</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>The whitepaper matters because it introduced a new financial technology idea.<br>Before Bitcoin, digital payments usually needed trust in a third party. A bank, card company, or<br>payment app had to check balances and prevent fraud.<br>The Bitcoin whitepaper proposed a system where trust could be replaced by verification,<br>cryptography, proof of work, and a public transaction history.<br>This is why the whitepaper is one of the most important documents in Bitcoin history.<br>What the Whitepaper Explains<br>The Bitcoin whitepaper explains:</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>payment company?<br>Satoshi’s answer was Bitcoin.<br>Why the Bitcoin Whitepaper Matters<br>The whitepaper matters because it introduced a new financial technology idea.<br>Before Bitcoin, digital payments usually needed trust in a third party. A bank, card company, or<br>payment app had to check balances and prevent fraud.<br>The Bitcoin whitepaper proposed a system where trust could be replaced by verification,<br>cryptography, proof of work, and a public transaction history.<br>This is why the whitepaper is one of the most important documents in Bitcoin history.<br>What the Whitepaper Explains<br>The Bitcoin whitepaper explains:<br>How transactions work<br>How digital signatures prove ownership<br>How proof of work helps secure the network<br>How blocks are linked together<br>How the network can agree on transaction history<br>How double spending can be prevented</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Think of the Bitcoin whitepaper like the architectural plan for a building.<br>The plan is not the building itself.<br>But it explains how the building should be made.<br>Similarly, the whitepaper is not the Bitcoin network itself. It is the document that explained the<br>idea and design.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many people think the Bitcoin whitepaper is too technical for beginners.<br>Some parts are technical, but the main idea is simple:<br>Bitcoin was designed to let people send digital value directly to each other without depending on<br>a trusted middleman.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Who wrote the Bitcoin whitepaper?</div><div class="faq-a">The Bitcoin whitepaper was written by Satoshi Nakamoto.
+When was the Bitcoin whitepaper published?
+It was published in 2008.
+Is the Bitcoin whitepaper still important?
+Yes. It remains the original document explaining Bitcoin’s core idea.
+Is Bitcoin exactly the same today as the whitepaper?
+Bitcoin has grown and improved over time, but the whitepaper still explains many of its core
+principles.
+Is the whitepaper only for developers?
+No. Beginners can also read it to understand Bitcoin’s purpose, even if they skip the technical
+details at first.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#satoshi-nakamoto" class="related-link">Satoshi Nakamoto</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#blockchain" class="related-link">Blockchain</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#double-spend" class="related-link">Double Spend</a></div></div>
+        </div>
+        <div class="term-entry" id="block">
+          <h2 class="term-name">Block</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A block is a group of Bitcoin transactions that gets added to the Bitcoin blockchain. Each block<br>contains transaction data and is connected to the previous block, creating a chain of blocks.<br>The Bitcoin Developer Guide describes blocks as part of the structure used to record<br>transactions and protect transaction history through proof of work.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A block is like a page in a record book.<br>Each page contains a group of transactions.<br>When one page is full and accepted, a new page begins.<br>Over time, these pages form a long record.<br>In Bitcoin, these pages are called blocks.<br>The full record is called the blockchain.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Blocks matter because they organize Bitcoin transactions.<br>Without blocks, Bitcoin would have a messy list of individual transactions. Blocks help the<br>network group transactions, confirm them, and add them to the shared record.<br>Each new block also makes previous transactions harder to change.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>When users send Bitcoin, their transactions are shared with the network.<br>Miners select transactions and place them into a candidate block. They then compete to find a<br>valid proof of work. When a miner succeeds, the block is broadcast to the network.<br>Nodes check the block. If it follows Bitcoin’s rules, it becomes part of the blockchain.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a teacher collecting homework from students.<br>Instead of checking one paper every few seconds, the teacher collects many papers, reviews<br>them together, and files them as one batch.<br>A Bitcoin block works like that batch.<br>It groups many transactions together before adding them to the blockchain.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think a block contains only one transaction.<br>A block usually contains many transactions. These transactions are grouped together and<br>added to the blockchain as one block.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a block the same as a blockchain?</div><div class="faq-a">No. A block is one group of transactions. A blockchain is the full chain of many blocks.
+Who creates Bitcoin blocks?
+Bitcoin miners create blocks by collecting transactions and performing proof of work.
+Can a Bitcoin block be changed?
+Changing an old block is extremely difficult because it would require redoing proof of work and
+overtaking the network.
+Why are blocks linked together?
+Blocks are linked together to create a clear transaction history. This makes the blockchain
+ordered and harder to alter.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#blockchain" class="related-link">Blockchain</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-confirmation" class="related-link">Bitcoin Confirmation</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-mining" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#block-reward" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#hash-rate" class="related-link">Hash Rate</a></div></div>
+        </div>
+        <div class="term-entry" id="blockchain">
+          <h2 class="term-name">Blockchain</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A blockchain is a shared digital record that stores information in groups called blocks. These<br>blocks are connected in order, creating a chain of records. In Bitcoin, the blockchain keeps track<br>of Bitcoin transactions and helps the network agree on who owns what.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Think of a blockchain like a public record book.<br>Every time people send Bitcoin, the transaction is recorded. Transactions are grouped together<br>into blocks. Each new block is linked to the block before it.<br>This creates a timeline of transactions.<br>That is why it is called a blockchain:<br>blocks connected in a chain.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Blockchain matters because it allows Bitcoin to keep records without one central company.<br>A bank has its own private database.<br>Bitcoin has a public blockchain.<br>This means Bitcoin users do not need to trust one company to maintain the record. Instead,<br>many computers on the network check and store the history.<br>This is one reason Bitcoin is called decentralized.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>In Bitcoin, new transactions are shared with the network.<br>Miners collect these transactions and place them into a block. They then use proof of work to<br>add the block to the blockchain. Once the block is accepted, nodes check whether it follows<br>Bitcoin’s rules.<br>Bitcoin.org explains that transactions are included in the blockchain through a process involving<br>mathematical proof of work.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a classroom where every student keeps a copy of the same notebook.<br>Whenever something important happens, everyone updates their notebook. If one student<br>changes their notebook incorrectly, the rest of the class can reject that version.<br>A blockchain works in a similar way.<br>Many computers keep a copy of the record. This makes it difficult for one person to secretly<br>change the history.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many people think blockchain and Bitcoin are the same thing.<br>They are connected, but they are not the same.<br>Bitcoin is the digital money and network.<br>Blockchain is the record system Bitcoin uses.<br>A simple way to remember it:<br>Bitcoin is the money.<br>Blockchain is the record book.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is blockchain only used for Bitcoin?</div><div class="faq-a">No. Bitcoin was the first major use of blockchain technology, but many other projects now use
+different types of blockchains.
+Can blockchain data be changed?
+Changing old blockchain data is extremely difficult in Bitcoin because it would require redoing
+proof of work and convincing the network to accept the changed version.
+Is every blockchain decentralized?
+No. Some blockchains are more decentralized than others. A blockchain can still have central
+points of control depending on how it is designed.
+Why does Bitcoin need a blockchain?
+Bitcoin needs a blockchain to keep a shared record of transactions without depending on a
+central database.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#block" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-node" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-confirmation" class="related-link">Bitcoin Confirmation</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#decentralization" class="related-link">Decentralization</a></div></div>
+        </div></div><div class="letter-group" id="s"><div class="letter-anchor">S</div>
+        <div class="term-entry" id="satoshi">
+          <h2 class="term-name">Satoshi</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A satoshi is the smallest unit of Bitcoin. One Bitcoin is equal to 100,000,000 satoshis. This<br>smaller unit makes it easier to measure and use tiny amounts of Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A satoshi is to Bitcoin what paise are to rupees.<br>In India, one rupee can be divided into 100 paise.<br>In Bitcoin, one Bitcoin can be divided into 100 million satoshis.<br>People often call satoshis “sats” for short.<br>So instead of saying:<br>“I own 0.0001 BTC”<br>someone can say:<br>“I own 10,000 sats.”<br>That feels simpler for many beginners.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Satoshis matter because one full Bitcoin can be expensive for many people.<br>But users do not need to buy one full Bitcoin. Bitcoin can be divided into very small units. This<br>makes it possible for people to buy, send, or save smaller amounts.<br>This is useful for beginners, students, working professionals, and anyone learning about Bitcoin<br>gradually.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>The basic conversion is:<br>1 Bitcoin = 100,000,000 satoshis<br>This means:<br>0.5 BTC = 50,000,000 sats<br>0.1 BTC = 10,000,000 sats<br>0.01 BTC = 1,000,000 sats<br>0.001 BTC = 100,000 sats</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine Bitcoin is like a large gold bar.<br>Not everyone needs to buy the full gold bar. People can buy smaller pieces.<br>Satoshis work in a similar way.<br>They allow Bitcoin to be broken into tiny units, making it easier to use and understand.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think they must buy one full Bitcoin.<br>That is not true.<br>Bitcoin is divisible. Someone can own a small fraction of Bitcoin. Satoshis make this easier to<br>understand.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a satoshi the same as Bitcoin?</div><div class="faq-a">A satoshi is a small part of Bitcoin. It is not separate from Bitcoin. It is simply the smallest unit of
+Bitcoin.
+Why is it called a satoshi?
+It is named after Satoshi Nakamoto, the creator of Bitcoin.
+Can I buy only a few satoshis?
+Yes. Many platforms allow users to buy small fractions of Bitcoin, depending on local rules,
+platform limits, and fees.
+What is the short form of satoshi?
+The common short form is “sat” or “sats.”</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#satoshi-nakamoto" class="related-link">Satoshi Nakamoto</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-wallet" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-transaction" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-address" class="related-link">Bitcoin Address</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#21-million-bitcoin-supply" class="related-link">21 Million Bitcoin Supply</a></div></div>
+        </div>
+        <div class="term-entry" id="satoshi-nakamoto">
+          <h2 class="term-name">Satoshi Nakamoto</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Satoshi Nakamoto is the name used by the person or group that created Bitcoin. Satoshi<br>published the Bitcoin whitepaper in 2008 and released the first Bitcoin software in 2009. The<br>real identity of Satoshi Nakamoto is still unknown.<br>The Bitcoin whitepaper was published under the name Satoshi Nakamoto and introduced<br>Bitcoin as a peer-to-peer electronic cash system.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Satoshi Nakamoto is the founder name behind Bitcoin.<br>But unlike most technology founders, Satoshi did not build Bitcoin around personal fame. After<br>helping start the project, Satoshi stepped away.<br>Bitcoin continued to run without its creator.<br>That is one of the most important parts of the Bitcoin story.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Satoshi matters because they solved a difficult problem: how to create digital money that does<br>not need a central authority.<br>Before Bitcoin, digital money usually needed a company, bank, or server to prevent double<br>spending. Satoshi proposed a system where a network of computers could agree on<br>transactions using proof of work.<br>This idea became Bitcoin.<br>Why Satoshi’s Identity Matters Less Than the Idea<br>Many people are curious about who Satoshi really is.<br>That curiosity is natural.<br>But Bitcoin does not depend on knowing Satoshi’s identity. The software is open. The rules are<br>public. The network is maintained by people around the world.<br>This makes Bitcoin different from a company.<br>A company usually depends heavily on its founder. Bitcoin does not.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine someone writes an important book, shares it with the world, and then disappears.<br>People can still read the book.<br>They can still study the ideas.<br>They can still build on the knowledge.<br>Bitcoin is similar.<br>Satoshi introduced the idea, but the network now exists beyond the creator.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think Satoshi controls Bitcoin today.<br>There is no public evidence that Satoshi controls the Bitcoin network. Bitcoin runs through<br>software, miners, nodes, developers, and users who follow the network rules.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is Satoshi Nakamoto a real person?</div><div class="faq-a">Satoshi Nakamoto may be one person or a group of people. The real identity is unknown.
+Did Satoshi create Bitcoin?
+Yes. Satoshi Nakamoto published the Bitcoin whitepaper and released the first Bitcoin software.
+Does Satoshi still control Bitcoin?
+No single person controls Bitcoin. Bitcoin is maintained by a decentralized network.
+Why did Satoshi disappear?
+Nobody knows for sure. Satoshi gradually stopped public communication after Bitcoin’s early
+years.
+Why is Satoshi important?
+Satoshi is important because they introduced the first successful decentralized digital money
+system.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/#bitcoin" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#bitcoin-whitepaper" class="related-link">Bitcoin Whitepaper</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#satoshi" class="related-link">Satoshi</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#proof-of-work" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#blockchain" class="related-link">Blockchain</a> &nbsp;·&nbsp; <a href="/glossary/series-1/#peer-to-peer-network" class="related-link">Peer-to-Peer Network</a></div></div>
+        </div></div>
+      </div>
+    </div>
+
+    <a href="/glossary/" class="back-link">← BACK TO GLOSSARY</a>
+  </main>
+
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>
