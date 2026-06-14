@@ -10,8 +10,11 @@ function staticGlossaryPlugin() {
     configureServer(server: any) {
       server.middlewares.use((req: any, res: any, next: any) => {
         const url: string = req.url || ''
-        // Match /glossary/ and /glossary/series-N/
-        if (url.startsWith('/glossary/') || url === '/glossary') {
+        // Match /glossary/, /glossary/series-N/, and /blogs/
+        const isStaticRoute =
+          url.startsWith('/glossary/') || url === '/glossary' ||
+          url.startsWith('/blogs/')    || url === '/blogs'
+        if (isStaticRoute) {
           // Normalize: strip query strings
           const cleanUrl = url.split('?')[0]
           // Build the file path

@@ -22,7 +22,7 @@
       padding: 24px 80px;
       border-bottom: 1px solid #e5e7eb;
     }
-    .header-left { display: flex; align-items: center; gap: 40px; }
+    .header-left, .header-right { display: flex; align-items: center; gap: 40px; }
     .nav-link {
       font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
       text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
@@ -42,7 +42,7 @@
 
     @media (max-width: 768px) {
       .site-header { padding: 18px 24px; }
-      .header-left { gap: 20px; }
+      .header-left, .header-right { gap: 20px; }
       .nav-link { font-size: 13px; }
     }
   </style>
@@ -271,12 +271,15 @@
 </head>
 <body>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="header-left">
       <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
       <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
     </div>
-    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+    <div class="header-right">
+      <a href="/blogs/" class="nav-link" id="nav-blogs">BLOGS</a>
+      <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+    </div>
   </header>
 
   <main>

@@ -85,37 +85,51 @@ function App() {
 
         </div>
 
-        {/* ABOUT button + dropdown */}
-        <div ref={aboutRef} style={{ position: "relative" }}>
-          <button
-            onClick={() => { setAboutOpen(o => !o); setContactOpen(false); }}
-            className="text-base md:text-lg font-semibold tracking-wide hover:text-gray-600 transition-colors cursor-pointer bg-transparent border-none outline-none"
-          >
-            ABOUT
-          </button>
+        {/* Right cluster: BLOGS + ABOUT */}
+        <div style={{ display: "flex", alignItems: "center", gap: "40px" }}>
 
-          {aboutOpen && (
-            <div style={{
-              position: "absolute",
-              top: "calc(100% + 8px)",
-              right: 0,
-              background: "#fff",
-              border: "1px solid #e5e7eb",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
-              padding: "20px 24px",
-              minWidth: "280px",
-              maxWidth: "320px",
-              zIndex: 9999,
-              textAlign: "right",
-            }}>
-              <p style={{ fontSize: "14px", color: "#374151", lineHeight: "1.6", marginBottom: "12px" }}>
-                CryptoWala is an INDIAN platform built to make Bitcoin simple, trusted, and accessible for everyone.
-              </p>
-              <p style={{ fontSize: "14px", color: "#374151", lineHeight: "1.6" }}>
-                We're on a mission to educate, empower, and turn India into a global Bitcoin and Crypto hub.
-              </p>
-            </div>
-          )}
+          {/* BLOGS link */}
+          <a
+            href="/blogs/"
+            className="text-base md:text-lg font-semibold tracking-wide hover:text-gray-600 transition-colors"
+            style={{ textDecoration: "none" }}
+          >
+            BLOGS
+          </a>
+
+          {/* ABOUT button + dropdown */}
+          <div ref={aboutRef} style={{ position: "relative" }}>
+            <button
+              onClick={() => { setAboutOpen(o => !o); setContactOpen(false); }}
+              className="text-base md:text-lg font-semibold tracking-wide hover:text-gray-600 transition-colors cursor-pointer bg-transparent border-none outline-none"
+            >
+              ABOUT
+            </button>
+
+            {aboutOpen && (
+              <div style={{
+                position: "absolute",
+                top: "calc(100% + 8px)",
+                right: 0,
+                background: "#fff",
+                border: "1px solid #e5e7eb",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.10)",
+                padding: "20px 24px",
+                minWidth: "280px",
+                maxWidth: "320px",
+                zIndex: 9999,
+                textAlign: "right",
+              }}>
+                <p style={{ fontSize: "14px", color: "#374151", lineHeight: "1.6", marginBottom: "12px" }}>
+                  CryptoWala is an INDIAN platform built to make Bitcoin simple, trusted, and accessible for everyone.
+                </p>
+                <p style={{ fontSize: "14px", color: "#374151", lineHeight: "1.6" }}>
+                  We're on a mission to educate, empower, and turn India into a global Bitcoin and Crypto hub.
+                </p>
+              </div>
+            )}
+          </div>
+
         </div>
 
       </header>

@@ -8,6 +8,28 @@ React, Vite, Tailwind CSS.
 
 ## Recent Changes
 - 2026-06-14
+  - Summary: Repositioned BLOGS link to the right side of the header
+  - Details:
+    - Moved the BLOGS link from the left-side navigation cluster (`CONTACT` + `GLOSSARY`) to the right-side navigation cluster (`BLOGS` + `ABOUT`), placing it directly to the left of the `ABOUT` button.
+    - Updated `src/App.tsx` header structure by creating a right-aligned flex container to hold both the `BLOGS` link and `ABOUT` dropdown button.
+    - Processed all 76 static HTML glossary pages and 11 blog pages in `public/` to modify their header HTML and CSS, adding the `.header-right` styling container to maintain layout consistency site-wide.
+  - Reason: User requested that BLOGS be placed on the left side of ABOUT in the header navigation.
+  - Files Affected: `src/App.tsx`, all 76 static glossary HTML pages (under `public/glossary/`), and all 11 blog HTML pages (under `public/blogs/`).
+
+- 2026-06-14
+  - Summary: Added Blogs section — 11 static HTML pages (hub + 10 blog articles)
+  - Details:
+    - Created `public/blogs/index.html` — hub page with 10 blog cards in a 2-column grid, Schema.org `Blog` JSON-LD, editorial black/white design matching glossary style
+    - Created 10 individual blog pages at `/blogs/<slug>/index.html` — each with: focused `<title>`, meta description, canonical URL, Schema.org `BlogPosting` JSON-LD, `BreadcrumbList` JSON-LD, PDF content extracted and rendered as structured HTML, prev/next article navigation
+    - Blog articles cover: Bitcoin SIP guide, how SIP works, SIP vs volatile markets, Bitcoin SIP vs Mutual Fund SIP (×2), Bitcoin SIP vs Trading, Dollar-Cost Averaging, Bitcoin crash & SIP, 30% crypto tax India, ITR reporting guide
+    - Updated `vite.config.ts`: extended `staticGlossaryPlugin()` middleware to also handle `/blogs/` routes
+    - Updated `src/App.tsx`: added BLOGS nav link to left header cluster (after GLOSSARY)
+    - Updated all 76 glossary HTML pages: added BLOGS nav link to their static headers
+    - Generation done via Python script `scratch/build_blogs.py` using pdfplumber
+  - Reason: User provided 10 blog PDFs in `public/blogs/` and requested they be published to a /blogs/ section using the same pattern as the Glossary section
+  - Files Affected: `vite.config.ts`, `src/App.tsx`, `public/blogs/index.html`, `public/blogs/*/index.html` (10 new sub-pages), all 76 `public/glossary/` HTML files (header update)
+
+
   - Summary: Split each glossary series into individual term sub-pages (68 sub-pages created)
   - Details:
     - Created 68 individual `index.html` files at `/glossary/series-N/term-slug/` URLs (one per term)
