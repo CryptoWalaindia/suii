@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Bitcoin Improvement Proposal? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Bitcoin Improvement Proposal? | CryptoWala Glossary">
+  <meta name="description" content="A Bitcoin Improvement Proposal, or BIP, is a formal document used to propose changes,standards, or improvements related to Bitcoin. A BIP can discuss technical upgrades, walletstandards, or process ch">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-6/bitcoin-improvement-pro/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-6/bitcoin-improvement-pro/">
+  <meta property="og:title" content="What is Bitcoin Improvement Proposal? | CryptoWala Glossary">
+  <meta property="og:description" content="A Bitcoin Improvement Proposal, or BIP, is a formal document used to propose changes,standards, or improvements related to Bitcoin. A BIP can discuss technical upgrades, walletstandards, or process ch">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Bitcoin Improvement Proposal",
+  "description": "A Bitcoin Improvement Proposal, or BIP, is a formal document used to propose changes,standards, or improvements related to Bitcoin. A BIP can discuss technical upgrades, walletstandards, or process ch",
+  "url": "https://www.cryptowala.ai/glossary/series-6/bitcoin-improvement-pro/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 6: Regulation, Risk & Scams",
+    "url": "https://www.cryptowala.ai/glossary/series-6/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 6: Regulation, Risk & Scams",
+      "item": "https://www.cryptowala.ai/glossary/series-6/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bitcoin Improvement Proposal",
+      "item": "https://www.cryptowala.ai/glossary/series-6/bitcoin-improvement-pro/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does BIP stand for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BIP stands for Bitcoin Improvement Proposal.\r\nWho can write a BIP?\r\nAnyone can suggest ideas, but formal BIPs need to follow the BIP process and meet editorial\r\nrequirements.\r\nDoes every BIP get accepted?\r\nNo. Many BIPs are discussed, revised, rejected, or never adopted.\r\nDid Taproot use BIPs?\r\nYes. Taproot was introduced through Bitcoin Improvement Proposals.\r\nWhy are BIPs important?\r\nThey help Bitcoin development stay open, documented, and reviewable."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-6/">SERIES 6</a> &nbsp;/&nbsp; BITCOIN IMPROVEMENT PROPOSAL
+      </div>
+      <h1>BITCOIN IMPROVEMENT PROPOSAL</h1>
+      <p class="term-series-label">Series 6: Regulation, Risk & Scams</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="bitcoin-improvement-pro">
+          <h2 class="term-name">Bitcoin Improvement Proposal</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A Bitcoin Improvement Proposal, or BIP, is a formal document used to propose changes,<br>standards, or improvements related to Bitcoin. A BIP can discuss technical upgrades, wallet<br>standards, or process changes.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin Improvement Proposal is a formal proposal document for suggesting changes or<br>standards in the Bitcoin ecosystem.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A BIP is like a public proposal.<br>Someone has an idea to improve Bitcoin or create a standard.<br>Instead of changing Bitcoin directly, they write a proposal. Other developers and community<br>members can review, discuss, and test the idea.<br>A BIP does not automatically become part of Bitcoin.<br>The official BIPs repository says publication means the proposal met formal criteria, but it does<br>not mean the proposal has community consensus or will be adopted.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>BIPs matter because Bitcoin is decentralized.<br>There is no CEO who decides upgrades.<br>Changes need open discussion, testing, review, and adoption by the network.<br>BIPs help organize this process.<br>They make Bitcoin development more transparent.<br>What BIPs Can Cover<br>BIPs can cover:<br>● Consensus rule changes<br>● Wallet standards<br>● Address formats<br>● Process improvements<br>● Technical documentation<br>● Network upgrades<br>Some BIPs are very important. Others may never be widely used.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a city where nobody can secretly change the traffic rules.<br>If someone wants a new rule, they must write a proposal, explain it clearly, and let others review<br>it.<br>A BIP works in a similar way for Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think a BIP automatically changes Bitcoin.<br>It does not.<br>A BIP is a proposal. For important changes, real adoption depends on users, developers,<br>miners, businesses, and nodes accepting the change.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does BIP stand for?</div><div class="faq-a">BIP stands for Bitcoin Improvement Proposal.
+Who can write a BIP?
+Anyone can suggest ideas, but formal BIPs need to follow the BIP process and meet editorial
+requirements.
+Does every BIP get accepted?
+No. Many BIPs are discussed, revised, rejected, or never adopted.
+Did Taproot use BIPs?
+Yes. Taproot was introduced through Bitcoin Improvement Proposals.
+Why are BIPs important?
+They help Bitcoin development stay open, documented, and reviewable.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-6/bitcoin/" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-6/taproot/" class="related-link">Taproot</a> &nbsp;·&nbsp; <a href="/glossary/series-6/soft-fork/" class="related-link">Soft Fork</a> &nbsp;·&nbsp; <a href="/glossary/series-6/consensus-mechanism/" class="related-link">Consensus Mechanism</a> &nbsp;·&nbsp; <a href="/glossary/series-6/bitcoin-node/" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-6/full-node/" class="related-link">Full Node</a> &nbsp;·&nbsp; <a href="/glossary/series-6/open-source/" class="related-link">Open Source</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <span></span>
+    <a href="/glossary/series-6/" class="back-to-series">↑ All Regulation, Risk & Scams Terms</a>
+    <a href="/glossary/series-6/bitcoin-ordinals/">Bitcoin Ordinals →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

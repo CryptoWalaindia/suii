@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Hardware Wallet? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Hardware Wallet? | CryptoWala Glossary">
+  <meta name="description" content="A hardware wallet is a physical device designed to protect private keys and sign Bitcointransactions. It helps keep keys away from regular internet-connected devices.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-2/hardware-wallet/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-2/hardware-wallet/">
+  <meta property="og:title" content="What is Hardware Wallet? | CryptoWala Glossary">
+  <meta property="og:description" content="A hardware wallet is a physical device designed to protect private keys and sign Bitcointransactions. It helps keep keys away from regular internet-connected devices.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Hardware Wallet",
+  "description": "A hardware wallet is a physical device designed to protect private keys and sign Bitcointransactions. It helps keep keys away from regular internet-connected devices.",
+  "url": "https://www.cryptowala.ai/glossary/series-2/hardware-wallet/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 2: Wallets, Keys & Self-Custody",
+    "url": "https://www.cryptowala.ai/glossary/series-2/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 2: Wallets, Keys & Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Hardware Wallet",
+      "item": "https://www.cryptowala.ai/glossary/series-2/hardware-wallet/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a hardware wallet store Bitcoin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It stores or protects private keys. Bitcoin is recorded on the blockchain.\r\nWhat happens if I lose my hardware wallet?\r\nIf you have your seed phrase safely backed up, you may be able to restore access\r\nusing another compatible wallet.\r\nCan someone use my hardware wallet without the PIN?\r\nThe PIN helps protect the device, but the seed phrase is still the most important backup.\r\nIs a hardware wallet needed for beginners?\r\nNot always at the start. It becomes more useful when users want stronger self-custody\r\nfor larger or long-term holdings.\r\nIs a hardware wallet the same as cold storage?\r\nA hardware wallet is commonly used for cold storage, but the full setup matters."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-2/">SERIES 2</a> &nbsp;/&nbsp; HARDWARE WALLET
+      </div>
+      <h1>HARDWARE WALLET</h1>
+      <p class="term-series-label">Series 2: Wallets, Keys & Self-Custody</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="hardware-wallet">
+          <h2 class="term-name">Hardware Wallet</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A hardware wallet is a physical device designed to protect private keys and sign Bitcoin<br>transactions. It helps keep keys away from regular internet-connected devices.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A hardware wallet is a dedicated device used to store private keys securely and sign<br>transactions without exposing those keys to a normal computer or phone.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A hardware wallet is like a special security device for Bitcoin.<br>It is not just a USB drive.<br>It is not where Bitcoin “sits.”<br>It is a device that protects keys and approves transactions.<br>Your Bitcoin remains recorded on the blockchain. The hardware wallet helps control<br>access.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Hardware wallets matter because they reduce risk from infected computers, fake<br>websites, and online attacks.<br>When used properly, a hardware wallet can help users sign transactions while keeping<br>private keys more protected.<br>Bitcoin.org’s wallet listings describe hardware and signing devices as tools that can<br>securely create private keys and sign Bitcoin transactions.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A hardware wallet creates or stores private keys inside the device.<br>When you want to send Bitcoin, the transaction details are shown for approval. The<br>device signs the transaction. The private key does not need to leave the device.<br>This gives an extra layer of protection.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul wants to store Bitcoin for the long term.<br>He buys a hardware wallet from an official source. During setup, it gives him a seed<br>phrase. He writes the phrase down offline.<br>Later, when he sends Bitcoin, he must confirm the transaction on the hardware wallet<br>device.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think Bitcoin is stored inside the hardware wallet.<br>That is not accurate.<br>The hardware wallet protects the private keys. The Bitcoin itself is recorded on the<br>blockchain.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Buy from official or trusted sources.<br>Check packaging carefully.<br>Write the seed phrase offline.<br>Never enter the seed phrase on a random website.<br>Confirm addresses on the device screen.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Does a hardware wallet store Bitcoin?</div><div class="faq-a">No. It stores or protects private keys. Bitcoin is recorded on the blockchain.
+What happens if I lose my hardware wallet?
+If you have your seed phrase safely backed up, you may be able to restore access
+using another compatible wallet.
+Can someone use my hardware wallet without the PIN?
+The PIN helps protect the device, but the seed phrase is still the most important backup.
+Is a hardware wallet needed for beginners?
+Not always at the start. It becomes more useful when users want stronger self-custody
+for larger or long-term holdings.
+Is a hardware wallet the same as cold storage?
+A hardware wallet is commonly used for cold storage, but the full setup matters.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/cold-wallet/" class="related-link">Cold Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/seed-phrase/" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/private-key/" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/self-custody/" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/non-custodial-wallet/" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/passphrase/" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/multisig-wallet/" class="related-link">Multisig Wallet</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-2/custodial-wallet/">← Custodial Wallet</a>
+    <a href="/glossary/series-2/" class="back-to-series">↑ All Wallets, Keys & Self-Custody Terms</a>
+    <a href="/glossary/series-2/hot-wallet/">Hot Wallet →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

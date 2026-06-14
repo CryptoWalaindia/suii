@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is SHA-256? | CryptoWala Glossary</title>
+  <meta name="title" content="What is SHA-256? | CryptoWala Glossary">
+  <meta name="description" content="SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into afixed-length output called a hash. Bitcoin miners use SHA-256 while searchingfor valid blocks.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-3/sha-256/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-3/sha-256/">
+  <meta property="og:title" content="What is SHA-256? | CryptoWala Glossary">
+  <meta property="og:description" content="SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into afixed-length output called a hash. Bitcoin miners use SHA-256 while searchingfor valid blocks.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "SHA-256",
+  "description": "SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into afixed-length output called a hash. Bitcoin miners use SHA-256 while searchingfor valid blocks.",
+  "url": "https://www.cryptowala.ai/glossary/series-3/sha-256/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 3: Mining, Proof-of-Work & Security",
+    "url": "https://www.cryptowala.ai/glossary/series-3/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 3: Mining, Proof-of-Work & Security",
+      "item": "https://www.cryptowala.ai/glossary/series-3/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "SHA-256",
+      "item": "https://www.cryptowala.ai/glossary/series-3/sha-256/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does SHA-256 mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SHA-256 stands for Secure Hash Algorithm 256-bit.\r\nWhy does Bitcoin use SHA-256?\r\nBitcoin uses SHA-256 for hashing in mining and other parts of its security design.\r\nIs SHA-256 the same as proof of work?\r\nNo. SHA-256 is the hashing algorithm. Proof of work is the broader mining\r\nsecurity mechanism.\r\nCan SHA-256 be reversed?\r\nNo practical method exists to reverse a SHA-256 hash back into the original\r\ninput.\r\nDo miners use SHA-256?\r\nYes. Bitcoin miners use SHA-256 hashing while searching for valid blocks."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-3/">SERIES 3</a> &nbsp;/&nbsp; SHA-256
+      </div>
+      <h1>SHA-256</h1>
+      <p class="term-series-label">Series 3: Mining, Proof-of-Work & Security</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="sha-256">
+          <h2 class="term-name">SHA-256</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>SHA-256 is a cryptographic hashing algorithm used by Bitcoin. It turns data into a<br>fixed-length output called a hash. Bitcoin miners use SHA-256 while searching<br>for valid blocks.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>SHA-256 is a cryptographic hash function that Bitcoin uses in mining and<br>security. It creates a unique-looking fixed-size output from input data.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>SHA-256 is like a digital fingerprint machine.<br>You put data in.<br>It gives a fixed-size fingerprint out.<br>Even a tiny change in the input creates a very different output.<br>This makes hashing useful for checking data and securing Bitcoin blocks.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>SHA-256 matters because it is at the heart of Bitcoin mining.<br>Miners repeatedly hash block data while trying to find a result below the difficulty<br>target.<br>This process is what makes proof of work measurable and verifiable.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A miner takes block information and runs it through SHA-256.<br>The output is a hash.<br>If the hash meets Bitcoin’s difficulty requirement, the block can be valid.<br>If not, the miner changes data such as the nonce and tries again.<br>This trial-and-error process happens many times per second across the network.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine putting a document into a machine that creates a unique code for it.<br>If you change even one letter in the document, the code changes completely.<br>SHA-256 works similarly, but mathematically.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think SHA-256 encrypts Bitcoin.<br>Hashing and encryption are not the same.<br>Encryption is designed to be reversed with a key.<br>Hashing is designed to be one-way.<br>SHA-256 creates a hash. It does not store hidden information that can simply be<br>decrypted.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does SHA-256 mean?</div><div class="faq-a">SHA-256 stands for Secure Hash Algorithm 256-bit.
+Why does Bitcoin use SHA-256?
+Bitcoin uses SHA-256 for hashing in mining and other parts of its security design.
+Is SHA-256 the same as proof of work?
+No. SHA-256 is the hashing algorithm. Proof of work is the broader mining
+security mechanism.
+Can SHA-256 be reversed?
+No practical method exists to reverse a SHA-256 hash back into the original
+input.
+Do miners use SHA-256?
+Yes. Bitcoin miners use SHA-256 hashing while searching for valid blocks.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/nonce/" class="related-link">Nonce</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-miner/" class="related-link">Bitcoin Miner</a></div></div>
+        </div></div>
+      </div>
+    </div>
+
+    
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-3/proof-of-work/">← Proof of Work</a>
+    <a href="/glossary/series-3/" class="back-to-series">↑ All Mining, Proof-of-Work & Security Terms</a>
+    <span></span>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

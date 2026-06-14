@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Bitcoin Transaction? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Bitcoin Transaction? | CryptoWala Glossary">
+  <meta name="description" content="A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by awallet, signed using a private key, shared with the Bitcoin network, and later confirmed whenincluded in a">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-1/bitcoin-transaction/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-1/bitcoin-transaction/">
+  <meta property="og:title" content="What is Bitcoin Transaction? | CryptoWala Glossary">
+  <meta property="og:description" content="A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by awallet, signed using a private key, shared with the Bitcoin network, and later confirmed whenincluded in a">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Bitcoin Transaction",
+  "description": "A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by awallet, signed using a private key, shared with the Bitcoin network, and later confirmed whenincluded in a",
+  "url": "https://www.cryptowala.ai/glossary/series-1/bitcoin-transaction/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 1: Bitcoin Basics",
+    "url": "https://www.cryptowala.ai/glossary/series-1/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 1: Bitcoin Basics",
+      "item": "https://www.cryptowala.ai/glossary/series-1/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bitcoin Transaction",
+      "item": "https://www.cryptowala.ai/glossary/series-1/bitcoin-transaction/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a Bitcoin transaction be cancelled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a transaction is not yet confirmed, there may be limited options depending on the wallet and\r\nfee settings. Once confirmed, Bitcoin transactions are generally not reversible like bank or card\r\npayments.\r\nWhy do Bitcoin transactions have fees?\r\nFees encourage miners to include transactions in blocks and help secure the network over time.\r\nHow long does a Bitcoin transaction take?\r\nIt depends on network activity, fees, and confirmations. A transaction may appear quickly but is\r\nusually considered stronger after confirmations.\r\nWhat happens if I send Bitcoin to the wrong address?\r\nIn most cases, it cannot be reversed. Bitcoin users must carefully verify addresses before\r\nsending."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-1/">SERIES 1</a> &nbsp;/&nbsp; BITCOIN TRANSACTION
+      </div>
+      <h1>BITCOIN TRANSACTION</h1>
+      <p class="term-series-label">Series 1: Bitcoin Basics</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="bitcoin-transaction">
+          <h2 class="term-name">Bitcoin Transaction</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin transaction is a transfer of Bitcoin from one address to another. It is created by a<br>wallet, signed using a private key, shared with the Bitcoin network, and later confirmed when<br>included in a block.<br>Bitcoin.org explains that wallets use a private key or seed to sign transactions, giving<br>mathematical proof that the transaction came from the wallet owner.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A Bitcoin transaction is how Bitcoin moves.<br>When someone sends Bitcoin, they are not moving physical coins. They are creating a digital<br>message that says:<br>“This amount of Bitcoin should move from here to there.”<br>The wallet signs this message using the sender’s private key.<br>That signature proves the sender has the right to spend the Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Transactions are the basic activity of the Bitcoin network.<br>Every payment, transfer, or wallet movement happens through a transaction. The blockchain is<br>simply a long history of confirmed Bitcoin transactions.<br>Understanding transactions helps beginners understand addresses, wallets, fees, confirmations,<br>and self-custody.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A basic Bitcoin transaction works like this:<br>The sender enters the receiver’s Bitcoin address.<br>The wallet prepares the transaction.<br>The wallet signs the transaction using the private key.<br>The transaction is shared with the Bitcoin network.<br>Miners include it in a block.<br>Nodes verify that it follows Bitcoin’s rules.<br>Once confirmed, the receiver can see the Bitcoin as received.<br>The Bitcoin Developer Guide explains transaction structures and how Bitcoin transactions<br>transfer value using scripts and outputs.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul wants to send Bitcoin to Meera.<br>Meera shares her Bitcoin address. Rahul enters the address in his wallet and chooses the<br>amount. His wallet signs the transaction and broadcasts it to the network.<br>After miners include it in a block, Meera’s wallet shows the transaction as confirmed.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think Bitcoin transactions can always be reversed like card payments.<br>Bitcoin transactions are different.<br>Once a transaction is confirmed deeply enough, it becomes very difficult to reverse. This is why<br>users must check the address carefully before sending Bitcoin.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Can a Bitcoin transaction be cancelled?</div><div class="faq-a">If a transaction is not yet confirmed, there may be limited options depending on the wallet and
+fee settings. Once confirmed, Bitcoin transactions are generally not reversible like bank or card
+payments.
+Why do Bitcoin transactions have fees?
+Fees encourage miners to include transactions in blocks and help secure the network over time.
+How long does a Bitcoin transaction take?
+It depends on network activity, fees, and confirmations. A transaction may appear quickly but is
+usually considered stronger after confirmations.
+What happens if I send Bitcoin to the wrong address?
+In most cases, it cannot be reversed. Bitcoin users must carefully verify addresses before
+sending.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/bitcoin/" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/bitcoin-address/" class="related-link">Bitcoin Address</a> &nbsp;·&nbsp; <a href="/glossary/series-1/bitcoin-wallet/" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/private-key/" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-1/bitcoin-confirmation/" class="related-link">Bitcoin Confirmation</a> &nbsp;·&nbsp; <a href="/glossary/series-1/transaction-fee/" class="related-link">Transaction Fee</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-1/bitcoin-confirmation/">← Bitcoin Confirmation</a>
+    <a href="/glossary/series-1/" class="back-to-series">↑ All Bitcoin Basics Terms</a>
+    <a href="/glossary/series-1/bitcoin-wallet/">Bitcoin Wallet →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

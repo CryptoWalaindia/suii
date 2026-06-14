@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Self-Custody? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Self-Custody? | CryptoWala Glossary">
+  <meta name="description" content="Self-custody means you control your own Bitcoin or crypto keys instead of relying on anexchange or company to hold them for you. It gives more control, but it also gives youmore responsibility.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-2/self-custody/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-2/self-custody/">
+  <meta property="og:title" content="What is Self-Custody? | CryptoWala Glossary">
+  <meta property="og:description" content="Self-custody means you control your own Bitcoin or crypto keys instead of relying on anexchange or company to hold them for you. It gives more control, but it also gives youmore responsibility.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Self-Custody",
+  "description": "Self-custody means you control your own Bitcoin or crypto keys instead of relying on anexchange or company to hold them for you. It gives more control, but it also gives youmore responsibility.",
+  "url": "https://www.cryptowala.ai/glossary/series-2/self-custody/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 2: Wallets, Keys & Self-Custody",
+    "url": "https://www.cryptowala.ai/glossary/series-2/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 2: Wallets, Keys & Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/self-custody/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does self-custody mean I own my Bitcoin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Self-custody means you control the keys needed to spend your Bitcoin. In Bitcoin, key\r\ncontrol is very important.\r\nIs self-custody safe?\r\nIt can be safe when done properly, but mistakes can be costly. Education matters.\r\nIs an exchange wallet self-custody?\r\nUsually no. Most exchange wallets are custodial because the exchange controls the\r\nkeys.\r\nWhat is the biggest responsibility in self-custody?\r\nProtecting your seed phrase or private keys.\r\nShould beginners use self-custody?\r\nBeginners can learn self-custody, but they should take time to understand backups,\r\nwallet safety, and transaction basics first."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-2/">SERIES 2</a> &nbsp;/&nbsp; SELF-CUSTODY
+      </div>
+      <h1>SELF-CUSTODY</h1>
+      <p class="term-series-label">Series 2: Wallets, Keys & Self-Custody</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="self-custody">
+          <h2 class="term-name">Self-Custody</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Self-custody means you control your own Bitcoin or crypto keys instead of relying on an<br>exchange or company to hold them for you. It gives more control, but it also gives you<br>more responsibility.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Self-custody is the practice of holding and managing your own private keys or seed<br>phrase. In Bitcoin, this means you control access to your funds directly.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Self-custody means:<br>You hold the keys.<br>You control the wallet.<br>You are responsible for the backup.<br>It is like keeping cash in your own safe instead of leaving it with someone else.<br>The safe gives you control.<br>But you must protect the key.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Self-custody matters because Bitcoin was designed to allow people to hold and transfer<br>value without depending completely on intermediaries.<br>With self-custody, you do not need to ask an exchange for permission to move your<br>Bitcoin.<br>But self-custody is not something to treat casually. You must learn how wallets, seed<br>phrases, private keys, and backups work.<br>Coinbase describes its self-custody wallet as giving users full control of private keys,<br>while also making the recovery phrase essential for access.<br>Self-Custody vs Custody<br>In a custodial wallet, a company holds the keys for you.<br>In self-custody, you hold the keys yourself.<br>Custodial wallet = company controls keys<br>Self-custody wallet = user controls keys<br>Neither should be understood blindly. Beginners should understand both models before<br>choosing.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha keeps Bitcoin on an exchange.<br>The exchange controls the keys. Asha logs in with an account.<br>Later, Asha moves Bitcoin to a non-custodial wallet. Now she controls the seed phrase.<br>She has more direct control, but she must protect the backup herself.<br>That is self-custody.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think self-custody means “no risk.”<br>That is not true.<br>Self-custody removes some risks, like depending completely on an exchange. But it<br>adds personal responsibility, such as protecting the seed phrase and avoiding scams.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Start small when learning.<br>Understand the wallet.<br>Write down the seed phrase.<br>Practice safe backups.<br>Never share secret information.<br>Do not rush.<br>Self-custody is best learned calmly.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Does self-custody mean I own my Bitcoin?</div><div class="faq-a">Self-custody means you control the keys needed to spend your Bitcoin. In Bitcoin, key
+control is very important.
+Is self-custody safe?
+It can be safe when done properly, but mistakes can be costly. Education matters.
+Is an exchange wallet self-custody?
+Usually no. Most exchange wallets are custodial because the exchange controls the
+keys.
+What is the biggest responsibility in self-custody?
+Protecting your seed phrase or private keys.
+Should beginners use self-custody?
+Beginners can learn self-custody, but they should take time to understand backups,
+wallet safety, and transaction basics first.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/private-key/" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/seed-phrase/" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/recovery-phrase/" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/non-custodial-wallet/" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/custodial-wallet/" class="related-link">Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/hardware-wallet/" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/cold-wallet/" class="related-link">Cold Wallet</a></div></div>
+        </div></div>
+      </div>
+    </div>
+
+    
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-2/seed-phrase/">← Seed Phrase</a>
+    <a href="/glossary/series-2/" class="back-to-series">↑ All Wallets, Keys & Self-Custody Terms</a>
+    <span></span>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

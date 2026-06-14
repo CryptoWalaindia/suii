@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Bitcoin Mining? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Bitcoin Mining? | CryptoWala Glossary">
+  <meta name="description" content="Bitcoin mining is the process of creating new blocks, confirming transactions, andsecuring the Bitcoin network through proof of work.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-3/bitcoin-mining/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-3/bitcoin-mining/">
+  <meta property="og:title" content="What is Bitcoin Mining? | CryptoWala Glossary">
+  <meta property="og:description" content="Bitcoin mining is the process of creating new blocks, confirming transactions, andsecuring the Bitcoin network through proof of work.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Bitcoin Mining",
+  "description": "Bitcoin mining is the process of creating new blocks, confirming transactions, andsecuring the Bitcoin network through proof of work.",
+  "url": "https://www.cryptowala.ai/glossary/series-3/bitcoin-mining/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 3: Mining, Proof-of-Work & Security",
+    "url": "https://www.cryptowala.ai/glossary/series-3/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 3: Mining, Proof-of-Work & Security",
+      "item": "https://www.cryptowala.ai/glossary/series-3/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bitcoin Mining",
+      "item": "https://www.cryptowala.ai/glossary/series-3/bitcoin-mining/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do Bitcoin miners do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They collect transactions, create blocks, perform proof of work, and help secure\r\nthe Bitcoin network.\r\nDo miners create Bitcoin?\r\nNew Bitcoin enters circulation through the block reward, which is given to the\r\nsuccessful miner.\r\nCan anyone mine Bitcoin?\r\nTechnically yes, but modern Bitcoin mining usually requires specialized\r\nhardware, low-cost electricity, and professional operations.\r\nIs mining the same as validating?\r\nNot exactly. Miners create blocks. Nodes verify that blocks follow Bitcoin’s rules.\r\nWhy is mining important for security?\r\nMining makes it expensive to rewrite transaction history or attack the network."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-3/">SERIES 3</a> &nbsp;/&nbsp; BITCOIN MINING
+      </div>
+      <h1>BITCOIN MINING</h1>
+      <p class="term-series-label">Series 3: Mining, Proof-of-Work & Security</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="bitcoin-mining">
+          <h2 class="term-name">Bitcoin Mining</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Bitcoin mining is the process of creating new blocks, confirming transactions, and<br>securing the Bitcoin network through proof of work.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Bitcoin mining is a process where miners use specialized computers to compete<br>for the right to add a new block of transactions to the Bitcoin blockchain.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Bitcoin mining is not digging coins from the ground.<br>It is a digital process.<br>Miners collect transactions, build blocks, and use computing power to find a valid<br>proof of work. The successful miner adds the block to the blockchain and<br>receives a reward.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin mining matters because it keeps Bitcoin’s transaction history organized<br>and difficult to change.<br>Mining helps:<br>Confirm transactions<br>Add new blocks<br>Secure the blockchain<br>Distribute new Bitcoin through block rewards<br>Make attacks expensive<br>Bitcoin.org describes mining as a distributed consensus system that confirms<br>pending transactions by including them in the blockchain.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A miner gathers pending Bitcoin transactions.<br>The miner creates a block.<br>The miner searches for a valid hash by changing values such as the nonce.<br>When the miner finds a valid hash, the block is broadcast to the network.<br>Bitcoin nodes check the block.<br>If valid, the block becomes part of the blockchain.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Think of miners like participants in a global puzzle competition.<br>Everyone is trying to solve the same type of puzzle.<br>The first one to solve it gets to add the next page to Bitcoin’s record book.<br>Everyone else can quickly check whether the solution is correct.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think miners “approve” Bitcoin however they want.<br>They cannot.<br>Miners propose blocks, but nodes verify whether those blocks follow Bitcoin’s<br>rules. If a miner creates an invalid block, nodes can reject it.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What do Bitcoin miners do?</div><div class="faq-a">They collect transactions, create blocks, perform proof of work, and help secure
+the Bitcoin network.
+Do miners create Bitcoin?
+New Bitcoin enters circulation through the block reward, which is given to the
+successful miner.
+Can anyone mine Bitcoin?
+Technically yes, but modern Bitcoin mining usually requires specialized
+hardware, low-cost electricity, and professional operations.
+Is mining the same as validating?
+Not exactly. Miners create blocks. Nodes verify that blocks follow Bitcoin’s rules.
+Why is mining important for security?
+Mining makes it expensive to rewrite transaction history or attack the network.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block-reward/" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/sha-256/" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-halving/" class="related-link">Bitcoin Halving</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-3/bitcoin-miner/">← Bitcoin Miner</a>
+    <a href="/glossary/series-3/" class="back-to-series">↑ All Mining, Proof-of-Work & Security Terms</a>
+    <a href="/glossary/series-3/block-reward/">Block Reward →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

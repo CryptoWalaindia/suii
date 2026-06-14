@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Private Key? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Private Key? | CryptoWala Glossary">
+  <meta name="description" content="A private key is a secret digital key that proves you have the right to spend Bitcoin froma wallet. It must never be shared. If someone gets your private key, they may be able tomove your Bitcoin.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-2/private-key/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-2/private-key/">
+  <meta property="og:title" content="What is Private Key? | CryptoWala Glossary">
+  <meta property="og:description" content="A private key is a secret digital key that proves you have the right to spend Bitcoin froma wallet. It must never be shared. If someone gets your private key, they may be able tomove your Bitcoin.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Private Key",
+  "description": "A private key is a secret digital key that proves you have the right to spend Bitcoin froma wallet. It must never be shared. If someone gets your private key, they may be able tomove your Bitcoin.",
+  "url": "https://www.cryptowala.ai/glossary/series-2/private-key/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 2: Wallets, Keys & Self-Custody",
+    "url": "https://www.cryptowala.ai/glossary/series-2/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 2: Wallets, Keys & Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Private Key",
+      "item": "https://www.cryptowala.ai/glossary/series-2/private-key/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a private key do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A private key signs Bitcoin transactions and proves that you have the right to spend\r\nBitcoin.\r\nCan someone steal Bitcoin with a private key?\r\nYes. If someone gets your private key, they may be able to move your Bitcoin.\r\nIs a private key the same as a seed phrase?\r\nNo. A seed phrase usually helps generate or recover private keys. A private key\r\ncontrols specific Bitcoin.\r\nShould I share my private key?\r\nNo. A private key should always remain secret.\r\nWhere is my private key stored?\r\nIt depends on the wallet. Some wallets manage private keys for you. Hardware wallets\r\nare designed to keep private keys more isolated."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-2/">SERIES 2</a> &nbsp;/&nbsp; PRIVATE KEY
+      </div>
+      <h1>PRIVATE KEY</h1>
+      <p class="term-series-label">Series 2: Wallets, Keys & Self-Custody</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="private-key">
+          <h2 class="term-name">Private Key</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A private key is a secret digital key that proves you have the right to spend Bitcoin from<br>a wallet. It must never be shared. If someone gets your private key, they may be able to<br>move your Bitcoin.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A private key is a secret piece of information used to sign Bitcoin transactions. It proves<br>that the person creating the transaction has the right to spend the Bitcoin linked to that<br>key.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Think of a private key like the key to a locker.<br>The locker may be visible to others.<br>People may know where it is.<br>But only the person with the key can open it.<br>In Bitcoin, the private key is what gives control.<br>This is why the word “private” matters. It should stay with you only.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Private keys matter because Bitcoin does not work like a normal bank account.<br>There is usually no “forgot password” button.<br>There is no bank manager who can reverse a mistaken transfer.<br>There is no customer support team that can recover a private key for you.<br>If you control the private key, you control the Bitcoin.<br>If someone else controls the private key, they control the Bitcoin.<br>Bitcoin.org explains that wallets use a private key or seed to sign transactions and<br>prove that they came from the owner of the wallet.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>When you send Bitcoin, your wallet creates a transaction.<br>The private key signs that transaction. This signature proves that the transaction is<br>valid.<br>The private key itself is not shared with the network. Instead, the network checks the<br>signature.<br>A simple way to understand it:<br>Private key = secret control<br>Signature = proof without revealing the secret</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha has Bitcoin in a self-custody wallet.<br>When she sends Bitcoin to Rahul, her wallet uses her private key to sign the<br>transaction. The Bitcoin network checks the signature and confirms that Asha has the<br>right to spend that Bitcoin.<br>Asha does not need to show her private key to anyone.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think a private key is the same as a wallet password.<br>It is not.<br>A wallet password may only unlock the app on your phone or laptop. A private key<br>controls access to Bitcoin itself.<br>Losing an app password may be fixable in some cases. Losing a private key or seed<br>phrase can be much more serious.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Never share your private key.<br>Do not send it on WhatsApp.<br>Do not save it in email.<br>Do not type it into unknown websites.<br>Do not share it with anyone claiming to be support.<br>No genuine support team needs your private key.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does a private key do?</div><div class="faq-a">A private key signs Bitcoin transactions and proves that you have the right to spend
+Bitcoin.
+Can someone steal Bitcoin with a private key?
+Yes. If someone gets your private key, they may be able to move your Bitcoin.
+Is a private key the same as a seed phrase?
+No. A seed phrase usually helps generate or recover private keys. A private key
+controls specific Bitcoin.
+Should I share my private key?
+No. A private key should always remain secret.
+Where is my private key stored?
+It depends on the wallet. Some wallets manage private keys for you. Hardware wallets
+are designed to keep private keys more isolated.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/public-key/" class="related-link">Public Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/seed-phrase/" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/recovery-phrase/" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/bitcoin-wallet/" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/self-custody/" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/hardware-wallet/" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/non-custodial-wallet/" class="related-link">Non-Custodial Wallet</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-2/passphrase/">← Passphrase</a>
+    <a href="/glossary/series-2/" class="back-to-series">↑ All Wallets, Keys & Self-Custody Terms</a>
+    <a href="/glossary/series-2/public-key/">Public Key →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

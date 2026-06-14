@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Seed Phrase? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Seed Phrase? | CryptoWala Glossary">
+  <meta name="description" content="A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.If your wallet app, phone, or device is lost, the seed phrase can help restore access tothe wallet.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-2/seed-phrase/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-2/seed-phrase/">
+  <meta property="og:title" content="What is Seed Phrase? | CryptoWala Glossary">
+  <meta property="og:description" content="A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.If your wallet app, phone, or device is lost, the seed phrase can help restore access tothe wallet.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Seed Phrase",
+  "description": "A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.If your wallet app, phone, or device is lost, the seed phrase can help restore access tothe wallet.",
+  "url": "https://www.cryptowala.ai/glossary/series-2/seed-phrase/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 2: Wallets, Keys & Self-Custody",
+    "url": "https://www.cryptowala.ai/glossary/series-2/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 2: Wallets, Keys & Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Seed Phrase",
+      "item": "https://www.cryptowala.ai/glossary/series-2/seed-phrase/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a seed phrase the same as a recovery phrase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In most wallet contexts, seed phrase and recovery phrase mean the same thing.\r\nHow many words are in a seed phrase?\r\nMany wallets use 12 or 24 words, but this can vary by wallet.\r\nCan I recover my wallet without a seed phrase?\r\nUsually, if you are using self-custody and lose the seed phrase, recovery may not be\r\npossible.\r\nCan someone steal my Bitcoin with my seed phrase?\r\nYes. If someone gets your seed phrase, they may be able to restore your wallet and\r\nmove your Bitcoin.\r\nShould I store my seed phrase online?\r\nFor most beginners, offline storage is safer because online storage can be hacked or\r\nleaked."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-2/">SERIES 2</a> &nbsp;/&nbsp; SEED PHRASE
+      </div>
+      <h1>SEED PHRASE</h1>
+      <p class="term-series-label">Series 2: Wallets, Keys & Self-Custody</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="seed-phrase">
+          <h2 class="term-name">Seed Phrase</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A seed phrase is a group of words that works as a backup for a Bitcoin or crypto wallet.<br>If your wallet app, phone, or device is lost, the seed phrase can help restore access to<br>the wallet.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A seed phrase is a set of words generated by a wallet that can be used to recover<br>access to the wallet. It is sometimes also called a recovery phrase or backup phrase.<br>Coinbase explains that a recovery phrase is also known as a seed phrase and that only<br>the user has access to it in a self-custody wallet.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A seed phrase is like the master backup of your wallet.<br>Your phone can break.<br>Your wallet app can be deleted.<br>Your device can be lost.<br>But if your seed phrase is safe, you may be able to restore your wallet on another<br>device.<br>This is why it is powerful.<br>It is also why it must be protected carefully.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>A seed phrase matters because it can restore wallet access.<br>That is useful when you lose a phone or switch devices. But it also creates<br>responsibility.<br>If someone else gets your seed phrase, they may be able to access your wallet.<br>Coinbase clearly warns users never to share their recovery phrase and says Coinbase<br>will never ask for it.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>When you create a wallet, the wallet generates a seed phrase.<br>This phrase is used to create the keys that control your wallet. You do not need to<br>understand all the mathematics behind it. But you do need to understand the safety<br>rule:<br>Your seed phrase should stay private and offline.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha installs a Bitcoin wallet on her phone.<br>During setup, the wallet shows her 12 or 24 words. She writes them down and stores<br>them safely.<br>Later, her phone is damaged.<br>Asha buys a new phone, installs the wallet app again, and enters her seed phrase. Her<br>wallet access is restored.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think the seed phrase is just a password.<br>It is not just a password.<br>A normal password may protect an app. A seed phrase can restore access to the wallet<br>itself. That makes it much more sensitive.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>Do not take screenshots of your seed phrase.<br>Do not store it in email.<br>Do not save it in Google Drive or iCloud without understanding the risks.<br>Do not send it to anyone.<br>Do not enter it on random websites.<br>Keep it offline and private.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a seed phrase the same as a recovery phrase?</div><div class="faq-a">Yes. In most wallet contexts, seed phrase and recovery phrase mean the same thing.
+How many words are in a seed phrase?
+Many wallets use 12 or 24 words, but this can vary by wallet.
+Can I recover my wallet without a seed phrase?
+Usually, if you are using self-custody and lose the seed phrase, recovery may not be
+possible.
+Can someone steal my Bitcoin with my seed phrase?
+Yes. If someone gets your seed phrase, they may be able to restore your wallet and
+move your Bitcoin.
+Should I store my seed phrase online?
+For most beginners, offline storage is safer because online storage can be hacked or
+leaked.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/recovery-phrase/" class="related-link">Recovery Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/private-key/" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/bitcoin-wallet/" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/self-custody/" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/hardware-wallet/" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/passphrase/" class="related-link">Passphrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/non-custodial-wallet/" class="related-link">Non-Custodial Wallet</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-2/recovery-phrase/">← Recovery Phrase</a>
+    <a href="/glossary/series-2/" class="back-to-series">↑ All Wallets, Keys & Self-Custody Terms</a>
+    <a href="/glossary/series-2/self-custody/">Self-Custody →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

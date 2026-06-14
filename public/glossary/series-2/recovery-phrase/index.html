@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Recovery Phrase? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Recovery Phrase? | CryptoWala Glossary">
+  <meta name="description" content="A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It isusually the same thing as a seed phrase. Anyone with access to the recovery phrasemay be able to restore the wall">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-2/recovery-phrase/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-2/recovery-phrase/">
+  <meta property="og:title" content="What is Recovery Phrase? | CryptoWala Glossary">
+  <meta property="og:description" content="A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It isusually the same thing as a seed phrase. Anyone with access to the recovery phrasemay be able to restore the wall">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Recovery Phrase",
+  "description": "A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It isusually the same thing as a seed phrase. Anyone with access to the recovery phrasemay be able to restore the wall",
+  "url": "https://www.cryptowala.ai/glossary/series-2/recovery-phrase/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 2: Wallets, Keys & Self-Custody",
+    "url": "https://www.cryptowala.ai/glossary/series-2/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 2: Wallets, Keys & Self-Custody",
+      "item": "https://www.cryptowala.ai/glossary/series-2/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Recovery Phrase",
+      "item": "https://www.cryptowala.ai/glossary/series-2/recovery-phrase/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a recovery phrase the same as a seed phrase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in most wallet contexts they mean the same thing.\r\nWhy do wallets use recovery phrases?\r\nThey help users restore wallet access if a device is lost or damaged.\r\nCan I change my recovery phrase?\r\nUsually, you create a new wallet with a new phrase and move funds to the new wallet.\r\nWhat happens if I lose my recovery phrase?\r\nIf you lose access to your wallet and do not have the recovery phrase, recovery may not\r\nbe possible.\r\nShould I share my recovery phrase with support?\r\nNo. Genuine support teams should not need your recovery phrase."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-2/">SERIES 2</a> &nbsp;/&nbsp; RECOVERY PHRASE
+      </div>
+      <h1>RECOVERY PHRASE</h1>
+      <p class="term-series-label">Series 2: Wallets, Keys & Self-Custody</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="recovery-phrase">
+          <h2 class="term-name">Recovery Phrase</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A recovery phrase is a group of words used to recover a Bitcoin or crypto wallet. It is<br>usually the same thing as a seed phrase. Anyone with access to the recovery phrase<br>may be able to restore the wallet.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A recovery phrase is a wallet backup made of words. It helps restore access to a wallet<br>if the device, app, or hardware wallet is lost, damaged, or replaced.<br>Coinbase says a recovery phrase is also known as a seed phrase, and warns users<br>never to share it with anyone.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A recovery phrase is your wallet’s backup key.<br>If your wallet is the door, the recovery phrase is the backup way to open that door again.<br>It is useful because devices can fail.<br>But it is sensitive because anyone who has it may be able to recover the wallet.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Recovery phrases matter because self-custody gives users direct control.<br>That control is powerful. But it also means the user must protect the backup.<br>In a normal banking app, you can often reset your password through the bank.<br>In a self-custody wallet, the recovery phrase may be the only way to restore access.<br>Recovery Phrase vs Seed Phrase<br>For most users, recovery phrase and seed phrase mean the same thing.<br>Wallet companies may use different names:<br>Seed phrase<br>Recovery phrase<br>Secret recovery phrase<br>Backup phrase<br>Mnemonic phrase<br>The purpose is usually the same: wallet recovery.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Rahul buys a new phone.<br>His old phone had his Bitcoin wallet. Because he wrote down his recovery phrase<br>safely, he can restore the wallet on the new phone.<br>Without the phrase, recovery could be difficult or impossible.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some beginners think customer support can recover a recovery phrase.<br>In self-custody wallets, the company usually does not have access to your recovery<br>phrase. Coinbase states that it cannot access the recovery phrase or help move funds<br>without it.</p></div></div><div class="term-section"><div class="section-label">Safety Note</div><div class="section-body"><p>No real support person should ask for your recovery phrase.<br>If someone asks for it, treat it as a serious warning sign.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a recovery phrase the same as a seed phrase?</div><div class="faq-a">Yes, in most wallet contexts they mean the same thing.
+Why do wallets use recovery phrases?
+They help users restore wallet access if a device is lost or damaged.
+Can I change my recovery phrase?
+Usually, you create a new wallet with a new phrase and move funds to the new wallet.
+What happens if I lose my recovery phrase?
+If you lose access to your wallet and do not have the recovery phrase, recovery may not
+be possible.
+Should I share my recovery phrase with support?
+No. Genuine support teams should not need your recovery phrase.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-2/seed-phrase/" class="related-link">Seed Phrase</a> &nbsp;·&nbsp; <a href="/glossary/series-2/private-key/" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-2/bitcoin-wallet/" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/self-custody/" class="related-link">Self-Custody</a> &nbsp;·&nbsp; <a href="/glossary/series-2/non-custodial-wallet/" class="related-link">Non-Custodial Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/hardware-wallet/" class="related-link">Hardware Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-2/passphrase/" class="related-link">Passphrase</a></div></div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-2/public-key/">← Public Key</a>
+    <a href="/glossary/series-2/" class="back-to-series">↑ All Wallets, Keys & Self-Custody Terms</a>
+    <a href="/glossary/series-2/seed-phrase/">Seed Phrase →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

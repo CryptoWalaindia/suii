@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is 51% Attack? | CryptoWala Glossary</title>
+  <meta name="title" content="What is 51% Attack? | CryptoWala Glossary">
+  <meta name="description" content="A 51% attack is a situation where one miner or group controls more than half of aproof-of-work network’s mining power. This could allow them to reorganize blocksor attempt double-spending, but it does">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-3/51-percent-attack/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-3/51-percent-attack/">
+  <meta property="og:title" content="What is 51% Attack? | CryptoWala Glossary">
+  <meta property="og:description" content="A 51% attack is a situation where one miner or group controls more than half of aproof-of-work network’s mining power. This could allow them to reorganize blocksor attempt double-spending, but it does">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "51% Attack",
+  "description": "A 51% attack is a situation where one miner or group controls more than half of aproof-of-work network’s mining power. This could allow them to reorganize blocksor attempt double-spending, but it does",
+  "url": "https://www.cryptowala.ai/glossary/series-3/51-percent-attack/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 3: Mining, Proof-of-Work & Security",
+    "url": "https://www.cryptowala.ai/glossary/series-3/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 3: Mining, Proof-of-Work & Security",
+      "item": "https://www.cryptowala.ai/glossary/series-3/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "51% Attack",
+      "item": "https://www.cryptowala.ai/glossary/series-3/51-percent-attack/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does 51% attack mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means one miner or group controls more than half of a proof-of-work network’s\r\nmining power.\r\nCan a 51% attacker steal my Bitcoin?\r\nThey cannot steal Bitcoin from your wallet without your private keys.\r\nCan a 51% attacker create unlimited Bitcoin?\r\nNo. Nodes would reject blocks that break Bitcoin’s supply rules.\r\nWhy is Bitcoin difficult to 51% attack?\r\nBecause an attacker would need enormous mining power, energy, hardware, and\r\ncoordination.\r\nDoes hash rate help protect against 51% attacks?\r\nYes. More honest hash rate can make majority attacks more expensive."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-3/">SERIES 3</a> &nbsp;/&nbsp; 51% ATTACK
+      </div>
+      <h1>51% ATTACK</h1>
+      <p class="term-series-label">Series 3: Mining, Proof-of-Work & Security</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="51-percent-attack">
+          <h2 class="term-name">51% Attack</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>A 51% attack is a situation where one miner or group controls more than half of a<br>proof-of-work network’s mining power. This could allow them to reorganize blocks<br>or attempt double-spending, but it does not let them create unlimited Bitcoin or<br>steal coins from any wallet.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A 51% attack is a potential attack on a proof-of-work blockchain where one actor<br>controls the majority of mining power and can interfere with the normal ordering<br>of blocks.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A 51% attack means one group has too much mining power.<br>If they control most of the network’s hash rate, they may be able to build an<br>alternative chain faster than the honest network.<br>This can create serious problems.<br>But it does not mean they can do anything they want.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>51% attacks matter because they explain why Bitcoin’s mining power and<br>decentralization are important.<br>Bitcoin is designed so that attacking the network requires enormous resources.<br>An attacker would need hardware, electricity, coordination, and enough power to<br>compete with the rest of the network.<br>This makes attacks costly.<br>What a 51% Attacker Can Do<br>A 51% attacker may try to:<br>Reorganize recent blocks<br>Double-spend their own transactions<br>Censor some transactions temporarily<br>Disrupt trust in the network<br>What a 51% Attacker Cannot Do<br>A 51% attacker cannot simply:<br>Create unlimited Bitcoin<br>Steal Bitcoin from any wallet<br>Change old rules without users and nodes accepting them<br>Spend Bitcoin without private keys<br>This is important for beginners to understand.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a classroom where students vote on the correct version of a notebook.<br>If one group controls most of the voting power, they can push their preferred<br>version.<br>But they still cannot write impossible entries that break the basic rules everyone<br>checks.<br>Bitcoin nodes still verify rules.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think a 51% attack means Bitcoin would instantly end.<br>That is too extreme.<br>A 51% attack would be serious, but it has limits. It is better understood as a<br>costly network attack risk, not unlimited control over Bitcoin.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">What does 51% attack mean?</div><div class="faq-a">It means one miner or group controls more than half of a proof-of-work network’s
+mining power.
+Can a 51% attacker steal my Bitcoin?
+They cannot steal Bitcoin from your wallet without your private keys.
+Can a 51% attacker create unlimited Bitcoin?
+No. Nodes would reject blocks that break Bitcoin’s supply rules.
+Why is Bitcoin difficult to 51% attack?
+Because an attacker would need enormous mining power, energy, hardware, and
+coordination.
+Does hash rate help protect against 51% attacks?
+Yes. More honest hash rate can make majority attacks more expensive.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-node/" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-3/double-spend/" class="related-link">Double Spend</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-confirmation/" class="related-link">Bitcoin Confirmation</a> &nbsp;·&nbsp; <a href="/glossary/series-3/add-this-small-box-near-the-bottom-of-all-10-pages/" class="related-link">Add this small box near the bottom of all 10 pages:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/cryptowala-note/" class="related-link">CryptoWala Note:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/mining-and-proof-of-work-are-about-bitcoin/" class="related-link">Mining and proof of work are about Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-3/security-not-guaranteed-profits-understanding/" class="related-link">security, not guaranteed profits. Understanding</a> &nbsp;·&nbsp; <a href="/glossary/series-3/them-helps-you-see-why-bitcoin-is-costly-to/" class="related-link">them helps you see why Bitcoin is costly to</a> &nbsp;·&nbsp; <a href="/glossary/series-3/attack-how-blocks-are-added-and-why-the/" class="related-link">attack, how blocks are added, and why the</a> &nbsp;·&nbsp; <a href="/glossary/series-3/network-depends-on-rules-incentives-and/" class="related-link">network depends on rules, incentives, and</a> &nbsp;·&nbsp; <a href="/glossary/series-3/verification/" class="related-link">verification.</a> &nbsp;·&nbsp; <a href="/glossary/series-3/series-3-internal-linking-plan/" class="related-link">Series 3 Internal Linking Plan</a> &nbsp;·&nbsp; <a href="/glossary/series-3/use-these-naturally-inside-each-page/" class="related-link">Use these naturally inside each page.</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossaryproof-of-work/" class="related-link">/glossary/proof-of-work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/sha-256/" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/51-attack/" class="related-link">51% Attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossarybitcoin-mining/" class="related-link">/glossary/bitcoin-mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block-reward/" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-halving/" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/sha-256/" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossarybitcoin-miner/" class="related-link">/glossary/bitcoin-miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block-reward/" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-node/" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossaryhash-rate/" class="related-link">/glossary/hash-rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/sha-256/" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/51-attack/" class="related-link">51% Attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossarydifficulty-adjustment/" class="related-link">/glossary/difficulty-adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-halving/" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossaryblock-reward/" class="related-link">/glossary/block-reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-halving/" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/transaction-fee/" class="related-link">Transaction Fee</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossarybitcoin-halving/" class="related-link">/glossary/bitcoin-halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block-reward/" class="related-link">Block Reward</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/scarcity/" class="related-link">Scarcity</a> &nbsp;·&nbsp; <a href="/glossary/series-3/21-million-bitcoin-supply/" class="related-link">21 Million Bitcoin Supply</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossarysha-256/" class="related-link">/glossary/sha-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/nonce/" class="related-link">Nonce</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossarynonce/" class="related-link">/glossary/nonce</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/sha-256/" class="related-link">SHA-256</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/difficulty-adjustment/" class="related-link">Difficulty Adjustment</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/glossary51-percent-attack/" class="related-link">/glossary/51-percent-attack</a> &nbsp;·&nbsp; <a href="/glossary/series-3/link-to/" class="related-link">Link to:</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-node/" class="related-link">Bitcoin Node</a> &nbsp;·&nbsp; <a href="/glossary/series-3/double-spend/" class="related-link">Double Spend</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-confirmation/" class="related-link">Bitcoin Confirmation</a></div></div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <span></span>
+    <a href="/glossary/series-3/" class="back-to-series">↑ All Mining, Proof-of-Work & Security Terms</a>
+    <a href="/glossary/series-3/bitcoin-halving/">Bitcoin Halving →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

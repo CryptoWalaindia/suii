@@ -7,6 +7,19 @@ CryptoWala application.
 React, Vite, Tailwind CSS.
 
 ## Recent Changes
+- 2026-06-14
+  - Summary: Split each glossary series into individual term sub-pages (68 sub-pages created)
+  - Details:
+    - Created 68 individual `index.html` files at `/glossary/series-N/term-slug/` URLs (one per term)
+    - Each term sub-page has: focused `<title>` (`What is X?`), meta description, canonical URL, Schema.org `DefinedTerm` JSON-LD, `FAQPage` JSON-LD, 4-level BreadcrumbList, full term content, prev/next term navigation
+    - Updated all 7 series index pages from long-scroll format to term directory grid (cards linking to sub-pages)
+    - Related term links updated from `#hash` fragments to real sub-page URLs (e.g., `/glossary/series-1/blockchain/`)
+    - `vite.config.ts` unchanged — existing `staticGlossaryPlugin()` middleware already handles all `/glossary/` sub-paths
+    - Generation done via Node.js script `scratch/generate-glossary-subpages.js`
+    - Series breakdown: S1(10) + S2(12) + S3(10) + S4(10) + S5(10) + S6(8) + S7(8) = 68 terms
+  - Reason: User wanted each glossary term to be directly crawlable by AI models (ChatGPT, Perplexity, Gemini, Claude) at a dedicated URL instead of a hash anchor on a shared series page
+  - Files Affected: `public/glossary/series-1/` through `series-7/` (68 new sub-directories + 7 updated series index.html files)
+
 - 2026-06-08
   - Summary: Added Glossary section — 8 static HTML pages with 68 crypto terms
   - Details:

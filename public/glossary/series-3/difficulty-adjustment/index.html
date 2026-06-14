@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Difficulty Adjustment? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Difficulty Adjustment? | CryptoWala Glossary">
+  <meta name="description" content="Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is tomine a block. It helps keep block creation close to Bitcoin’s target timing, evenwhen mining power changes.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-3/difficulty-adjustment/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-3/difficulty-adjustment/">
+  <meta property="og:title" content="What is Difficulty Adjustment? | CryptoWala Glossary">
+  <meta property="og:description" content="Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is tomine a block. It helps keep block creation close to Bitcoin’s target timing, evenwhen mining power changes.">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Difficulty Adjustment",
+  "description": "Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is tomine a block. It helps keep block creation close to Bitcoin’s target timing, evenwhen mining power changes.",
+  "url": "https://www.cryptowala.ai/glossary/series-3/difficulty-adjustment/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 3: Mining, Proof-of-Work & Security",
+    "url": "https://www.cryptowala.ai/glossary/series-3/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 3: Mining, Proof-of-Work & Security",
+      "item": "https://www.cryptowala.ai/glossary/series-3/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Difficulty Adjustment",
+      "item": "https://www.cryptowala.ai/glossary/series-3/difficulty-adjustment/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does Bitcoin adjust difficulty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To keep block production relatively stable even when mining power changes.\r\nHow often does Bitcoin difficulty adjust?\r\nEvery 2,016 blocks, which is roughly every two weeks.\r\nWhat happens if many miners leave?\r\nBlocks may slow down for a period, then difficulty can adjust downward.\r\nWhat happens if many miners join?\r\nBlocks may come faster for a period, then difficulty can adjust upward.\r\nIs difficulty adjustment controlled by miners?\r\nNo. It is part of Bitcoin’s protocol rules."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-3/">SERIES 3</a> &nbsp;/&nbsp; DIFFICULTY ADJUSTMENT
+      </div>
+      <h1>DIFFICULTY ADJUSTMENT</h1>
+      <p class="term-series-label">Series 3: Mining, Proof-of-Work & Security</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="difficulty-adjustment">
+          <h2 class="term-name">Difficulty Adjustment</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Quick Answer</div><div class="section-body"><p>Difficulty adjustment is Bitcoin’s automatic system for changing how hard it is to<br>mine a block. It helps keep block creation close to Bitcoin’s target timing, even<br>when mining power changes.</p></div></div><div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>Difficulty adjustment is the process by which Bitcoin changes the mining difficulty<br>after a set number of blocks to keep block production relatively stable.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>Bitcoin wants blocks to be created at a steady pace over time.<br>But miners can join or leave the network.<br>If more miners join, blocks could be found too quickly.<br>If miners leave, blocks could be found too slowly.<br>Difficulty adjustment helps balance this.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Difficulty adjustment matters because it helps Bitcoin stay predictable.<br>Bitcoin’s issuance schedule depends on blocks. If blocks came too quickly or too<br>slowly for long periods, the system would become less stable.<br>Difficulty adjustment helps Bitcoin respond to changes in mining power without<br>needing a central manager.<br>Bitcoin difficulty is adjusted every 2,016 blocks, roughly every two weeks, based<br>on how long the previous set of blocks took to mine.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>Bitcoin looks at how long it took to mine the previous 2,016 blocks.<br>If blocks were found too quickly, mining becomes harder.<br>If blocks were found too slowly, mining becomes easier.<br>This automatic rule helps keep the network close to its intended block rhythm.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Imagine a school exam.<br>If everyone finishes too quickly, the next exam becomes harder.<br>If everyone struggles too much, the next exam becomes easier.<br>Bitcoin difficulty adjustment works in a similar way.<br>It adjusts the challenge based on mining speed.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Some people think Bitcoin difficulty is controlled manually by a person or<br>company.<br>It is not.<br>Difficulty adjustment is part of Bitcoin’s rules and happens automatically.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Why does Bitcoin adjust difficulty?</div><div class="faq-a">To keep block production relatively stable even when mining power changes.
+How often does Bitcoin difficulty adjust?
+Every 2,016 blocks, which is roughly every two weeks.
+What happens if many miners leave?
+Blocks may slow down for a period, then difficulty can adjust downward.
+What happens if many miners join?
+Blocks may come faster for a period, then difficulty can adjust upward.
+Is difficulty adjustment controlled by miners?
+No. It is part of Bitcoin’s protocol rules.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-3/bitcoin-mining/" class="related-link">Bitcoin Mining</a> &nbsp;·&nbsp; <a href="/glossary/series-3/hash-rate/" class="related-link">Hash Rate</a> &nbsp;·&nbsp; <a href="/glossary/series-3/proof-of-work/" class="related-link">Proof of Work</a> &nbsp;·&nbsp; <a href="/glossary/series-3/miner/" class="related-link">Miner</a> &nbsp;·&nbsp; <a href="/glossary/series-3/block/" class="related-link">Block</a> &nbsp;·&nbsp; <a href="/glossary/series-3/bitcoin-halving/" class="related-link">Bitcoin Halving</a> &nbsp;·&nbsp; <a href="/glossary/series-3/sha-256/" class="related-link">SHA-256</a></div></div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-3/block-reward/">← Block Reward</a>
+    <a href="/glossary/series-3/" class="back-to-series">↑ All Mining, Proof-of-Work & Security Terms</a>
+    <a href="/glossary/series-3/hash-rate/">Hash Rate →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>

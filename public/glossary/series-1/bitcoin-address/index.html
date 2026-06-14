@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/suii 2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/suii 2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #fff; color: #000; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { opacity: 0.6; }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: relative; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 80px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .header-left { display: flex; align-items: center; gap: 40px; }
+    .nav-link {
+      font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; cursor: pointer; transition: opacity 0.15s;
+    }
+    .nav-link.active { border-bottom: 2px solid #000; padding-bottom: 2px; }
+    .nav-link:hover { opacity: 0.5; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      width: 100%; text-align: center; padding: 32px 24px;
+      border-top: 1px solid #e5e7eb; margin-top: 80px;
+    }
+    .site-footer p { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: #111; margin-bottom: 10px; }
+    .site-footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .site-footer .footer-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #111; }
+    .site-footer .footer-links a:hover { opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .site-header { padding: 18px 24px; }
+      .header-left { gap: 20px; }
+      .nav-link { font-size: 13px; }
+    }
+  </style>
+
+  <title>What is Bitcoin Address? | CryptoWala Glossary</title>
+  <meta name="title" content="What is Bitcoin Address? | CryptoWala Glossary">
+  <meta name="description" content="A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like adestination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them aBitcoin addre">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://www.cryptowala.ai/glossary/series-1/bitcoin-address/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.cryptowala.ai/glossary/series-1/bitcoin-address/">
+  <meta property="og:title" content="What is Bitcoin Address? | CryptoWala Glossary">
+  <meta property="og:description" content="A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like adestination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them aBitcoin addre">
+  <meta property="og:image" content="https://www.cryptowala.ai/images/suii 2.png">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "name": "Bitcoin Address",
+  "description": "A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like adestination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them aBitcoin addre",
+  "url": "https://www.cryptowala.ai/glossary/series-1/bitcoin-address/",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "CryptoWala Glossary Series 1: Bitcoin Basics",
+    "url": "https://www.cryptowala.ai/glossary/series-1/"
+  }
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cryptowala.ai"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Glossary",
+      "item": "https://www.cryptowala.ai/glossary/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Series 1: Bitcoin Basics",
+      "item": "https://www.cryptowala.ai/glossary/series-1/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bitcoin Address",
+      "item": "https://www.cryptowala.ai/glossary/series-1/bitcoin-address/"
+    }
+  ]
+}</script>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a Bitcoin address the same as a public key?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A Bitcoin address is related to public-key cryptography, but it is not exactly the same as a\r\npublic key.\r\nCan I reuse a Bitcoin address?\r\nTechnically yes, but using a new address for each payment is better for privacy.\r\nWhat happens if I send Bitcoin to the wrong address?\r\nBitcoin transactions are generally not reversible, so the Bitcoin may be lost or sent to someone\r\nelse.\r\nCan someone steal my Bitcoin with only my address?\r\nNo. A Bitcoin address can be shared to receive Bitcoin. The private key or seed phrase must\r\nstay secret.\r\nWhy do Bitcoin addresses look complicated?\r\nThey are designed for cryptographic accuracy, not human memory. Most people use copy-paste\r\nor QR codes."
+      }
+    }
+  ]
+}</script>
+  <style>
+    .term-hero {
+      padding: 48px 80px 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .breadcrumb {
+      font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: #888; margin-bottom: 16px;
+    }
+    .breadcrumb a { color: #888; }
+    .breadcrumb a:hover { color: #000; opacity: 1; }
+    .term-hero h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+    .term-hero .term-series-label {
+      font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: #555;
+    }
+
+    /* Layout */
+    .term-page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 80px 80px;
+    }
+
+    .term-entry { padding: 0; }
+    .term-name { display: none; } /* hidden — shown in hero h1 */
+    .term-divider { border: none; border-top: 2px solid #000; margin-bottom: 28px; }
+
+    .term-section { margin-bottom: 28px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #888; margin-bottom: 8px;
+    }
+    .section-body p {
+      font-size: 15px; line-height: 1.8; color: #1a1a1a; margin-bottom: 8px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 16px; }
+    .faq-item { border-left: 2px solid #e5e7eb; padding-left: 16px; }
+    .faq-q { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; }
+
+    .related-section .section-body { line-height: 2.2; }
+    .related-link {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+      text-transform: uppercase; border-bottom: 1px solid #000;
+      padding-bottom: 1px; transition: opacity 0.15s;
+    }
+    .related-link:hover { opacity: 0.4; }
+
+    /* Prev/Next Navigation */
+    .term-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 80px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .term-nav a { transition: opacity 0.15s; }
+    .term-nav a:hover { opacity: 0.5; }
+    .term-nav .back-to-series { color: #888; }
+
+    @media (max-width: 768px) {
+      .term-hero { padding: 32px 24px 28px; }
+      .term-page-wrapper { padding: 32px 24px 64px; }
+      .term-nav { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-left">
+      <a href="/" class="nav-link" id="nav-contact">CONTACT</a>
+      <a href="/glossary/" class="nav-link active" id="nav-glossary">GLOSSARY</a>
+    </div>
+    <a href="/" class="nav-link" id="nav-about">ABOUT</a>
+  </header>
+
+  <main>
+    <div class="term-hero">
+      <div class="breadcrumb">
+        <a href="/glossary/">GLOSSARY</a> &nbsp;/&nbsp; <a href="/glossary/series-1/">SERIES 1</a> &nbsp;/&nbsp; BITCOIN ADDRESS
+      </div>
+      <h1>BITCOIN ADDRESS</h1>
+      <p class="term-series-label">Series 1: Bitcoin Basics</p>
+    </div>
+
+    <div class="term-page-wrapper">
+      <div class="term-entry" id="bitcoin-address">
+          <h2 class="term-name">Bitcoin Address</h2>
+          <hr class="term-divider">
+          <div class="term-section"><div class="section-label">Definition</div><div class="section-body"><p>A Bitcoin address is a string of letters and numbers used to receive Bitcoin. It works like a<br>destination for a Bitcoin transaction. When someone wants to send you Bitcoin, you give them a<br>Bitcoin address from your wallet.</p></div></div><div class="term-section"><div class="section-label">Simple Meaning</div><div class="section-body"><p>A Bitcoin address is like an account destination for receiving Bitcoin.<br>But it is not exactly the same as a bank account number.<br>A bank account is linked to a bank and your identity. A Bitcoin address is created by a wallet<br>and is used on the Bitcoin network.<br>You can create many Bitcoin addresses from one wallet.<br>Bitcoin.org recommends using a new Bitcoin address each time you receive a new payment for<br>better privacy.</p></div></div><div class="term-section"><div class="section-label">Why It Matters</div><div class="section-body"><p>Bitcoin addresses matter because they tell the network where Bitcoin should be sent.<br>If the address is wrong, the Bitcoin may be lost.<br>If the address belongs to someone else, they may receive the Bitcoin.<br>If the address is copied incorrectly, the transaction may fail or go to the wrong place.<br>This is why checking addresses is an important habit.</p></div></div><div class="term-section"><div class="section-label">How It Works</div><div class="section-body"><p>A Bitcoin wallet creates addresses using cryptographic keys.<br>The user shares the address with someone who wants to send Bitcoin. The sender enters that<br>address into their wallet and creates a transaction.<br>The Bitcoin network then checks whether the transaction follows the rules.<br>A Bitcoin address is connected to public-key cryptography, but beginners do not need to<br>understand all the mathematics at first.</p></div></div><div class="term-section"><div class="section-label">Real-World Example</div><div class="section-body"><p>Asha wants Rahul to send her Bitcoin.<br>She opens her Bitcoin wallet and taps “Receive.”<br>The wallet shows a Bitcoin address and QR code.<br>Asha shares it with Rahul.<br>Rahul scans the QR code and sends Bitcoin to that address.</p></div></div><div class="term-section"><div class="section-label">Common Misunderstanding</div><div class="section-body"><p>Many beginners think one wallet has only one Bitcoin address.<br>Actually, one wallet can create many addresses. Using a fresh address for each payment can<br>improve privacy.</p></div></div><div class="term-section"><div class="section-label">FAQs</div><div class="section-body faq-list"><div class="faq-item"><div class="faq-q">Is a Bitcoin address the same as a public key?</div><div class="faq-a">No. A Bitcoin address is related to public-key cryptography, but it is not exactly the same as a
+public key.
+Can I reuse a Bitcoin address?
+Technically yes, but using a new address for each payment is better for privacy.
+What happens if I send Bitcoin to the wrong address?
+Bitcoin transactions are generally not reversible, so the Bitcoin may be lost or sent to someone
+else.
+Can someone steal my Bitcoin with only my address?
+No. A Bitcoin address can be shared to receive Bitcoin. The private key or seed phrase must
+stay secret.
+Why do Bitcoin addresses look complicated?
+They are designed for cryptographic accuracy, not human memory. Most people use copy-paste
+or QR codes.</div></div></div></div><div class="term-section related-section"><div class="section-label">Related Terms</div><div class="section-body related-links"><a href="/glossary/series-1/bitcoin/" class="related-link">Bitcoin</a> &nbsp;·&nbsp; <a href="/glossary/series-1/bitcoin-wallet/" class="related-link">Bitcoin Wallet</a> &nbsp;·&nbsp; <a href="/glossary/series-1/public-key/" class="related-link">Public Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/private-key/" class="related-link">Private Key</a> &nbsp;·&nbsp; <a href="/glossary/series-1/bitcoin-transaction/" class="related-link">Bitcoin Transaction</a> &nbsp;·&nbsp; <a href="/glossary/series-1/qr-code/" class="related-link">QR Code</a> &nbsp;·&nbsp; <a href="/glossary/series-1/self-custody/" class="related-link">Self-Custody</a></div></div>
+        </div>
+        
+    </div>
+  </main>
+
+  <nav class="term-nav" aria-label="Term navigation">
+    <a href="/glossary/series-1/bitcoin/">← Bitcoin</a>
+    <a href="/glossary/series-1/" class="back-to-series">↑ All Bitcoin Basics Terms</a>
+    <a href="/glossary/series-1/bitcoin-confirmation/">Bitcoin Confirmation →</a>
+  </nav>
+
+  <footer class="site-footer">
+    <p>©2025 - 2026. CRYPTOWALA.</p>
+    <div class="footer-links">
+      <span>ALL RIGHTS RESERVED.</span>
+      <a href="/T&amp;C CryptoWala.pdf" target="_blank" rel="noopener noreferrer">LEGAL.</a>
+      <a href="/Privacy Policy CryptoWala.pdf" target="_blank" rel="noopener noreferrer">PRIVACY.</a>
+      <a href="/Risk_Disclosure_CryptoWala.pdf" target="_blank" rel="noopener noreferrer">RISK.</a>
+    </div>
+  </footer>
+</body>
+</html>
